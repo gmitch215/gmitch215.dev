@@ -3,3 +3,4 @@ _site
 .vscode/
 .jekyll-cache/
 .DS_Store
+Gemfile.lock
