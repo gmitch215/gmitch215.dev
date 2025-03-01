@@ -4,7 +4,7 @@ layout: page
 summary: Official CV
 logo: true
 page_title: Gregory Mitchell
-tagline: Full-Stack Software Programmer
+tagline: Full-Stack Software Engineer
 ---
 
 b. 2008 <br>
@@ -19,7 +19,8 @@ b. 2008 <br>
 
 ## Sofware Development
 
-- Over **2,300** hours in total programming experience, including **1,200+** hours in Java and **600+** hours in Kotlin
+- High Quality Software Development with over **6** years of industry experience, since 2019
+- Over **2,400** hours in total programming experience, including **1,200+** hours in Java and **600+** hours in Kotlin
 - Experience in many OOP and Functional languages, such as Java, Kotlin, Svelte, C++, C, and JavaScript
 - Fan of JetBrains IDEs, such as IntelliJ IDEA and WebStorm where I make JVM, JS, and other framework-related projects
 
@@ -33,7 +34,7 @@ b. 2008 <br>
   - Heavy utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
 - [Calculus Games](https://github.com/CalculusGames) \| 2024-Present
   - Game Development Studio
-  - Utilizes KorGE Game Engine, Java, and Kotlin for game development
+  - Utilizes multiple game engines with Java, Kotlin, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
 
 ------------
@@ -57,6 +58,7 @@ b. 2008 <br>
     - Ktor Client
   - C/C++
     - Systems, I/O
+    - Heavy Memory Management
     - Unreal Engine 4/5
     - Vex V5 Robot API
   - HTML/CSS/JS
@@ -72,10 +74,40 @@ b. 2008 <br>
     - CLion
   - Visual Studio Code
   - Eclipse IDE for Java Developers
+- **Art**
+  - Pixel Art
+  - Blender
+  - Adobe Photoshop & Premiere Pro
 
 ------------
 
 ## Projects
+
+### [cmdfx](https://github.com/gmitch215/cmdfx)
+
+*2025 - Present*
+
+- A game engine for your terminal, written in C
+- Uses OS-specific libraries to create a game engine that can be used in the terminal
+- Avoids external dependencies to ensure compatibility with all systems
+
+### [kloudflare](https://github.com/gmitch215/kloudflare)
+
+*2025 - Present*
+
+- A port of the popular [Cloudflare](https://cloudflare.com) API to Kotlin Multiplatform
+- Uses Ktor for HTTP requests and serialization
+- Provides a simple and easy-to-use interface for interacting with the Cloudflare API
+- Available for JVM, JS, Native, and WebAssembly
+
+### [kasciffy](https://github.com/gmitch215/kasciffy)
+
+*2025 - Present*
+
+- An ascii art generator written in [Kotlin Multiplatform](https://kotlinlang.org)
+- Available for CLI, Desktop, Web, and Mobile
+  - Uses [Clikt](https://github.com/ajalt/clikt) for a command-line interface
+- Converts images and videos to ascii art using a variety of characters
 
 ### [gitle](https://github.com/gmitch215/gitle)
 
@@ -117,15 +149,6 @@ b. 2008 <br>
 - Contributed to their [Discord Bot](https://github.com/CodeMC/Bot)
 - Collaborated as Moderator on their platform to ensure success
 
-### [SocketMC](https://github.com/gmitch215/SocketMC)
-
-*2024*
-
-- Server to Client communication mod and library for Minecraft: Java Edition
-- Allows plugins to directly communicate with clients using instructions
-- Allows plugins to use client information and events to create more interactive experiences
-- Allows plugins to retrieve client information for a better game experience
-
 ### [LevelZ File Format](https://github.com/LevelZ-File)
 
 *2024 - Present*
@@ -135,6 +158,18 @@ b. 2008 <br>
 - Includes IDE Plugins, Mutli-Language Bindings & Parsers
   - Java, Kotlin, JavaScript, C, C++, and Python
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
+
+<div class="noPrint">
+## Deprecated Projects
+
+### [SocketMC](https://github.com/gmitch215/SocketMC)
+
+*2024*
+
+- Server to Client communication mod and library for Minecraft: Java Edition
+- Allows plugins to directly communicate with clients using instructions
+- Allows plugins to use client information and events to create more interactive experiences
+- Allows plugins to retrieve client information for a better game experience
 
 ### [InceptusNMS](https://github.com/Team-Inceptus/InceptusNMS)
 
@@ -166,8 +201,6 @@ b. 2008 <br>
 
 - A very lightweight, simple, custom enchantments plugin for SpigotMC, and one of the first plugins I worked on to have [Kotlin Development](http://kotlinlang.org/)
 - Uses the [Spigot API](https://spigotmc.org) and [Kotlin](https://kotlinlang.org) to create a simple, yet effective plugin for Minecraft: Java Edition 1.14 and above without using NMS
-
-<br>
 
 ### [SuperAdvancements](https://github.com/gmitch215/SuperAdvancements)
 
@@ -223,3 +256,5 @@ b. 2008 <br>
 - My first JavaScript Discord Bot projects ever that I hosted on the free hosting site [repl.it](https://replit.com).
 - This Discord Bot was a personal bot for a [HypixelMC](https://hypixel.net) Guild called "TheNoobyGods," which I ran before founding Team Inceptus.
 - Interacts with the [Discord API](https://discord.com/developers/docs/intro), and [mineflayer](https://github.com/PrismarineJS/mineflayer), a JS Framework that allowed you to remotely control an in-game Minecraft Account with code
+
+</div>
