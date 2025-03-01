@@ -8,7 +8,7 @@ let index_strs = [
     "JoJo's Bizarre Adventure: Stardust Crusaders",
     "Enjoyer of Kotlin",
     "Super Mario Galaxy",
-    "Hates Logbait & Hog 2.6"
+    "Runs an ok 1600m"
 ]
 
 function getTheme() {
@@ -59,17 +59,11 @@ window.onload = async function() {
     $("#stars").text("⭐ " + (await getStars()).toLocaleString("en-US") + " Stars");
 
     $("#downloads").text("📥 " + (await getDownloads()).toLocaleString("en-US") + " Downloads");
-
-    $("#active-users").text("👥 " + (await getActiveUsers()).toLocaleString("en-US") + " Active Users");
-    $("#active-servers").text("🖥️ " + (await getActiveServers()).toLocaleString("en-US") + " Active Servers");
-
 }
 
 const cache = {
     repos: -1,
     downloads: -1,
-    users: -1,
-    servers: -1,
     stars: -1,
 }
 
@@ -89,6 +83,7 @@ async function getDownloads() {
     if (cache.downloads !== -1) return cache.downloads;
     let downloads = 0
 
+    // Legacy Minecraft Downloads
     let url1 = "https://api.spiget.org/v2/authors/1229877/resources"
     let data1 = JSON.parse(await makeRequest(url1))
     for (let i = 0; i < data1.length; i++) downloads += data1[i].downloads;
@@ -97,47 +92,44 @@ async function getDownloads() {
     let data2 = JSON.parse(await makeRequest(url2))
     for (let i = 0; i < data2.length; i++) downloads += data2[i].downloads;
 
+    // GitHub Releases Downloads
+    let repos = "https://api.github.com/users/gmitch215/repos";
+    let repoData = JSON.parse(await makeRequest(repos));
+
+    let releases = [];
+    for (let i = 0; i < repoData.length; i++) {
+        let repo = repoData[i];
+        releases.push(getReleasesDownloads(repo.releases_url));
+    }
+    const counts = await Promise.all(releases);
+    downloads += counts.reduce((a, b) => a + b, 0);
+
     cache.downloads = downloads;
     return cache.downloads;
 }
 
-// bStats
-const serverIDs = [
-    15322, // Novaconomy
-    15392, // PlutoChat
-    17108, // StarCosmetics
-    18166, // BattleCards
-    18713, // PlasmaEnchants
-]
+async function getReleasesDownloads(url) {
+    const url0 = url.replace("{/id}", "");
+    let data = JSON.parse(await makeRequest(url0));
+    if (data.length === 0) return 0;
 
-async function getActiveUsers() {
-    if (cache.users !== -1) return cache.users;
-    let users = 0;
+    async function getReleaseDownloads(data) {
+        let downloads = 0;
+        for (let i = 0; i < data.assets.length; i++) {
+            downloads += data.assets[i].download_count;
+        }
 
-    for (let server of serverIDs) {
-        let url = `https://bstats.org/api/v1/plugins/${server}/charts/players/data`
-        let data = JSON.parse(await makeRequest(url));
-
-        users += data[data.length - 1][1]
+        return downloads
     }
 
-    cache.users = users;
-    return cache.users;
-}
-
-async function getActiveServers() {
-    if (cache.servers !== -1) return cache.servers;
-    let servers = 0;
-
-    for (let server of serverIDs) {
-        let url = `https://bstats.org/api/v1/plugins/${server}/charts/servers/data`
-        let data = JSON.parse(await makeRequest(url));
-
-        servers += data[data.length - 1][1]
+    let downloads = [];
+    for (let i = 0; i < data.length; i++) {
+        let release = data[i];
+        downloads.push(getReleaseDownloads(release));
     }
 
-    cache.servers = servers;
-    return cache.servers;
+    const counts = await Promise.all(downloads);
+    return counts.reduce((a, b) => a + b, 0);
 }
 
 async function getStars() {
