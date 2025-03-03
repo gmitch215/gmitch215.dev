@@ -9,40 +9,18 @@ layout: default
     <h2 class="subtitle">{{ page.tagline }}</h2>
     <h3 class="subtitle" id="index-subtitle"></h3>
 
-    <p class="break"></p>
-    <p class="break"></p>
-    <p class="break"></p>
-
-    <h1 class="title">Statistics</h1>
-
-    <p class="medium" id="repos">Loading...</p>
-    <p class="medium" id="downloads">Loading...</p>
-    <p class="medium" id="stars">Loading...</p>
-    
-    <p class="break"></p>
-    <p class="break"></p>
-    <p class="break"></p>
-    <p class="break"></p>
-
-    <h1 class="title">Donate</h1>
-
     <div class="donations">
         {% for donate in site.data.donate %}
-        <a href="{{ donate.url }}" target="_blank" title="{{ donate.name }}">
-            <img src="{{ donate.img }}" class="donate-img" alt="{{ donate.name }}">
+        <a href="{{ donate.url }}" class="donate" title="{{ donate.name }}" target="_blank">
+            <img src="{{ donate.img }}" alt="{{ donate.name }}">
         </a>
         {% endfor %}
-    </div>
+    </div>    
 
-    <p class="break"></p>
-    <p class="break"></p>
+    <br>
 
-    <h1 class="title">Contact</h1>
-
-    <div>
-        <a href="mailto:me@gmitch215.xyz" class="small">Mail</a>
-    </div>
-
-    <p class="break"></p>
+    <p class="small" id="repos">Loading...</p>
+    <p class="small" id="downloads">Loading...</p>
+    <p class="small" id="stars">Loading...</p>
 
 </div>

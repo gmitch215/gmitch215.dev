@@ -367,20 +367,21 @@ h1, h2, h3 {
 
 .donations {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    column-gap: 3vw;
+
     width: 100%;
     position: relative;
 }
 
-.donate-img {
-    border: solid 0.25em var(--text);
-    border-radius: 50%;
-    height: 20vh;
+.donations img {
+    border-radius: 30%;
+    height: 7vh;
     width: auto;
     transition: transform 0.5s ease-in-out;
 }
 
-.donate-img:hover {
+.donations img:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.1);
 }
