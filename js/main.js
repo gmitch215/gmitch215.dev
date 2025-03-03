@@ -79,6 +79,16 @@ async function getRepos() {
     return cache.repos
 }
 
+const npmPackages = [
+    // Deprecated
+    "nodejs-notebook",
+    "super-dictionary",
+    // Not Deprecated
+    "levelz-js",
+
+    "@gmitch215/tabroom-api"
+]
+
 async function getDownloads() {
     if (cache.downloads !== -1) return cache.downloads;
     let downloads = 0
@@ -99,10 +109,23 @@ async function getDownloads() {
     let releases = [];
     for (let i = 0; i < repoData.length; i++) {
         let repo = repoData[i];
+        if (repo.private) continue;
+
         releases.push(getReleasesDownloads(repo.releases_url));
     }
     const counts = await Promise.all(releases);
     downloads += counts.reduce((a, b) => a + b, 0);
+
+    // NPM Downloads
+    let npmPromises = []
+    for (let i = 0; i < npmPackages.length; i++) {
+        let url = "https://api.npmjs.org/downloads/point/last-year/" + npmPackages[i];
+        npmPromises.push(makeRequest(url));
+    }
+
+    (await Promise.all(npmPromises)).forEach((data) => {
+        downloads += JSON.parse(data).downloads;
+    });
 
     cache.downloads = downloads;
     return cache.downloads;
