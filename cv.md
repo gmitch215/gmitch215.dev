@@ -160,6 +160,7 @@ b. 2008 <br>
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
 
 <div class="noPrint">
+
 ## Deprecated Projects
 
 ### [SocketMC](https://github.com/gmitch215/SocketMC)
