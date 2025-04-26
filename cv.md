@@ -21,7 +21,7 @@ b. 2008 <br>
 
 - High Quality Software Development with over **6** years of industry experience, since 2019
 - Over **2,400** hours in total programming experience, including **1,200+** hours in Java and **600+** hours in Kotlin
-- Experience in many OOP and Functional languages, such as Java, Kotlin, Svelte, C++, C, and JavaScript
+- Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and JavaScript
 - Fan of JetBrains IDEs, such as IntelliJ IDEA and WebStorm where I make JVM, JS, and other framework-related projects
 
 ## Business
@@ -34,50 +34,37 @@ b. 2008 <br>
   - Heavy utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
 - [Calculus Games](https://github.com/CalculusGames) \| 2024-Present
   - Game Development Studio
-  - Utilizes multiple game engines with Java, Kotlin, and C++ for game development
+  - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
 
 ------------
 
 ## Skills
 
+- **Leadership & Tutoring**
+  - 4+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
+  - Experience with multiple project management tools, including Jira, Trello, and Asana
+  - Exceptional tutoring and mentoring experience with students and peers
+  - Effective communication skills, including the ability to explain complex concepts to non-technical audiences
 - **Programming**
-  - Java
-    - JBDC (Java Database Connectivity API)
-    - Minecraft-based APIs
-    - Google Gson
-    - JavaX Swing
-    - Gradle (Kotin DSL)
-    - Netty Channels
-  - Kotlin
-    - KorGE Game Engine
-    - Kotlin Multiplatform (JS, Wasm, JVM, Native)
-    - Extension Functions & Coroutines
-    - Interoperability with Java
-    - Serialization & Deserialization
-    - Ktor Client
-  - C/C++
-    - Systems, I/O
-    - Heavy Memory Management
-    - Unreal Engine 4/5
-    - Vex V5 Robot API
-  - HTML/CSS/JS
-    - Node.js / Bun.sh
-    - Jekyll
-    - jQuery
-    - discord.js (Discord API)
-    - GitHub Actions
-- **IDEs**
-  - JetBrains
-    - IntelliJ IDEA Community & Ultimate
-    - WebStorm
-    - CLion
-  - Visual Studio Code
-  - Eclipse IDE for Java Developers
-- **Art**
-  - Pixel Art
-  - Blender
-  - Adobe Photoshop & Premiere Pro
+  - 6+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
+  - Experience with multiple frameworks, including Spring, Ktor, and Vue
+  - Experience with multiple libraries, including Kandy, Lets-Plot, Clikt, and more
+  - Designed a custom game engine for the terminal using C and OS-specific libraries
+- **Project Management**
+  - 7+ years of experience utilizing Git and GitHub for version control and project management
+  - Mastered in multiple project management tools, including Jira, Trello, and Asana
+
+## Contributions
+
+- [**National Speech & Debate Association**](https://www.speechanddebate.org) \| 2024-Present
+  - Proposed new features implemented on the NSDA's tabroom.com platform
+  - Created a cross-platform API for [tabroom.com](https://tabroom.com) using Kotlin Multiplatform and web scraping tools
+  - Proved useful during High School Debate Seasons
+- [**CodeMC**](https://codemc.io) \| 2024-Present
+  - Designed and developed the [Backend API](https://github.com/CodeMC/API) used to automate the developer process, written in Kotlin
+
+<div class="noPrint">
 
 ------------
 
@@ -158,8 +145,6 @@ b. 2008 <br>
 - Includes IDE Plugins, Mutli-Language Bindings & Parsers
   - Java, Kotlin, JavaScript, C, C++, and Python
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
-
-<div class="noPrint">
 
 ## Deprecated Projects
 
