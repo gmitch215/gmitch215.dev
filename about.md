@@ -7,6 +7,8 @@ logo: true
 
 # About Gregory
 
+![Gregory Mithell](/assets/gregory.jpg)
+
 I illustrate my passion for video games, computers, 
 and software as a whole through the development, modification, 
 and release of various platforms and projects that engage my users 
@@ -22,4 +24,4 @@ I've developed many different kinds of things, which began from my creating of d
 
 ---
 
-Copyright © 2024 Gregory. All rights reserved.
+Copyright © 2025 Gregory. All rights reserved.

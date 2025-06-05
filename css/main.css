@@ -164,6 +164,20 @@ h1, h2, h3 {
     text-align: center;
 }
 
+.page img {
+    max-width: 25%;
+    height: auto;
+
+    border: 2px solid var(--color-text);
+    border-radius: 4px;
+}
+
+.page p:has(img) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 .page-content {
     margin: 0 18vw;
 }
