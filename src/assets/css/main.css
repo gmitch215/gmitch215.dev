@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "tailwindcss-motion";
+@config "../../../tailwind.config.ts";
+
+@theme {
+    --color-primary: greenyellow;
+    --color-dark-primary: darkgreen;
+
+    --font-title: 'Noto Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}

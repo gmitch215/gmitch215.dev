@@ -1,6 +1,21 @@
-_site
-.idea/
-.vscode/
-.jekyll-cache/
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+package-lock.json
+desktop.ini
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
 .DS_Store
-Gemfile.lock
+.fleet
+.idea
