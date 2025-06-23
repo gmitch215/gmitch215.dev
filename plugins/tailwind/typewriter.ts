@@ -9,10 +9,10 @@ export default plugin(function ({ addBase, matchUtilities }: PluginAPI) {
             "100%": { opacity: "1" },
         },
         "@keyframes typewriter-typing": {
-            "0%": { width: "0" },
+            "0%": { width: "0", "text-wrap": "no-wrap" },
             "25%": { width: "0" },
             "50%": { width: "var(--typewriter-width)" },
-            "100%": { width: "var(--typewriter-width)" },
+            "100%": { width: "var(--typewriter-width)", "text-wrap": "wrap" },
         },
         "@keyframes typewriter-blink": {
             "50%": { borderColor: "transparent" },

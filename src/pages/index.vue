@@ -12,7 +12,7 @@
                 style="transition-property: scale;"
             />
             <h1 class="font-bold text-xl md:text-2xl lg:text-4xl xl:text-6xl mt-6 mb-6">{{ PERSON_NAME }}</h1>
-            <h3 class="typewriter-[80+7s+1s] text-xs sm:text-sm lg:text-lg xl:text-xl break-all wrap-break-word dark:text-primary text-dark-primary">{{ SITE_DESCRIPTION }}</h3>
+            <h3 class="typewriter-[80+7s+1s] text-xs sm:text-sm lg:text-lg xl:text-xl mx-4 dark:text-primary text-dark-primary">{{ SITE_DESCRIPTION }}</h3>
 
             <div class="flex mt-4 flex-col sm:flex-row sm:mt-12">
                 <div v-for="(popup, i) in popups" :key="i"
@@ -29,7 +29,7 @@
                 <a v-for="(link, i) in iconLinks" :key="i"
                     :href="link.url"
                     class="relative bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white
-                    size-8 md:size-16 lg:size-24 xl:size-32
+                    size-16 lg:size-24 xl:size-32
                     flex items-center justify-center
                     px-4 py-2 rounded-lg m-4 shadow-lg shadow-gray-300/70 dark:shadow-gray-800/70
                     motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-delay-[6s]
