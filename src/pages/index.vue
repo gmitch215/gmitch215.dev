@@ -63,7 +63,7 @@ const iconLinks = [
     {
         name: 'Buy Me a Coffee',
         url: 'https://www.buymeacoffee.com/gmitch215',
-        icon: 'logos:coffeescript'
+        icon: 'cib:buy-me-a-coffee'
     }
 ]
 
