@@ -10,9 +10,9 @@ b. 2008 <br>
 ## Sofware Development
 
 - High Quality Software Development with over **6** years of industry experience, since 2019
-- Over **2,400** hours in total programming experience, including **1,200+** hours in Java and **600+** hours in Kotlin
-- Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and JavaScript
-- Fan of JetBrains IDEs, such as IntelliJ IDEA and WebStorm where I make JVM, JS, and other framework-related projects
+- Over **2,500** hours in total programming experience, including **1,200+** hours in Java and **650+** hours in Kotlin
+- Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
+- Fan of JetBrains IDEs (such as IntelliJ IDEA and WebStorm), along with Visual Studio Code, where I make JVM, JS, and other framework-related projects
 
 ## Business
 
@@ -26,23 +26,27 @@ b. 2008 <br>
   - Game Development Studio
   - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
+- [earth-app](https://github.com/earth-app) \| 2025-Present
+  - Social Media Platform
+  - Built with Nuxt + Vue.js in the Frontend, Hono in the backend, KMP for Mobile
+  - Utilizes Kotlin Multiplatform for web scraping and types
 
 ------------
 
 ## Skills
 
 - **Leadership & Tutoring**
-  - 4+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
+  - 5+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
   - Experience with multiple project management tools, including Jira, Trello, and Asana
   - Exceptional tutoring and mentoring experience with students and peers
   - Effective communication skills, including the ability to explain complex concepts to non-technical audiences
 - **Programming**
-  - 6+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
+  - 7+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
   - Experience with multiple frameworks, including Spring, Ktor, and Vue
   - Experience with multiple libraries, including Kandy, Lets-Plot, Clikt, and more
   - Designed a custom game engine for the terminal using C and OS-specific libraries
 - **Project Management**
-  - 7+ years of experience utilizing Git and GitHub for version control and project management
+  - 8+ years of experience utilizing Git and GitHub for version control and project management
   - Mastered in multiple project management tools, including Jira, Trello, and Asana
 
 ## Contributions
@@ -67,15 +71,6 @@ b. 2008 <br>
 - A game engine for your terminal, written in C
 - Uses OS-specific libraries to create a game engine that can be used in the terminal
 - Avoids external dependencies to ensure compatibility with all systems
-
-### [kloudflare](https://github.com/gmitch215/kloudflare)
-
-*2025 - Present*
-
-- A port of the popular [Cloudflare](https://cloudflare.com) API to Kotlin Multiplatform
-- Uses Ktor for HTTP requests and serialization
-- Provides a simple and easy-to-use interface for interacting with the Cloudflare API
-- Available for JVM, JS, Native, and WebAssembly
 
 ### [kasciffy](https://github.com/gmitch215/kasciffy)
 
