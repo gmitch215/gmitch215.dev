@@ -2,12 +2,12 @@
     <div class="w-screen flex flex-col items-center justify-center">
         <img src="/pictures/gregory-engineering.jpeg" alt="Gregory R. Mitchell" class="w-80 mb-8 rounded-lg shadow-xl shadow-amber-400/50
         hover:scale-110 transition-transform duration-900" />
-        <h1 class="text-5xl font-bold mb-4">Gregory R. Mitchell</h1>
+        <h1 class="text-2xl lg:text-4xl xl:text-5xl font-bold mb-4">Gregory R. Mitchell</h1>
 
         <img
             src="https://skillicons.dev/icons?i=kotlin,java,cpp,c,ts,nodejs,js,html,css,vue,svelte,py",
             alt="Languages"
-            class="my-4 h-12"
+            class="md:my-4 h-12"
         />
         <img 
             src="https://skillicons.dev/icons?i=github,git,idea,clion,webstorm,vscode,gradle,npm,bun,yarn,maven,blender,photoshop"

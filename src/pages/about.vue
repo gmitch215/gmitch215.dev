@@ -2,7 +2,7 @@
     <div class="w-screen flex flex-col items-center justify-center mb-32">
         <img src="/pictures/gregory-thinking.png" alt="Gregory R. Mitchell" class="w-64 mb-8 rounded-lg shadow-xl shadow-red-600/50
         hover:scale-110 transition-transform duration-900" />
-        <h1 class="text-5xl font-bold">About Gregory R. Mitchell</h1>
+        <h1 class="text-2xl lg:text-4xl xl:text-5xl font-bold">About Gregory R. Mitchell</h1>
     </div>
 
     <div class="prose dark:prose-invert pb-8 w-screen">

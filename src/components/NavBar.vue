@@ -8,8 +8,7 @@
                 <img src="/favicon.png" alt="Logo" class="hidden xl:inline-block size-12 mr-2 rounded-full border-black dark:border-white border-2">
                 {{ SITE_NAME }}
             </a>
-            <div class="ml-2 sm:ml-4 md:ml-8 lg:ml-24 justify-center md:text-lg xl:text-xl
-            hidden sm:flex">
+            <div class="ml-2 sm:ml-4 md:ml-8 lg:ml-24 justify-center text-xs md:text-sm xl:text-xl flex">
                 <a 
                     v-for="(link, i) in links"
                     :key="i"
