@@ -10,7 +10,7 @@ b. 2008 <br>
 ## Sofware Development
 
 - High Quality Software Development with over **6** years of industry experience, since 2019
-- Over **2,500** hours in total programming experience, including **1,200+** hours in Java and **650+** hours in Kotlin
+- Over **2,500** hours in total programming experience, including **1,200+** hours in Java, **650+** hours in Kotlin, and **100+** hours in C
 - Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
 - Fan of JetBrains IDEs (such as IntelliJ IDEA and WebStorm), along with Visual Studio Code, where I make JVM, JS, and other framework-related projects
 
