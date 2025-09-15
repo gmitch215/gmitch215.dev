@@ -5,7 +5,7 @@ b. 2008 <br>
 [🖥️ github.com/gmitch215](https://github.com/gmitch215) <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
-------------
+---
 
 ## Sofware Development
 
@@ -31,7 +31,7 @@ b. 2008 <br>
   - Built with Nuxt + Vue.js in the Frontend, Hono in the backend, KMP for Mobile
   - Utilizes Kotlin Multiplatform for web scraping and types
 
-------------
+---
 
 ## Skills
 
@@ -60,13 +60,13 @@ b. 2008 <br>
 
 <div class="noPrint">
 
-------------
+---
 
 ## Projects
 
 ### [cmdfx](https://github.com/gmitch215/cmdfx)
 
-*2025 - Present*
+_2025 - Present_
 
 - A game engine for your terminal, written in C
 - Uses OS-specific libraries to create a game engine that can be used in the terminal
@@ -74,7 +74,7 @@ b. 2008 <br>
 
 ### [kasciffy](https://github.com/gmitch215/kasciffy)
 
-*2025 - Present*
+_2025 - Present_
 
 - An ascii art generator written in [Kotlin Multiplatform](https://kotlinlang.org)
 - Available for CLI, Desktop, Web, and Mobile
@@ -83,14 +83,14 @@ b. 2008 <br>
 
 ### [gitle](https://github.com/gmitch215/gitle)
 
-*2025 - Present*
+_2025 - Present_
 
 - Gradle Plugin written in [Kotlin](https://kotlinlang.org) that downloads artifacts to your own machine
 - Allows you to clone and use gradle artifacts that aren't published to an Artifact Repository, but are available over Git
 
 ### [benchmarks](https://github.com/gmitch215/benchmarks)
 
-*2024 - Present*
+_2024 - Present_
 
 - Programming benchmarks for various languages against different problems
 - Records time spent in nanoseconds, milliseconds, or other, and outputs in a specified time
@@ -99,7 +99,7 @@ b. 2008 <br>
 
 ### [TabroomAPI](https://github.com/gmitch215/TabroomAPI)
 
-*2024 - Present*
+_2024 - Present_
 
 - Library API for [tabroom.com](https://tabroom.com), a Speech & Debate platform
 - Written in [Kotlin](https://kotlinlang.org) for Multiplatform, using web scraping tools and [Ktor](https://ktor.io)
@@ -107,14 +107,14 @@ b. 2008 <br>
 
 ### [FlowX](https://github.com/gmitch215/FlowX)
 
-*2024 - Present*
+_2024 - Present_
 
 - Fork of [flower](https://github.com/Ashwagandhae/debate-flow) with some improvements I find helpful
 - Uses Svelte and TypeScript, deployed with Vercel
 
 ### [CodeMC](https://github.com/CodeMC)
 
-*2024 - Present*
+_2024 - Present_
 
 - Community Organization that provides Jenkins/Nexus Hosting for Developers
 - Created the [Backend API](https://github.com/CodeMC/API) used to automate the developer process, written in [Kotlin](https://kotlinlang.org)
@@ -123,7 +123,7 @@ b. 2008 <br>
 
 ### [LevelZ File Format](https://github.com/LevelZ-File)
 
-*2024 - Present*
+_2024 - Present_
 
 - Game Level Format used for designing Video Game Levels
 - Supports 2D and 3D Format
@@ -135,7 +135,7 @@ b. 2008 <br>
 
 ### [SocketMC](https://github.com/gmitch215/SocketMC)
 
-*2024*
+_2024_
 
 - Server to Client communication mod and library for Minecraft: Java Edition
 - Allows plugins to directly communicate with clients using instructions
@@ -144,7 +144,7 @@ b. 2008 <br>
 
 ### [InceptusNMS](https://github.com/Team-Inceptus/InceptusNMS)
 
-*2023*
+_2023_
 
 - [Kotlin](https://kotlinlang.org)-based project that emulates a [JavaDoc](https://en.wikipedia.org/wiki/Javadoc) browser using inputted JSON files.
 - Heavily utilizes [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html) for parsing dozens of files in seconds.
@@ -152,7 +152,7 @@ b. 2008 <br>
 
 ### [BattleCards](https://github.com/gmitch215/BattleCards)
 
-*2023 - 2024*
+_2023 - 2024_
 
 - [Kotlin](https://kotlinlang.org) Project that allows you to summon "cards" to fight with and for you in the popular video game Minecraft, inspired by the stands from [JoJo's Bizarre Adventure](https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure)
 - Uses JVM Annotations to reduce boilerplate and duplicated code, with the [Spigot API](https://spigotmc.org)
@@ -161,21 +161,21 @@ b. 2008 <br>
 
 ### [Terminal Miner](https://github.com/gmitch215/Terminal-Miner)
 
-*2023*
+_2023_
 
 - [C++](https://en.wikipedia.org/wiki/C++) Idle Game for mining materials
 - Simple game that utilizes core C++ libraries for input and output on the command line
 
 ### [PlasmaEnchants](https://github.com/Team-Inceptus/PlasmaEnchants)
 
-*2023 - 2024*
+_2023 - 2024_
 
 - A very lightweight, simple, custom enchantments plugin for SpigotMC, and one of the first plugins I worked on to have [Kotlin Development](http://kotlinlang.org/)
 - Uses the [Spigot API](https://spigotmc.org) and [Kotlin](https://kotlinlang.org) to create a simple, yet effective plugin for Minecraft: Java Edition 1.14 and above without using NMS
 
 ### [SuperAdvancements](https://github.com/gmitch215/SuperAdvancements)
 
-*2023 - 2024*
+_2023 - 2024_
 
 - A Minecraft: Java Edition Framework allows you to create custom Minecraft Advancements, the default progression system in the game.
 - Developed in Java with the [Spigot API](https://spigotmc.org)
@@ -183,7 +183,7 @@ b. 2008 <br>
 
 ### [StarCosmetics](https://github.com/gmitch215/StarCosmetics)
 
-*2023 - 2024*
+_2023 - 2024_
 
 - A plugin which allows you to freely express yourself through a wide range of cosmetics available after completing certain tasks.
 - Made in Java with the [Spigot API](https://spigotmc.org).
@@ -191,7 +191,7 @@ b. 2008 <br>
 
 ### [MobChip](https://github.com/gmitch215/MobChip)
 
-*2022 - 2024*
+_2022 - 2024_
 
 - A Minecraft: Java Edition API wrapper tool that makes it easy and simple to change the default AI, actions, schedules, data, and other aspects of any entity.
 - Made in Java with the [Spigot API](https://spigotmc.org).
@@ -200,7 +200,7 @@ b. 2008 <br>
 
 ### [Novaconomy](https://github.com/Team-Inceptus/Novaconomy)
 
-*2021 - 2024*
+_2021 - 2024_
 
 - One of the best plugins I have ever continued to develop is this one. It started out as a small project that was intended as a one-and-done, but I eventually decided to keep adding more features and did NOT regret it.
 - Many components of Minecraft: Java Edition and Java itself, including the use of JDBC (Java SQL), intercepting [Packets](https://wiki.vg/Protocol),using [Netty Channels](https://netty.io/4.1/api/io/netty/channel/Channel.html), YAML Storage, and the [Spigot API](https://spigotmc.org)
@@ -208,7 +208,7 @@ b. 2008 <br>
 
 ### [QuantumPen](https://github.com/gmitch215/QuantumPen)
 
-*2022*
+_2022_
 
 - The first plugin that I listed, that is sill freely available to download on my [SpigotMC Plugin Resources](https://www.spigotmc.org/members/gamercoder215.1229877/#resources).
 - Allows you to manually modify and send Packets to players, fabricating different server events for educational, fun, and adniminstrator-related purposes
@@ -216,13 +216,13 @@ b. 2008 <br>
 
 ### [nodejs-notebook](https://github.com/brightplum/nodejs-notebook)
 
-*2021*
+_2021_
 
 - My first NPM Package published in 2021. A JavaScript wrapper around editing specific code files, useful for changing code at runtime using JS. - A simple project that helped teach me how to document properly. Still downloaded a little bit today, even though it is long abandoned.
 
 ### [NoobyGods (NoobyBot)](https://github.com/Team-Inceptus/NoobyGods)
 
-*2020 - 2022*
+_2020 - 2022_
 
 - My first JavaScript Discord Bot projects ever that I hosted on the free hosting site [repl.it](https://replit.com).
 - This Discord Bot was a personal bot for a [HypixelMC](https://hypixel.net) Guild called "TheNoobyGods," which I ran before founding Team Inceptus.
