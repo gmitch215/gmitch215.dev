@@ -8,9 +8,22 @@ on:
   workflow_dispatch:
 
 jobs:
+  format:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - name: Install Dependencies
+        run: bun install
+      - name: Check Prettier Formatting
+        run: bun run prettier:check
+
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    needs: format
 
     permissions:
       contents: read
@@ -28,7 +41,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
-  
+
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
