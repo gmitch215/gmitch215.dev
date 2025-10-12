@@ -58,7 +58,7 @@ export default defineNuxtConfig({
 		identity: definePerson({
 			name: 'Gregory Mitchell',
 			image: '/pictures/gregory-thinking.png',
-			description: 'FullStack Software Engineer & Game Developer',
+			description: 'FullStack Software Engineer, Game Developer, Sunglasses Enthusiast',
 			url: 'gmitch215.dev',
 			sameAs: [
 				'https://x.com/gmitch215',
