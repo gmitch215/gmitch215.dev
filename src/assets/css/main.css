@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-@plugin "tailwindcss-motion";
-@config "../../../tailwind.config.ts";
+@plugin 'tailwindcss-motion';
+@config '../../../tailwind.config.ts';
 
 @theme {
 	--color-primary: greenyellow;
