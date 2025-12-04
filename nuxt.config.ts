@@ -3,10 +3,22 @@ import { definePerson } from 'nuxt-schema-org/schema';
 
 export default defineNuxtConfig({
 	ssr: true,
-	compatibilityDate: '2024-11-01',
+	compatibilityDate: '2025-06-20',
 	devtools: { enabled: true },
 	srcDir: 'src',
 	css: ['~/assets/css/main.css'],
+	app: {
+		head: {
+			link: [
+				{ rel: 'preconnect', href: 'https://cdn.gmitch215.dev' },
+				{ rel: 'dns-prefetch', href: 'https://cdn.gmitch215.dev' },
+				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+				{ rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+				{ rel: 'preconnect', href: 'https://skillicons.dev' },
+				{ rel: 'dns-prefetch', href: 'https://skillicons.dev' }
+			]
+		}
+	},
 	nitro: {
 		preset: 'static',
 		prerender: {
