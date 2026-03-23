@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 			link: [
 				{ rel: 'preconnect', href: 'https://cdn.gmitch215.dev' },
 				{ rel: 'dns-prefetch', href: 'https://cdn.gmitch215.dev' },
-				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
 				{ rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
 				{ rel: 'preconnect', href: 'https://skillicons.dev' },
 				{ rel: 'dns-prefetch', href: 'https://skillicons.dev' }
@@ -27,7 +27,8 @@ export default defineNuxtConfig({
 		}
 	},
 	vite: {
-		plugins: [tailwindcss()]
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		plugins: [tailwindcss() as any]
 	},
 	modules: [
 		'@nuxt/content',
@@ -35,6 +36,7 @@ export default defineNuxtConfig({
 		'@nuxtjs/robots',
 		'@nuxtjs/sitemap',
 		'nuxt-schema-org',
+		'@nuxt/hints',
 		[
 			'@nuxtjs/google-fonts',
 			{
@@ -54,6 +56,10 @@ export default defineNuxtConfig({
 			}
 		]
 	],
+	experimental: {
+		renderJsonPayloads: true,
+		viewTransition: true
+	},
 	schemaOrg: {
 		identity: definePerson({
 			name: 'Gregory Mitchell',
