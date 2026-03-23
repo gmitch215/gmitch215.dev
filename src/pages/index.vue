@@ -1,21 +1,22 @@
 <template>
 	<main>
 		<div class="flex flex-col items-center justify-center w-full">
-			<img
+			<LazyNuxtImg
 				src="/pictures/gregory-engineering-2.png"
 				:alt="PERSON_NAME"
 				:title="PERSON_NAME"
+				quality="90"
 				class="rounded-xl shadow-2xl shadow-green-300/70 dark:shadow-green-900/70 motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-rotate-in-20 hover:scale-110 cursor-pointer duration-800 size-48 sm:size-64 md:size-80 lg:size-96"
 				style="transition-property: scale"
 			/>
 			<h1 class="font-bold text-xl md:text-2xl lg:text-4xl xl:text-6xl mt-6 mb-6">
 				{{ PERSON_NAME }}
 			</h1>
-			<h3
+			<h2
 				class="typewriter-[80+7s+1s] text-xs sm:text-sm lg:text-lg xl:text-xl mx-4 dark:text-primary text-dark-primary"
 			>
 				{{ SITE_DESCRIPTION }}
-			</h3>
+			</h2>
 
 			<div class="flex mt-4 flex-col sm:flex-row sm:mt-12">
 				<div
@@ -28,18 +29,19 @@
 				</div>
 			</div>
 
-			<div class="flex flex-row items-center">
-				<a
+			<div class="flex flex-row items-center min-h-32">
+				<NuxtLink
 					v-for="(link, i) in iconLinks"
 					:key="i"
-					:href="link.url"
+					:to="link.url"
+					target="_blank"
 					class="relative bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white size-16 lg:size-24 xl:size-32 flex items-center justify-center px-4 py-2 rounded-lg m-4 shadow-lg shadow-gray-300/70 dark:shadow-gray-800/70 motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-delay-[6s] hover:scale-110 transition-transform duration-500"
 				>
 					<Icon
 						:name="link.icon"
 						size="4.5em"
 					/>
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 	</main>
@@ -48,7 +50,7 @@
 <script setup lang="ts">
 import { PERSON_NAME } from '~/composables/useConstants';
 
-const popups = ['📍 Chicago, IL', '🖱️ 7+ Years Experience', '🏃🏾 Distance Runner'];
+const popups = ['📍 Chicago, IL', '🖱️ 8+ Years Experience', '🏃🏾 Distance Runner'];
 
 const iconLinks = [
 	{

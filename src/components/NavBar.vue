@@ -4,37 +4,36 @@
 		class="flex items-center p-4 w-full border-b-6 mb-8 bg-green-100 border-b-green-200 dark:bg-green-900 dark:border-b-green-950"
 	>
 		<div class="flex items-center">
-			<a
-				href="/"
+			<NuxtLink
+				to="/"
 				class="text-2xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
 			>
-				<img
+				<NuxtImg
 					src="/favicon.png"
 					alt="Logo"
 					class="hidden xl:inline-block size-12 mr-2 rounded-full border-black dark:border-white border-2"
 				/>
 				{{ SITE_NAME }}
-			</a>
+			</NuxtLink>
 			<div class="ml-2 sm:ml-4 md:ml-8 lg:ml-24 justify-center text-xs md:text-sm xl:text-xl flex">
-				<a
+				<NuxtLink
 					v-for="(link, i) in links"
 					:key="i"
-					:name="link.name"
 					:title="link.name"
-					:href="link.url"
+					:to="link.url"
 					:target="link.external ? '_blank' : '_self'"
 					class="mx-1 md:mx-2 lg:mx-6 xl:mx-8 font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
 				>
 					{{ link.name }}
-				</a>
+				</NuxtLink>
 			</div>
 		</div>
 
 		<div class="ml-auto space-x-4 hidden sm:flex">
-			<a
+			<NuxtLink
 				v-for="(social, i) in socials"
 				:key="i"
-				:href="social.url"
+				:to="social.url"
 				:title="social.name"
 				target="_blank"
 				rel="noopener noreferrer"
@@ -44,7 +43,7 @@
 					:name="social.icon"
 					class="hover:scale-110 transition-transform duration-400"
 				/>
-			</a>
+			</NuxtLink>
 		</div>
 	</div>
 </template>

@@ -1,6 +1,6 @@
 <template>
 	<div class="prose dark:prose-invert pb-8 w-screen">
-		<ContentRenderer
+		<LazyContentRenderer
 			v-if="commissions"
 			:value="commissions"
 			class="pl-8 w-screen"
