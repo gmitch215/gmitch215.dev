@@ -13,12 +13,15 @@
 import NavBar from './components/NavBar.vue';
 
 useHead({
+	htmlAttrs: {
+		lang: 'en'
+	},
 	meta: [
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		{ name: 'application-name', content: SITE_NAME },
 		{ name: 'description', content: SITE_DESCRIPTION },
 		{ name: 'keywords', content: 'gmitch215' },
-		{ name: 'author', content: 'Gregory Mitchell' },
+		{ name: 'author', content: PERSON_NAME },
 		{ name: 'theme-color', content: THEME_COLOR },
 		{ name: 'apple-mobile-web-app-capable', content: 'yes' },
 		{ name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
