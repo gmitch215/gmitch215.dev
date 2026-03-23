@@ -9,8 +9,12 @@ b. 2008 <br>
 
 ## Sofware Development
 
-- High Quality Software Development with over **6** years of industry experience, since 2019
-- Over **2,500** hours in total programming experience, including **1,200+** hours in Java, **650+** hours in Kotlin, and **100+** hours in C
+- High Quality Software Development with over **7** years of industry experience, since 2019
+- Over **3,300** hours in total programming experience, including:
+  - **1,200+** hours in Java
+  - **750+** hours in Kotlin
+  - **250+** hours in TypeScript
+  - **100+** hours in C
 - Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
 - Fan of JetBrains IDEs (such as IntelliJ IDEA and WebStorm), along with Visual Studio Code, where I make JVM, JS, and other framework-related projects
 
@@ -27,8 +31,9 @@ b. 2008 <br>
   - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
 - [earth-app](https://github.com/earth-app) \| 2025-Present
-  - Social Media Platform
-  - Built with Nuxt + Vue.js in the Frontend, Hono in the backend, KMP for Mobile
+  - Novelty & Intellectual Curiosity Platform
+  - Built with Nuxt + Vue.js in the Frontend, Capacitor for Mobile
+  - Uses Cloudflare Workers + Drupal/PHP for a hybrid backend, custom built CMS, and a custom API
   - Utilizes Kotlin Multiplatform for web scraping and types
 
 ---
@@ -36,17 +41,17 @@ b. 2008 <br>
 ## Skills
 
 - **Leadership & Tutoring**
-  - 5+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
+  - 6+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
   - Experience with multiple project management tools, including Jira, Trello, and Asana
   - Exceptional tutoring and mentoring experience with students and peers
   - Effective communication skills, including the ability to explain complex concepts to non-technical audiences
 - **Programming**
-  - 7+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
+  - 8+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
   - Experience with multiple frameworks, including Spring, Ktor, and Vue
   - Experience with multiple libraries, including Kandy, Lets-Plot, Clikt, and more
   - Designed a custom game engine for the terminal using C and OS-specific libraries
 - **Project Management**
-  - 8+ years of experience utilizing Git and GitHub for version control and project management
+  - 9+ years of experience utilizing Git and GitHub for version control and project management
   - Mastered in multiple project management tools, including Jira, Trello, and Asana
 
 ## Contributions
@@ -64,6 +69,14 @@ b. 2008 <br>
 
 ## Projects
 
+### [nuxtpress](https://github.com/gmitch215/nuxtpress)
+
+_2025 - Present_
+
+- Nuxt + Cloudflare Workers Blogging Software
+- Built with TypeScript, NuxtHub, and Cloudflare Workers, on top of KV/D1 SQL Storage
+- Custom API for storing, retrieving, and displaying blog posts, with a Nuxt Frontend for writing
+
 ### [cmdfx](https://github.com/gmitch215/cmdfx)
 
 _2025 - Present_
@@ -72,38 +85,12 @@ _2025 - Present_
 - Uses OS-specific libraries to create a game engine that can be used in the terminal
 - Avoids external dependencies to ensure compatibility with all systems
 
-### [kasciffy](https://github.com/gmitch215/kasciffy)
-
-_2025 - Present_
-
-- An ascii art generator written in [Kotlin Multiplatform](https://kotlinlang.org)
-- Available for CLI, Desktop, Web, and Mobile
-  - Uses [Clikt](https://github.com/ajalt/clikt) for a command-line interface
-- Converts images and videos to ascii art using a variety of characters
-
 ### [gitle](https://github.com/gmitch215/gitle)
 
 _2025 - Present_
 
 - Gradle Plugin written in [Kotlin](https://kotlinlang.org) that downloads artifacts to your own machine
 - Allows you to clone and use gradle artifacts that aren't published to an Artifact Repository, but are available over Git
-
-### [benchmarks](https://github.com/gmitch215/benchmarks)
-
-_2024 - Present_
-
-- Programming benchmarks for various languages against different problems
-- Records time spent in nanoseconds, milliseconds, or other, and outputs in a specified time
-- Written in [Kotlin](https://kotlinlang.org) to perform tests, and uses [Kandy](https://github.com/Kotlin/kandy) to create readable graphs, which uses Lets-Plot in the backend
-- Required knowledge of many different programming languages at the same time to create efficient testing
-
-### [TabroomAPI](https://github.com/gmitch215/TabroomAPI)
-
-_2024 - Present_
-
-- Library API for [tabroom.com](https://tabroom.com), a Speech & Debate platform
-- Written in [Kotlin](https://kotlinlang.org) for Multiplatform, using web scraping tools and [Ktor](https://ktor.io)
-- Proved useful during High School Debate Seasons
 
 ### [FlowX](https://github.com/gmitch215/FlowX)
 
@@ -132,6 +119,40 @@ _2024 - Present_
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
 
 ## Deprecated Projects
+
+### [MyMCP](https://github.com/gmitch215/MyMCP)
+
+_2025_
+
+- Converts OpenAPI specifications to a MCP (Model Context Protocol) server for AI agents to use
+- Built with Hono, TypeScript, and OpenAPI tools, and deployed on Cloudflare Workers
+- Used for AI Agents to interact with APIs in a standardized way, and to create custom APIs for AI Agents to use
+
+### [kasciffy](https://github.com/gmitch215/kasciffy)
+
+_2025 - 2026_
+
+- An ascii art generator written in [Kotlin Multiplatform](https://kotlinlang.org)
+- Available for CLI, Desktop, Web, and Mobile
+  - Uses [Clikt](https://github.com/ajalt/clikt) for a command-line interface
+- Converts images and videos to ascii art using a variety of characters
+
+### [TabroomAPI](https://github.com/gmitch215/TabroomAPI)
+
+_2024 - 2026_
+
+- Library API for [tabroom.com](https://tabroom.com), a Speech & Debate platform
+- Written in [Kotlin](https://kotlinlang.org) for Multiplatform, using web scraping tools and [Ktor](https://ktor.io)
+- Proved useful during High School Debate Seasons
+
+### [benchmarks](https://github.com/gmitch215/benchmarks)
+
+_2024 - 2025_
+
+- Programming benchmarks for various languages against different problems
+- Records time spent in nanoseconds, milliseconds, or other, and outputs in a specified time
+- Written in [Kotlin](https://kotlinlang.org) to perform tests, and uses [Kandy](https://github.com/Kotlin/kandy) to create readable graphs, which uses Lets-Plot in the backend
+- Required knowledge of many different programming languages at the same time to create efficient testing
 
 ### [SocketMC](https://github.com/gmitch215/SocketMC)
 

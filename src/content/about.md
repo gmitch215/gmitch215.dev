@@ -13,4 +13,4 @@ I've developed many different kinds of things, which began from my creating of d
 
 ---
 
-Copyright © 2025 Gregory. All rights reserved.
+Copyright © 2026 Gregory. All rights reserved.
