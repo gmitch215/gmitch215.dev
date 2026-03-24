@@ -7,9 +7,9 @@ My first programming experience started in late 2018 when I began working with D
 
 [Terminal Miner](https://github.com/gmitch215/Terminal-Miner), the first game I ever made in C++, is when I started branching out into all different kinds of programming languages.
 
-I work in all kinds of programming and video game design, such as with [Unreal Engine](https://unrealengine.com), [KorGE](https://korge.org), and many more. This began with my first video game company, [Calculus Games](https://calcugames.xyz).
+I've developed many different kinds of things, which began from my creating of discord bots into the development of Minecraft plugins. Slowly, I became immersed within a rich developer culture, and continue to consume feedback at a high standard to ensure quality products. I tried game development for a bit, but it never really clicked, especially as I slowly stopped playing games.However, in this waking age of Artificial Intelligence, human skill and knowledge emphasize the need for creativity in the tech space.
 
-I've developed many different kinds of things, which began from my creating of discord bots into the development of Minecraft plugins. Slowly, I became immersed within a rich developer culture, and continue to consume feedback at a high standard to ensure quality products. However, in this waking age of Artificial Intelligence, human skill and knowledge emphasize the need for creativity in the tech space. This influenced me to develop [The Earth App](https://earth-app.com), a contradictory social media platform that encourages you to go outside.
+My years in high school saw me shift toward an interest in Psychology and human connections. I still really enjoyed programming though, and wasn't ready to give up on it. Thus, I developed [The Earth App](https://earth-app.com), my first long-term prototype for helping against the mental health and loneliness epidemic in our society.
 
 ---
 
