@@ -26,7 +26,7 @@ b. 2008 <br>
 - [Team Inceptus](https://github.com/Team-Inceptus) \| 2020-2024
   - Minecraft: Java Edition development platform
   - Heavy utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
-- [Calculus Games](https://github.com/CalculusGames) \| 2024-Present
+- [Calculus Games](https://github.com/CalculusGames) \| 2024-2026
   - Game Development Studio
   - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
