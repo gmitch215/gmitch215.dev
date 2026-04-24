@@ -40,7 +40,7 @@ b. 2008 <br>
 
 ## Skills
 
-- **Leadership & Tutoring**
+- *_Leadership & Tutoring_
   - 6+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
   - Experience with multiple project management tools, including Jira, Trello, and Asana
   - Exceptional tutoring and mentoring experience with students and peers
