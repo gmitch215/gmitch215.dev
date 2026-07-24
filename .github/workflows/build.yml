@@ -36,11 +36,13 @@ jobs:
         run: bun install
       - name: Build Website
         run: bun run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Archive Site
         id: deployment
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./dist
+          path: .output/public
 
   deploy:
     if: github.event_name == 'push' && github.ref == 'refs/heads/master'
