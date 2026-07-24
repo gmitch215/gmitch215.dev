@@ -1,17 +1,16 @@
 <template>
-	<div
-		class="min-h-screen min-w-screen h-full w-full bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-white"
-	>
-		<NuxtLayout>
+	<UApp>
+		<div class="bg-default text-default flex min-h-screen w-full flex-col">
 			<NavBar />
-			<NuxtPage />
-		</NuxtLayout>
-	</div>
+			<main class="flex-1 pt-16">
+				<NuxtPage />
+			</main>
+			<Footer />
+		</div>
+	</UApp>
 </template>
 
 <script setup>
-import NavBar from './components/NavBar.vue';
-
 useHead({
 	htmlAttrs: {
 		lang: 'en'
@@ -20,33 +19,38 @@ useHead({
 		{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 		{ name: 'application-name', content: SITE_NAME },
 		{ name: 'description', content: SITE_DESCRIPTION },
-		{ name: 'keywords', content: 'gmitch215' },
 		{ name: 'author', content: PERSON_NAME },
 		{ name: 'theme-color', content: THEME_COLOR },
+		{ name: 'color-scheme', content: 'dark light' },
 		{ name: 'apple-mobile-web-app-capable', content: 'yes' },
-		{ name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+		{ name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
 		{ name: 'mobile-web-app-capable', content: 'yes' },
-		{ name: 'msapplication-TileColor', content: THEME_COLOR },
-		{ name: 'msapplication-TileImage', content: '/favicon.png' }
+		{ name: 'msapplication-TileColor', content: THEME_COLOR }
 	],
 	link: [
-		{ rel: 'icon', type: 'image/png', href: '/favicon.png' },
-		{ rel: 'apple-touch-icon', href: '/favicon.png' }
+		{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+		{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+		{ rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon-180.png' },
+		{ rel: 'manifest', href: '/site.webmanifest' }
 	]
 });
 
 useSeoMeta({
-	title: SITE_NAME,
+	titleTemplate: (title) =>
+		title ? `${title} | ${SITE_NAME}` : `${PERSON_NAME} | ${SITE_DESCRIPTION}`,
 	description: SITE_DESCRIPTION,
-	ogTitle: SITE_NAME,
+	ogTitle: `${PERSON_NAME}`,
 	ogDescription: SITE_DESCRIPTION,
-	ogImage: 'https://cdn.gmitch215.dev/gregory.png',
+	ogImage: `${SITE_URL}/og.png`,
+	ogImageWidth: 1200,
+	ogImageHeight: 630,
 	ogLocale: 'en_US',
 	ogType: 'website',
 	ogSiteName: SITE_NAME,
-	ogUrl: 'https://gmitch215.dev',
-	twitterTitle: SITE_NAME,
+	ogUrl: SITE_URL,
+	twitterTitle: PERSON_NAME,
 	twitterDescription: SITE_DESCRIPTION,
+	twitterImage: `${SITE_URL}/og.png`,
 	twitterCard: 'summary_large_image',
 	twitterCreator: '@gmitch215'
 });
