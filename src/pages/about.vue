@@ -1,37 +1,44 @@
 <template>
-	<div class="w-screen flex flex-col items-center justify-center mb-32">
-		<LazyNuxtImg
-			src="/pictures/gregory-thinking.png"
-			alt="Gregory R. Mitchell"
-			quality="90"
-			class="w-64 mb-8 rounded-lg shadow-xl shadow-red-600/50 hover:scale-110 transition-transform duration-900"
-		/>
-		<h1 class="text-2xl lg:text-4xl xl:text-5xl font-bold">About Gregory R. Mitchell</h1>
-	</div>
+	<div class="page-atmos min-h-screen">
+		<div class="mx-auto max-w-3xl px-6 py-16">
+			<ScrollReveal>
+				<div class="flex flex-col items-center text-center">
+					<NuxtImg
+						src="/pictures/gregory-thinking.png"
+						alt="Gregory R. Mitchell"
+						width="256"
+						sizes="(max-width: 640px) 60vw, 240px"
+						class="brand-glow mb-6 w-48 rounded-2xl sm:w-56"
+					/>
+					<h1 class="font-display text-3xl font-black sm:text-5xl">
+						<span class="text-gradient-brand">About Gregory</span>
+					</h1>
+				</div>
+			</ScrollReveal>
 
-	<div class="prose dark:prose-invert pb-8 w-screen">
-		<LazyContentRenderer
-			v-if="about"
-			:value="about"
-			class="pl-8 w-screen"
-		/>
-		<div
-			v-else
-			class="flex items-center justify-center w-screen h-screen"
-		>
-			<p class="text-gray-500 dark:text-gray-400">Loading...</p>
+			<ScrollReveal
+				:delay="100"
+				class="plate plate-accent mt-8 p-6 sm:p-10"
+			>
+				<div class="prose dark:prose-invert max-w-none">
+					<ContentRenderer
+						v-if="about"
+						:value="about"
+					/>
+				</div>
+			</ScrollReveal>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
-const { data: about } = await useAsyncData(
-	'about',
-	() => queryCollection('content').path('/about').first(),
-	{ server: false }
+const { data: about } = await useAsyncData('about', () =>
+	queryCollection('content').path('/about').first()
 );
 
-useHead({
-	title: 'About Gregory R. Mitchell'
+useSeoMeta({
+	title: 'About',
+	description:
+		'The person behind the code: how Gregory Mitchell went from a Discord-server hustle to building software against the loneliness epidemic.'
 });
 </script>

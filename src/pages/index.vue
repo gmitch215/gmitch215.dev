@@ -1,77 +1,192 @@
 <template>
-	<main>
-		<div class="flex flex-col items-center justify-center w-full">
-			<LazyNuxtImg
-				src="/pictures/gregory-engineering-2.png"
-				:alt="PERSON_NAME"
-				:title="PERSON_NAME"
-				quality="90"
-				class="rounded-xl shadow-2xl shadow-green-300/70 dark:shadow-green-900/70 motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-rotate-in-20 hover:scale-110 cursor-pointer duration-800 size-48 sm:size-64 md:size-80 lg:size-96"
-				style="transition-property: scale"
-			/>
-			<h1 class="font-bold text-xl md:text-2xl lg:text-4xl xl:text-6xl mt-6 mb-6">
-				{{ PERSON_NAME }}
-			</h1>
-			<h2
-				class="typewriter-[80+7s+1s] text-xs sm:text-sm lg:text-lg xl:text-xl mx-4 dark:text-primary text-dark-primary"
-			>
-				{{ SITE_DESCRIPTION }}
-			</h2>
+	<div>
+		<ClientOnly>
+			<CursorTrail />
+		</ClientOnly>
+		<JourneyHud :progress="journey" />
 
-			<div class="flex mt-4 flex-col sm:flex-row sm:mt-12">
-				<div
-					v-for="(popup, i) in popups"
-					:key="i"
-					class="bg-green-100 dark:bg-green-900 text-gray-900 dark:text-white px-4 py-2 rounded-lg m-2 shadow-lg shadow-green-300/70 dark:shadow-green-900/70 motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-delay-[5s] hover:scale-110 cursor-pointer duration-800"
-					style="transition-property: scale"
+		<div
+			ref="region"
+			class="relative"
+		>
+			<div class="pointer-events-none sticky top-0 h-screen overflow-hidden">
+				<SpaceScene :progress="journey" />
+			</div>
+
+			<div class="relative z-10 mt-[-100vh]">
+				<section
+					class="flex min-h-screen flex-col items-center justify-center px-6 pt-24 pb-16 text-center"
 				>
-					{{ popup }}
+					<img
+						:src="gravatarUrl(240)"
+						alt="Gregory R. Mitchell"
+						width="144"
+						height="144"
+						class="ring-primary/50 motion-preset-fade motion-duration-1000 mb-8 size-36 rounded-full object-cover shadow-2xl shadow-black/60 ring-4"
+					/>
+					<h1
+						class="font-display motion-preset-slide-up motion-duration-700 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
+					>
+						<span class="text-shimmer">Gregory Mitchell</span>
+					</h1>
+					<p
+						class="text-muted motion-preset-fade motion-delay-200 motion-duration-1000 mt-4 max-w-xl text-base drop-shadow-lg sm:text-xl"
+					>
+						{{ SITE_DESCRIPTION }}
+					</p>
+					<p
+						class="motion-preset-fade motion-delay-500 motion-duration-1000 mt-4 max-w-lg text-sm text-white/90 drop-shadow-lg sm:text-base"
+					>
+						{{ MISSION }}
+					</p>
+
+					<div class="mt-9 flex flex-wrap items-center justify-center gap-3">
+						<UButton
+							to="#story"
+							size="lg"
+							color="primary"
+							icon="i-lucide-rocket"
+							@click="warp()"
+							>Begin the Journey</UButton
+						>
+						<UButton
+							to="/cv"
+							size="lg"
+							color="neutral"
+							variant="outline"
+							icon="i-lucide-file-text"
+							>View CV</UButton
+						>
+						<UButton
+							to="/support"
+							size="lg"
+							color="neutral"
+							variant="ghost"
+							icon="i-lucide-heart"
+							>Support</UButton
+						>
+					</div>
+
+					<NuxtLink
+						to="#story"
+						aria-label="Scroll to story"
+						class="text-dimmed hover:text-primary absolute bottom-8 animate-bounce transition"
+					>
+						<UIcon
+							name="i-lucide-chevrons-down"
+							class="size-6"
+						/>
+					</NuxtLink>
+				</section>
+
+				<section class="mx-auto max-w-6xl px-6 py-10">
+					<div
+						class="plate plate-accent grid grid-cols-2 gap-y-10 p-8 sm:grid-cols-3 lg:grid-cols-5"
+					>
+						<StatCounter
+							v-for="s in STATS"
+							:key="s.label"
+							:value="statValue(s)"
+							:prefix="s.prefix"
+							:suffix="s.suffix"
+							:label="s.label"
+							:footnote="s.footnote"
+						/>
+					</div>
+				</section>
+
+				<div
+					id="story"
+					class="scroll-mt-16"
+				>
+					<template v-if="story">
+						<div
+							v-for="c in story"
+							:id="`chapter-${c.order}`"
+							:key="c.id ?? c.order"
+							class="scroll-mt-16"
+						>
+							<Chapter :chapter="c as any" />
+						</div>
+					</template>
 				</div>
 			</div>
-
-			<div class="flex flex-row items-center min-h-32">
-				<NuxtLink
-					v-for="(link, i) in iconLinks"
-					:key="i"
-					:to="link.url"
-					target="_blank"
-					class="relative bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white size-16 lg:size-24 xl:size-32 flex items-center justify-center px-4 py-2 rounded-lg m-4 shadow-lg shadow-gray-300/70 dark:shadow-gray-800/70 motion-opacity-in-0 motion-translate-y-in-25 motion-duration-1500 motion-delay-[6s] hover:scale-110 transition-transform duration-500"
-				>
-					<Icon
-						:name="link.icon"
-						size="4.5em"
-					/>
-				</NuxtLink>
-			</div>
 		</div>
-	</main>
+
+		<section class="mx-auto max-w-4xl px-6 py-24">
+			<ScrollReveal class="text-center">
+				<p class="text-primary font-mono text-sm tracking-widest uppercase">Telemetry</p>
+				<h2 class="font-display mt-2 text-3xl font-bold sm:text-4xl">The Curve Tells the Story</h2>
+				<p class="text-muted mx-auto mt-3 max-w-xl">
+					A trickle at eleven, a plateau near 1,800 a year through the pre-AI era, then the ceiling
+					breaks: more commits in seven months of 2026 than in any prior full year.
+				</p>
+			</ScrollReveal>
+			<ScrollReveal
+				:delay="120"
+				class="plate plate-accent mt-8 p-4 sm:p-8"
+			>
+				<CommitCurve />
+			</ScrollReveal>
+		</section>
+
+		<section class="relative mx-auto max-w-3xl px-6 pb-24 text-center">
+			<ScrollReveal>
+				<h2 class="font-display text-3xl font-bold sm:text-4xl">
+					<span class="text-gradient-brand">Keep Moving Forward.</span>
+				</h2>
+				<p class="text-muted mx-auto mt-4 max-w-xl">
+					Eleven thousand commits, and the one that matters most I have not written yet. If any of
+					this resonates, the best way to follow along is right here.
+				</p>
+				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+					<UButton
+						to="/projects"
+						size="lg"
+						color="primary"
+						icon="i-lucide-folder-git-2"
+						>Explore the Projects</UButton
+					>
+					<UButton
+						to="/support"
+						size="lg"
+						color="neutral"
+						variant="outline"
+						icon="i-lucide-heart"
+						>Support the Work</UButton
+					>
+				</div>
+			</ScrollReveal>
+		</section>
+	</div>
 </template>
 
 <script setup lang="ts">
-import { PERSON_NAME } from '~/composables/useConstants';
+import { STATS } from '~/data/timeline';
 
-const popups = ['📍 Chicago, IL', '🖱️ 8+ Years Experience', '🏃🏾 Distance Runner'];
+const { data: story } = await useAsyncData('story-chapters', () =>
+	queryCollection('story').order('order', 'ASC').all()
+);
 
-const iconLinks = [
-	{
-		name: 'Patreon',
-		url: 'https://www.patreon.com/gmitch215',
-		icon: 'logos:patreon'
-	},
-	{
-		name: 'Buy Me a Coffee',
-		url: 'https://www.buymeacoffee.com/gmitch215',
-		icon: 'cib:buy-me-a-coffee'
-	}
-];
+const { warp } = useWarp();
 
-definePageMeta({
-	htmlAttrs: {
-		lang: 'en',
-		class: 'no-overflow'
-	},
-	bodyAttrs: {
-		class: 'no-overflow'
-	}
+const gh = useGitHub();
+onMounted(() => gh.load());
+const statValue = (s: (typeof STATS)[number]) =>
+	s.label.includes('Top Library')
+		? (gh.starsFor('gmitch215/MobChip', s.value) ?? s.value)
+		: s.value;
+
+const region = ref<HTMLElement | null>(null);
+const { top, height } = useElementBounding(region);
+const { height: vh } = useWindowSize();
+const journey = computed(() => {
+	const dist = height.value - vh.value;
+	return dist > 0 ? Math.min(1, Math.max(0, -top.value / dist)) : 0;
+});
+
+useSeoMeta({
+	title: '',
+	description: `${PERSON_NAME}. ${SITE_DESCRIPTION}. ${MISSION}`
 });
 </script>
