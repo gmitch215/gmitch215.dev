@@ -54,6 +54,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    concurrency:
+      group: 'github-pages'
+      cancel-in-progress: true
+
     permissions:
       pages: write
       id-token: write
