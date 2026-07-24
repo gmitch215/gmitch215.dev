@@ -1,16 +1,204 @@
 @import 'tailwindcss';
+@import '@nuxt/ui';
 @plugin 'tailwindcss-motion';
 @config '../../../tailwind.config.ts';
 
+/* brand green scale (lime-forward accent -> deep green depth) */
+@theme static {
+	--font-sans: 'Noto Sans', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Space Grotesk', 'Noto Sans', ui-sans-serif, sans-serif;
+	--font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	--color-brand-50: #f6ffe3;
+	--color-brand-100: #eaffbf;
+	--color-brand-200: #d6ff85;
+	--color-brand-300: #bcff43;
+	--color-brand-400: #a2f213;
+	--color-brand-500: #83d000;
+	--color-brand-600: #62a000;
+	--color-brand-700: #497800;
+	--color-brand-800: #395e0a;
+	--color-brand-900: #244007;
+	--color-brand-950: #0e2100;
+}
+
 @theme {
+	/* legacy aliases kept until every component moves to brand-* */
 	--color-primary: greenyellow;
 	--color-dark-primary: darkgreen;
+	--font-title: 'Space Grotesk', 'Noto Sans', sans-serif;
 
-	--font-title: 'Noto Sans', sans-serif;
+	/* shared gradient stops (light + dark tuned via vars below) */
+	--gradient-brand: linear-gradient(135deg, var(--color-brand-400), var(--color-brand-700));
+}
+
+:root {
+	--surface-glow: color-mix(in oklab, var(--color-brand-500) 18%, transparent);
+}
+
+.dark {
+	--surface-glow: color-mix(in oklab, var(--color-brand-400) 22%, transparent);
 }
 
 html,
 body {
 	height: 100%;
 	width: 100%;
+}
+
+/* headings in the display face; prose keeps its own sizing */
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--font-display);
+	}
+}
+
+@layer utilities {
+	.text-gradient-brand {
+		background-image: linear-gradient(120deg, var(--color-brand-300), var(--color-brand-500));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
+	.text-shimmer {
+		background-image: linear-gradient(
+			100deg,
+			var(--color-brand-300),
+			var(--color-brand-500),
+			var(--color-brand-200),
+			var(--color-brand-400)
+		);
+		background-size: 220% auto;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		animation: text-shimmer 7s linear infinite;
+	}
+	.bg-brand-gradient {
+		background-image: var(--gradient-brand);
+	}
+	.brand-glow {
+		box-shadow: 0 0 40px -8px var(--surface-glow);
+	}
+}
+
+@layer components {
+	.plate {
+		border: 1px solid var(--ui-border);
+		border-radius: 1.5rem;
+		background: color-mix(in oklab, var(--ui-bg) 60%, transparent);
+		backdrop-filter: blur(18px);
+		box-shadow:
+			0 18px 50px -18px rgba(0, 0, 0, 0.6),
+			inset 0 1px 0 rgba(255, 255, 255, 0.07);
+	}
+	.plate-accent {
+		position: relative;
+		overflow: hidden;
+	}
+	.plate-accent::before {
+		content: '';
+		position: absolute;
+		inset-inline: 1.5rem;
+		top: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, var(--color-brand-400), transparent);
+		opacity: 0.7;
+	}
+	.page-atmos {
+		background-image:
+			radial-gradient(1px 1px at 20px 30px, rgba(234, 255, 240, 0.22), transparent),
+			radial-gradient(1px 1px at 130px 80px, rgba(162, 242, 19, 0.18), transparent),
+			radial-gradient(
+				circle at 12% 8%,
+				color-mix(in oklab, var(--color-brand-500) 12%, transparent),
+				transparent 42%
+			),
+			radial-gradient(
+				circle at 88% 92%,
+				color-mix(in oklab, var(--color-brand-700) 14%, transparent),
+				transparent 46%
+			);
+		background-size:
+			180px 180px,
+			200px 200px,
+			auto,
+			auto;
+		background-attachment: fixed;
+	}
+}
+
+@keyframes text-shimmer {
+	to {
+		background-position: 220% center;
+	}
+}
+
+@layer components {
+	.prose :where(h2):not(:where(.not-prose *)) {
+		padding-left: 0.75rem;
+		border-left: 3px solid var(--color-brand-400);
+	}
+	.prose :where(blockquote):not(:where(.not-prose *)) {
+		border-inline-start-color: var(--color-brand-500);
+		background: color-mix(in oklab, var(--color-brand-500) 8%, transparent);
+		border-radius: 0.5rem;
+		padding-block: 0.25rem;
+	}
+	.prose :where(hr):not(:where(.not-prose *)) {
+		border: 0;
+		height: 2px;
+		background: linear-gradient(90deg, transparent, var(--color-brand-500), transparent);
+	}
+	.prose :where(:not(pre) > code):not(:where(.not-prose *)) {
+		color: var(--color-brand-300);
+		background: color-mix(in oklab, var(--color-brand-500) 14%, transparent);
+		border-radius: 0.3rem;
+		padding: 0.1rem 0.35rem;
+	}
+	.prose :where(:not(pre) > code):not(:where(.not-prose *))::before,
+	.prose :where(:not(pre) > code):not(:where(.not-prose *))::after {
+		content: '';
+	}
+	.prose :where(ul > li):not(:where(.not-prose *))::marker {
+		color: var(--color-brand-400);
+	}
+	.prose :where(strong):not(:where(.not-prose *)) {
+		color: var(--color-brand-300);
+	}
+}
+
+/* print: strip chrome + decoration, keep the CV body */
+@media print {
+	header,
+	footer,
+	.no-print,
+	.noPrint {
+		display: none !important;
+	}
+	main {
+		padding-top: 0 !important;
+	}
+	.cv-page {
+		max-width: none;
+		padding: 0;
+	}
+	:root {
+		color-scheme: light;
+	}
+}
+
+/* respect reduced-motion globally (adaptive engine also honors this) */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
 }
