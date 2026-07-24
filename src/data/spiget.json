@@ -1,0 +1,97 @@
+{
+  "97115": {
+    "name": "[1.18.1] QuantumPen Lite",
+    "downloads": 226,
+    "average": 5,
+    "count": 1,
+    "vFirst": "1.18",
+    "vLast": "1.18",
+    "premium": false,
+    "review": {
+      "message": "Quite a good one. I can't think of a time when I would genuinely use it, but the idea is nice.",
+      "rating": 5
+    }
+  },
+  "97612": {
+    "name": "SilverSkillz",
+    "downloads": 758,
+    "average": 5,
+    "count": 1,
+    "vFirst": "1.17",
+    "vLast": "1.18",
+    "premium": false,
+    "review": {
+      "message": "The plugin in general is good, it gives a more RPG touch to your server, however, some things that could be added: - File to be able to translate the messages. - Option to raise or lower the attributes gained by leveling up a skill. - To be",
+      "rating": 5
+    }
+  },
+  "98760": {
+    "name": "MessagesX | Broadcast Tool",
+    "downloads": 129,
+    "average": 0,
+    "count": 0,
+    "vFirst": "1.18",
+    "vLast": "1.18",
+    "premium": false,
+    "review": null
+  },
+  "99282": {
+    "name": "PlutoChat",
+    "downloads": 170,
+    "average": 0,
+    "count": 0,
+    "vFirst": "1.13",
+    "vLast": "1.18",
+    "premium": false,
+    "review": null
+  },
+  "100503": {
+    "name": "Novaconomy",
+    "downloads": 6766,
+    "average": 5,
+    "count": 10,
+    "vFirst": "1.8",
+    "vLast": "1.20",
+    "premium": false,
+    "review": {
+      "message": "Very flexible and customizable plugin! I have multiple currencies setup, and I love it! Thank you!!! A++",
+      "rating": 5
+    }
+  },
+  "101407": {
+    "name": "Lightning | Execute Spigot from the Browser",
+    "downloads": 83,
+    "average": 0,
+    "count": 0,
+    "vFirst": "1.18",
+    "vLast": "1.18",
+    "premium": false,
+    "review": null
+  },
+  "106805": {
+    "name": "StarCosmetics",
+    "downloads": 2367,
+    "average": 4.3,
+    "count": 3,
+    "vFirst": "1.9",
+    "vLast": "1.20",
+    "premium": false,
+    "review": {
+      "message": "Hello, the plugin works perfectly, my only problem is that my server is minigames, so people can only pick things up when breaking items, you could put a money system, and a system that the plugin would work only in such a world, type VAULT",
+      "rating": 5
+    }
+  },
+  "113155": {
+    "name": "BattleCards",
+    "downloads": 1014,
+    "average": 4.6,
+    "count": 5,
+    "vFirst": "1.8",
+    "vLast": "1.20",
+    "premium": false,
+    "review": {
+      "message": "First to download and install, very good, need a written guide on how to level up, and combine, and add items to cards.",
+      "rating": 5
+    }
+  }
+}
