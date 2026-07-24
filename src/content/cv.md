@@ -5,18 +5,34 @@ b. 2008 <br>
 [🖥️ github.com/gmitch215](https://github.com/gmitch215) <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
+::callout{icon="i-lucide-badge-check" title="At a Glance"}
+11,491 commits since 2019. An 88-star top library. 10+ languages shipped in production. Published to 5 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, and Homebrew.
+::
+
 ---
 
-## Sofware Development
+## Software Development
 
 - High Quality Software Development with over **7** years of industry experience, since 2019
-- Over **3,300** hours in total programming experience, including:
+- Over **3,900** hours in total programming experience, including:
   - **1,200+** hours in Java
-  - **750+** hours in Kotlin
-  - **250+** hours in TypeScript
+  - **800+** hours in Kotlin
+  - **450+** hours in TypeScript
   - **100+** hours in C
 - Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
 - Fan of JetBrains IDEs (such as IntelliJ IDEA and WebStorm), along with Visual Studio Code, where I make JVM, JS, and other framework-related projects
+
+## Education
+
+- [Dartmouth College](https://home.dartmouth.edu) \| Class of 2030
+  - B.A. in Computer Science and Psychology
+  - Aimed at the mental health and loneliness crisis
+- High School Graduate \| 2026
+
+## Awards
+
+- **Congressional App Challenge** \| 1st Place, Illinois 2nd District \| 2025
+  - Awarded for [The Earth App](https://earth-app.com), a platform built to fight the loneliness and mental-health epidemic
 
 ## Business
 
@@ -25,7 +41,7 @@ b. 2008 <br>
   - Uses Frameworks like Jekyll and Gulp
 - [Team Inceptus](https://github.com/Team-Inceptus) \| 2020-2024
   - Minecraft: Java Edition development platform
-  - Heavy utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
+  - Heavily utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
 - [Calculus Games](https://github.com/CalculusGames) \| 2024-2026
   - Game Development Studio
   - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
@@ -41,17 +57,17 @@ b. 2008 <br>
 ## Skills
 
 - **Leadership & Tutoring**
-  - 6+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
+  - 7+ years of experience leading teams of developers, including Team Inceptus and Calculus Games
   - Experience with multiple project management tools, including Jira, Trello, and Asana
   - Exceptional tutoring and mentoring experience with students and peers
   - Effective communication skills, including the ability to explain complex concepts to non-technical audiences
 - **Programming**
-  - 8+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
+  - 9+ years of experience in dozens of languages, including Java, Kotlin, C/C++, JavaScript, and more
   - Experience with multiple frameworks, including Spring, Ktor, and Vue
   - Experience with multiple libraries, including Kandy, Lets-Plot, Clikt, and more
   - Designed a custom game engine for the terminal using C and OS-specific libraries
 - **Project Management**
-  - 9+ years of experience utilizing Git and GitHub for version control and project management
+  - 8+ years of experience utilizing Git and GitHub for version control and project management
   - Mastered in multiple project management tools, including Jira, Trello, and Asana
 
 ## Contributions
@@ -63,11 +79,35 @@ b. 2008 <br>
 - [**CodeMC**](https://codemc.io) \| 2024-Present
   - Designed and developed the [Backend API](https://github.com/CodeMC/API) used to automate the developer process, written in Kotlin
 
-<div class="noPrint">
-
 ---
 
+::no-print
+
 ## Projects
+
+### [edgeport](https://github.com/gmitch215/edgeport)
+
+_2026 - Present_
+
+- A from-scratch TCP library for [Cloudflare Workers](https://workers.cloudflare.com), written in TypeScript
+- Ships clients for SSH, SFTP, SMTP, IMAP, POP3, WebSocket, NATS, MQTT, STOMP, FTP, LDAP, and Syslog
+- Tested against real Dockerized servers and published to npm
+
+### [MyLoRA](https://github.com/gmitch215/MyLoRA)
+
+_2026 - Present_
+
+- A self-hosted MLOps control plane for fine-tuning LoRA adapters
+- Trains on a home RTX 4070 over an SSH tunnel, driven from a Cloudflare Workers UI
+- Built with TypeScript and deployed on Cloudflare Workers
+
+### [MyMCP](https://github.com/gmitch215/MyMCP)
+
+_2025 - Present_
+
+- Converts OpenAPI specifications into a MCP (Model Context Protocol) server for AI agents to use
+- Built with Hono, TypeScript, and OpenAPI tools, and deployed on Cloudflare Workers
+- Lets AI agents interact with existing APIs in a standardized way
 
 ### [nuxtpress](https://github.com/gmitch215/nuxtpress)
 
@@ -87,14 +127,14 @@ _2025 - Present_
 
 ### [gitle](https://github.com/gmitch215/gitle)
 
-_2025 - Present_
+_2024 - Present_
 
 - Gradle Plugin written in [Kotlin](https://kotlinlang.org) that downloads artifacts to your own machine
 - Allows you to clone and use gradle artifacts that aren't published to an Artifact Repository, but are available over Git
 
 ### [FlowX](https://github.com/gmitch215/FlowX)
 
-_2024 - Present_
+_2024 - 2025_
 
 - Fork of [flower](https://github.com/Ashwagandhae/debate-flow) with some improvements I find helpful
 - Uses Svelte and TypeScript, deployed with Vercel
@@ -110,27 +150,19 @@ _2024 - Present_
 
 ### [LevelZ File Format](https://github.com/LevelZ-File)
 
-_2024 - Present_
+_2024_
 
 - Game Level Format used for designing Video Game Levels
 - Supports 2D and 3D Format
-- Includes IDE Plugins, Mutli-Language Bindings & Parsers
+- Includes IDE Plugins, Multi-Language Bindings & Parsers
   - Java, Kotlin, JavaScript, C, C++, and Python
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
 
 ## Deprecated Projects
 
-### [MyMCP](https://github.com/gmitch215/MyMCP)
-
-_2025_
-
-- Converts OpenAPI specifications to a MCP (Model Context Protocol) server for AI agents to use
-- Built with Hono, TypeScript, and OpenAPI tools, and deployed on Cloudflare Workers
-- Used for AI Agents to interact with APIs in a standardized way, and to create custom APIs for AI Agents to use
-
 ### [kasciffy](https://github.com/gmitch215/kasciffy)
 
-_2025 - 2026_
+_2024 - 2026_
 
 - An ascii art generator written in [Kotlin Multiplatform](https://kotlinlang.org)
 - Available for CLI, Desktop, Web, and Mobile
@@ -173,7 +205,7 @@ _2023_
 
 ### [BattleCards](https://github.com/gmitch215/BattleCards)
 
-_2023 - 2024_
+_2022 - 2024_
 
 - [Kotlin](https://kotlinlang.org) Project that allows you to summon "cards" to fight with and for you in the popular video game Minecraft, inspired by the stands from [JoJo's Bizarre Adventure](https://en.wikipedia.org/wiki/JoJo%27s_Bizarre_Adventure)
 - Uses JVM Annotations to reduce boilerplate and duplicated code, with the [Spigot API](https://spigotmc.org)
@@ -189,7 +221,7 @@ _2023_
 
 ### [PlasmaEnchants](https://github.com/Team-Inceptus/PlasmaEnchants)
 
-_2023 - 2024_
+_2022 - 2024_
 
 - A very lightweight, simple, custom enchantments plugin for SpigotMC, and one of the first plugins I worked on to have [Kotlin Development](http://kotlinlang.org/)
 - Uses the [Spigot API](https://spigotmc.org) and [Kotlin](https://kotlinlang.org) to create a simple, yet effective plugin for Minecraft: Java Edition 1.14 and above without using NMS
@@ -204,7 +236,7 @@ _2023 - 2024_
 
 ### [StarCosmetics](https://github.com/gmitch215/StarCosmetics)
 
-_2023 - 2024_
+_2022 - 2024_
 
 - A plugin which allows you to freely express yourself through a wide range of cosmetics available after completing certain tasks.
 - Made in Java with the [Spigot API](https://spigotmc.org).
@@ -216,8 +248,8 @@ _2022 - 2024_
 
 - A Minecraft: Java Edition API wrapper tool that makes it easy and simple to change the default AI, actions, schedules, data, and other aspects of any entity.
 - Made in Java with the [Spigot API](https://spigotmc.org).
-- Required the use of the undocumented and unexplored parts of the Spigot API and the obfsucated Minecraft code itself.
-- An extremely popular project with over 75 stars
+- Required the use of the undocumented and unexplored parts of the Spigot API and the obfuscated Minecraft code itself.
+- An extremely popular project with over 88 stars
 
 ### [Novaconomy](https://github.com/Team-Inceptus/Novaconomy)
 
@@ -231,8 +263,8 @@ _2021 - 2024_
 
 _2022_
 
-- The first plugin that I listed, that is sill freely available to download on my [SpigotMC Plugin Resources](https://www.spigotmc.org/members/gamercoder215.1229877/#resources).
-- Allows you to manually modify and send Packets to players, fabricating different server events for educational, fun, and adniminstrator-related purposes
+- The first plugin that I listed, that is still freely available to download on my [SpigotMC Plugin Resources](https://www.spigotmc.org/members/gamercoder215.1229877/#resources).
+- Allows you to manually modify and send Packets to players, fabricating different server events for educational, fun, and administrator-related purposes
 - Built in Java with the [Spigot API](https://spigotmc.org) and NMS for MC 1.18.2, this is the first project of many.
 
 ### [nodejs-notebook](https://github.com/brightplum/nodejs-notebook)
@@ -249,4 +281,4 @@ _2020 - 2022_
 - This Discord Bot was a personal bot for a [HypixelMC](https://hypixel.net) Guild called "TheNoobyGods," which I ran before founding Team Inceptus.
 - Interacts with the [Discord API](https://discord.com/developers/docs/intro), and [mineflayer](https://github.com/PrismarineJS/mineflayer), a JS Framework that allowed you to remotely control an in-game Minecraft Account with code
 
-</div>
+::
