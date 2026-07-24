@@ -1,102 +1,178 @@
 <template>
-	<div
-		id="navbar"
-		class="flex items-center p-4 w-full border-b-6 mb-8 bg-green-100 border-b-green-200 dark:bg-green-900 dark:border-b-green-950"
+	<header
+		class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+		:class="
+			solid
+				? 'border-default bg-default/80 border-b shadow-sm backdrop-blur-md'
+				: 'border-b border-transparent'
+		"
 	>
-		<div class="flex items-center">
+		<nav class="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4 sm:px-6">
 			<NuxtLink
 				to="/"
-				class="text-2xl font-bold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+				class="group flex items-center gap-2.5"
+				aria-label="Home"
 			>
-				<NuxtImg
-					src="/favicon.png"
-					alt="Logo"
-					class="hidden xl:inline-block size-12 mr-2 rounded-full border-black dark:border-white border-2"
+				<UAvatar
+					:src="gravatarUrl(80)"
+					alt="Gregory Mitchell"
+					size="sm"
+					class="ring-primary/40 group-hover:ring-primary ring-2 ring-offset-2 ring-offset-transparent transition"
 				/>
-				{{ SITE_NAME }}
+				<span class="font-display text-highlighted text-lg font-bold tracking-tight">
+					{{ SITE_NAME }}
+				</span>
 			</NuxtLink>
-			<div class="ml-2 sm:ml-4 md:ml-8 lg:ml-24 justify-center text-xs md:text-sm xl:text-xl flex">
-				<NuxtLink
-					v-for="(link, i) in links"
-					:key="i"
-					:title="link.name"
+
+			<div class="ml-4 hidden items-center gap-1 lg:flex">
+				<UButton
+					v-for="link in NAV_LINKS"
+					:key="link.url"
 					:to="link.url"
-					:target="link.external ? '_blank' : '_self'"
-					class="mx-1 md:mx-2 lg:mx-6 xl:mx-8 font-semibold text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+					:target="link.external ? '_blank' : undefined"
+					:rel="link.external ? 'noopener noreferrer' : undefined"
+					variant="ghost"
+					size="sm"
+					:color="isActive(link.url) ? 'primary' : 'neutral'"
+					:class="isActive(link.url) ? 'font-semibold' : ''"
 				>
 					{{ link.name }}
-				</NuxtLink>
+					<UIcon
+						v-if="link.external"
+						name="i-lucide-arrow-up-right"
+						class="size-3 opacity-60"
+					/>
+				</UButton>
 			</div>
-		</div>
 
-		<div class="ml-auto space-x-4 hidden sm:flex">
-			<NuxtLink
-				v-for="(social, i) in socials"
-				:key="i"
-				:to="social.url"
-				:title="social.name"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="md:mx-2 lg:mx-4 xl:mx-6 text-gray-900 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 transition-colors text-xl sm:text-2xl md:text-3xl lg:text-4xl"
-			>
-				<Icon
-					:name="social.icon"
-					class="hover:scale-110 transition-transform duration-400"
+			<div class="ml-auto flex items-center gap-1">
+				<UButton
+					to="https://github.com/gmitch215"
+					target="_blank"
+					rel="noopener noreferrer"
+					color="neutral"
+					variant="ghost"
+					aria-label="GitHub"
+					class="hidden sm:inline-flex"
+				>
+					<Icon
+						name="uil:github"
+						class="size-5"
+					/>
+				</UButton>
+
+				<ClientOnly>
+					<QualityToggle />
+					<template #fallback>
+						<div class="size-8" />
+					</template>
+				</ClientOnly>
+
+				<ClientOnly>
+					<UColorModeButton />
+					<template #fallback>
+						<div class="size-8" />
+					</template>
+				</ClientOnly>
+
+				<UButton
+					color="primary"
+					variant="solid"
+					size="sm"
+					to="/support"
+					class="ml-1 hidden md:inline-flex"
+					icon="i-lucide-heart"
+				>
+					Support
+				</UButton>
+
+				<UButton
+					color="neutral"
+					variant="ghost"
+					icon="i-lucide-menu"
+					class="lg:hidden"
+					aria-label="Open Menu"
+					@click="open = true"
 				/>
-			</NuxtLink>
-		</div>
-	</div>
+			</div>
+		</nav>
+
+		<USlideover
+			v-model:open="open"
+			title="gmitch215"
+			side="right"
+		>
+			<template #body>
+				<div class="flex flex-col gap-1">
+					<UButton
+						v-for="link in NAV_LINKS"
+						:key="link.url"
+						:to="link.url"
+						:target="link.external ? '_blank' : undefined"
+						:rel="link.external ? 'noopener noreferrer' : undefined"
+						variant="ghost"
+						size="lg"
+						block
+						class="justify-start"
+						:color="isActive(link.url) ? 'primary' : 'neutral'"
+						:icon="link.icon"
+					>
+						{{ link.name }}
+					</UButton>
+
+					<UButton
+						color="primary"
+						variant="solid"
+						size="lg"
+						block
+						to="/support"
+						icon="i-lucide-heart"
+						class="mt-2"
+					>
+						Support the Work
+					</UButton>
+
+					<div class="border-default mt-4 flex items-center justify-between border-t pt-4">
+						<div class="flex items-center gap-3">
+							<NuxtLink
+								v-for="s in SOCIALS"
+								:key="s.name"
+								:to="s.url"
+								target="_blank"
+								rel="noopener noreferrer"
+								:aria-label="s.name"
+								class="text-muted hover:text-primary transition"
+							>
+								<Icon
+									:name="s.icon!"
+									class="size-5"
+								/>
+							</NuxtLink>
+						</div>
+						<div class="flex items-center gap-1">
+							<QualityToggle />
+							<UColorModeButton />
+						</div>
+					</div>
+				</div>
+			</template>
+		</USlideover>
+	</header>
 </template>
 
 <script setup lang="ts">
-const links = [
-	{
-		name: 'Blog',
-		url: 'https://gmitch215.blog',
-		external: true
-	},
-	{
-		name: 'CV',
-		url: '/cv',
-		external: false
-	},
-	{
-		name: 'Commissions',
-		url: '/commissions',
-		external: false
-	},
-	{
-		name: 'About',
-		url: '/about',
-		external: false
-	}
-];
+import { useWindowScroll } from '@vueuse/core';
 
-const socials = [
-	{
-		name: 'GitHub',
-		icon: 'uil:github',
-		url: 'https://github.com/gmitch215'
-	},
-	{
-		name: 'Instagram',
-		icon: 'uil:instagram',
-		url: 'https://instagram.com/gmitch215'
-	},
-	{
-		name: 'Discord',
-		icon: 'ic:baseline-discord',
-		url: 'https://discord.com/users/572173428086538270'
-	},
-	{
-		name: 'Twitter',
-		icon: 'uil:twitter',
-		url: 'https://x.com/gmitch215'
-	},
-	{
-		name: 'LinkedIn',
-		icon: 'uil:linkedin',
-		url: 'https://www.linkedin.com/in/gmitch215/'
-	}
-];
+const route = useRoute();
+const { y } = useWindowScroll();
+const open = ref(false);
+
+const solid = computed(() => y.value > 24 || route.path !== '/');
+
+const isActive = (url: string) => !url.startsWith('http') && route.path === url;
+
+watch(
+	() => route.path,
+	() => (open.value = false)
+);
 </script>
