@@ -39,7 +39,7 @@ const PRESETS: Record<Tier, QualitySettings> = {
 		render3D: true,
 		shaderBg: false,
 		postFX: false,
-		dprCap: 1.25,
+		dprCap: 1.1,
 		globePoints: 3800,
 		particleScale: 0.6,
 		antialias: true
@@ -48,7 +48,7 @@ const PRESETS: Record<Tier, QualitySettings> = {
 		render3D: true,
 		shaderBg: true,
 		postFX: false,
-		dprCap: 1.5,
+		dprCap: 1.35,
 		globePoints: 7000,
 		particleScale: 0.85,
 		antialias: true
@@ -57,7 +57,7 @@ const PRESETS: Record<Tier, QualitySettings> = {
 		render3D: true,
 		shaderBg: true,
 		postFX: true,
-		dprCap: 2,
+		dprCap: 1.5,
 		globePoints: 12000,
 		particleScale: 1,
 		antialias: true

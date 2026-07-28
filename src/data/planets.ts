@@ -1,4 +1,4 @@
-import type { Surface } from '~/utils/planetTextures';
+export type Surface = 'rock' | 'grass' | 'gas' | 'metal' | 'lava' | 'energy' | 'islands' | 'earth';
 
 export interface PlanetConfig {
 	order: number;

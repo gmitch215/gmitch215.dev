@@ -9,9 +9,9 @@ import * as THREE from 'three';
 const { track } = useDisposables();
 
 const specs = [
-	{ c: 'rgba(73,120,0,0.5)', p: [-32, 10, -95], s: 75 },
-	{ c: 'rgba(43,60,150,0.4)', p: [36, -16, -125], s: 95 },
-	{ c: 'rgba(120,40,120,0.3)', p: [12, 26, -155], s: 85 }
+	{ c: 'rgba(73,120,0,0.34)', p: [-30, 12, -100], s: 58 },
+	{ c: 'rgba(43,60,150,0.26)', p: [34, -16, -140], s: 70 },
+	{ c: 'rgba(120,40,120,0.16)', p: [12, 26, -172], s: 52 }
 ];
 const group = new THREE.Group();
 const sprites: THREE.Sprite[] = [];
