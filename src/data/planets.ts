@@ -3,6 +3,8 @@ export type Surface = 'rock' | 'grass' | 'gas' | 'metal' | 'lava' | 'energy' | '
 export interface PlanetConfig {
 	order: number;
 	name: string;
+	era: string;
+	year: string;
 	surface: Surface;
 	color: string;
 	emissive: string;
@@ -29,6 +31,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 1,
 		name: 'Genesis',
+		era: 'Origin',
+		year: '2019',
 		surface: 'rock',
 		color: '#6b6f5c',
 		emissive: '#0a0f06',
@@ -44,6 +48,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 2,
 		name: 'Cubehaven',
+		era: 'Beginnings',
+		year: '2021',
 		surface: 'grass',
 		color: '#5aa84b',
 		emissive: '#0e2a10',
@@ -58,6 +64,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 3,
 		name: 'Forge',
+		era: 'Craftsman',
+		year: '2022',
 		surface: 'gas',
 		color: '#c9863f',
 		emissive: '#3a1e08',
@@ -74,6 +82,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 4,
 		name: 'Anvil',
+		era: 'Toolmaker',
+		year: '2023',
 		surface: 'metal',
 		color: '#9aa7b4',
 		emissive: '#0e2100',
@@ -88,6 +98,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 5,
 		name: 'Polyglot',
+		era: 'Breadth',
+		year: '2024',
 		surface: 'islands',
 		color: '#2fa89a',
 		emissive: '#0a2b28',
@@ -103,6 +115,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 6,
 		name: 'Ignition',
+		era: 'Architect',
+		year: '2025',
 		surface: 'lava',
 		color: '#ffcf8a',
 		emissive: '#ff9a3c',
@@ -118,6 +132,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 7,
 		name: 'Velocity',
+		era: 'Force-Multiplier',
+		year: '2026',
 		surface: 'energy',
 		color: '#bcff43',
 		emissive: '#a2f213',
@@ -134,6 +150,8 @@ export const PLANETS: PlanetConfig[] = [
 	{
 		order: 8,
 		name: 'Earth',
+		era: 'Mission',
+		year: 'Now',
 		surface: 'earth',
 		color: '#2b7fd4',
 		emissive: '#08351f',

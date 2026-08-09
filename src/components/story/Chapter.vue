@@ -24,6 +24,17 @@
 						chapter.era
 					}}</span>
 					<span
+						v-if="planet"
+						class="text-dimmed inline-flex items-center gap-1.5 font-mono text-xs"
+						:title="`This era is the planet ${planet.name}`"
+					>
+						<span
+							class="size-2 rounded-full"
+							:style="{ background: planet.color }"
+						/>
+						{{ planet.name }}
+					</span>
+					<span
 						v-if="chapter.commits"
 						class="text-dimmed ml-auto font-mono text-xs"
 						>{{ chapter.commits.toLocaleString('en-US') }} commits</span
@@ -47,7 +58,7 @@
 				<NuxtImg
 					v-if="chapter.image"
 					:src="chapter.image"
-					:alt="chapter.era"
+					:alt="`Gregory Mitchell, ${chapter.era} era (${chapter.year})`"
 					sizes="(max-width: 640px) 88vw, 560px"
 					class="mt-5 w-full rounded-xl border border-white/10 object-cover"
 					:class="finale ? 'mx-auto max-w-md' : ''"
@@ -86,6 +97,8 @@
 </template>
 
 <script setup lang="ts">
+import { PLANETS } from '~/data/planets';
+
 interface Flagship {
 	name: string;
 	url: string;
@@ -106,4 +119,5 @@ interface StoryDoc {
 const props = defineProps<{ chapter: StoryDoc & Record<string, unknown> }>();
 const flip = computed(() => props.chapter.order % 2 === 0);
 const finale = computed(() => props.chapter.era === 'Mission' || props.chapter.year === 'Now');
+const planet = computed(() => PLANETS.find((p) => p.order === props.chapter.order));
 </script>

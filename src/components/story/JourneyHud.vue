@@ -10,8 +10,8 @@
 				v-for="p in PLANETS"
 				:key="p.order"
 				type="button"
-				class="group relative flex size-4 items-center justify-center"
-				:aria-label="`${p.order}. ${p.name}`"
+				class="group relative flex size-6 items-center justify-center"
+				:aria-label="`${p.order}. ${p.name} - ${p.era} ${p.year}`"
 				@click="go(p.order)"
 			>
 				<span
@@ -21,7 +21,8 @@
 				<span
 					class="border-default bg-default/90 text-highlighted pointer-events-none absolute right-7 rounded-md border px-2 py-0.5 text-xs whitespace-nowrap opacity-0 transition group-hover:opacity-100"
 				>
-					{{ p.name }}
+					<span class="text-highlighted">{{ p.name }}</span>
+					<span class="text-dimmed">{{ p.era }} {{ p.year }}</span>
 				</span>
 			</button>
 		</div>
