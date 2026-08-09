@@ -115,6 +115,14 @@
 				<span class="text-gradient-brand font-medium">Keep Moving Forward.</span>
 				<span aria-hidden="true">&middot;</span>
 				<span>Built with Nuxt, three.js &amp; no sleep</span>
+				<span aria-hidden="true">&middot;</span>
+				<a
+					href="https://gist.github.com/gmitch215/cf4a7376e66e835c7b8a53b85a8713d5"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="hover:text-primary font-mono transition"
+					>a poem in c</a
+				>
 			</p>
 		</div>
 	</footer>

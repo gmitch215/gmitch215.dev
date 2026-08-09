@@ -1,8 +1,16 @@
 <template>
 	<UApp>
 		<div class="bg-default text-default flex min-h-screen w-full flex-col">
+			<a
+				href="#main"
+				class="focus:bg-primary focus:text-inverted sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:px-3 focus:py-2 focus:font-medium"
+				>Skip to Content</a
+			>
 			<NavBar />
-			<main class="flex-1 pt-16">
+			<main
+				id="main"
+				class="flex-1 pt-16"
+			>
 				<NuxtPage />
 			</main>
 			<Footer />
