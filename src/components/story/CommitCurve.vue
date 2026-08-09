@@ -115,6 +115,16 @@
 					>
 						{{ b.era.year }}
 					</text>
+					<text
+						v-if="b.bright"
+						:x="b.cx"
+						:y="baseline + 34"
+						text-anchor="middle"
+						class="fill-current text-[10px]"
+						fill-opacity="0.55"
+					>
+						7 mo YTD
+					</text>
 					<rect
 						:x="padL + slot * b.i"
 						:y="padT"
@@ -125,6 +135,29 @@
 				</g>
 			</g>
 		</svg>
+
+		<table class="sr-only">
+			<caption>
+				Commits per year, 2019 to 2026 (2026 is the first seven months only)
+			</caption>
+			<thead>
+				<tr>
+					<th>Year</th>
+					<th>Era</th>
+					<th>Commits</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr
+					v-for="e in ERAS"
+					:key="e.year"
+				>
+					<td>{{ e.year }}{{ e.year === 2026 ? ' (7 mo)' : '' }}</td>
+					<td>{{ e.era }}</td>
+					<td>{{ e.commits.toLocaleString('en-US') }}</td>
+				</tr>
+			</tbody>
+		</table>
 
 		<Transition name="fade">
 			<div
