@@ -28,7 +28,6 @@
 				<button
 					v-for="p in filtered"
 					:key="p.id ?? (p.name as string)"
-					v-tilt
 					type="button"
 					class="group bg-default flex flex-col rounded-2xl border p-5 text-left transition-colors"
 					:class="

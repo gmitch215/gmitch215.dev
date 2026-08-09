@@ -40,6 +40,9 @@
 	--surface-glow: color-mix(in oklab, var(--color-brand-400) 22%, transparent);
 }
 
+html {
+	scroll-padding-top: 5rem;
+}
 html,
 body {
 	height: 100%;
@@ -54,28 +57,19 @@ body {
 	h4 {
 		font-family: var(--font-display);
 	}
+	:focus-visible {
+		outline: 2px solid var(--color-brand-400);
+		outline-offset: 2px;
+		border-radius: 2px;
+	}
 }
 
 @layer utilities {
 	.text-gradient-brand {
-		background-image: linear-gradient(120deg, var(--color-brand-300), var(--color-brand-500));
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
+		color: var(--color-brand-700);
 	}
-	.text-shimmer {
-		background-image: linear-gradient(
-			100deg,
-			var(--color-brand-300),
-			var(--color-brand-500),
-			var(--color-brand-200),
-			var(--color-brand-400)
-		);
-		background-size: 220% auto;
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
-		animation: text-shimmer 7s linear infinite;
+	.dark .text-gradient-brand {
+		color: var(--color-brand-300);
 	}
 	.bg-brand-gradient {
 		background-image: var(--gradient-brand);
@@ -88,12 +82,10 @@ body {
 @layer components {
 	.plate {
 		border: 1px solid var(--ui-border);
-		border-radius: 1.5rem;
-		background: color-mix(in oklab, var(--ui-bg) 60%, transparent);
-		backdrop-filter: blur(18px);
-		box-shadow:
-			0 18px 50px -18px rgba(0, 0, 0, 0.6),
-			inset 0 1px 0 rgba(255, 255, 255, 0.07);
+		border-radius: 1rem;
+		background: color-mix(in oklab, var(--ui-bg) 90%, transparent);
+		backdrop-filter: blur(6px);
+		box-shadow: 0 8px 24px -20px rgba(0, 0, 0, 0.5);
 	}
 	.plate-accent {
 		position: relative;
@@ -128,12 +120,6 @@ body {
 			auto,
 			auto;
 		background-attachment: fixed;
-	}
-}
-
-@keyframes text-shimmer {
-	to {
-		background-position: 220% center;
 	}
 }
 

@@ -14,9 +14,9 @@ const COLORS: Record<string, string> = {
 	Swift: '#f05138',
 	HTML: '#e34c26',
 	CSS: '#8a63d2',
-	'Multi-language': '#a2f213'
+	'Multi-language': '#cbd5e1'
 };
 
 export function languageColor(name: string): string {
-	return COLORS[name] ?? '#83d000';
+	return COLORS[name] ?? '#94a3b8';
 }

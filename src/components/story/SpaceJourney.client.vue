@@ -42,8 +42,8 @@ const { settings, tier } = useAdaptiveQuality();
 
 const OCTAVES: Record<string, number> = { ultra: 6, high: 5, medium: 4, low: 3, off: 3 };
 const octaves = computed(() => OCTAVES[tier.value] ?? 4);
-const starCount = computed(() => Math.round(2400 * (settings.value.particleScale || 0.4)));
-const cometCount = computed(() => (tier.value === 'low' ? 1 : tier.value === 'medium' ? 2 : 3));
+const starCount = computed(() => Math.round(1400 * (settings.value.particleScale || 0.4)));
+const cometCount = computed(() => (tier.value === 'ultra' ? 2 : 1));
 const progress = computed(() => props.progress);
 
 const { x: mx, y: my } = useMouse({ type: 'client' });

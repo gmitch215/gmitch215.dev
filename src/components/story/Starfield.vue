@@ -19,7 +19,7 @@ for (let i = 0; i < n; i++) {
 	pos[i * 3] = (Math.random() - 0.5) * 320;
 	pos[i * 3 + 1] = (Math.random() - 0.5) * 220;
 	pos[i * 3 + 2] = 40 - Math.random() * 280;
-	c.copy(Math.random() < 0.14 ? green : white).multiplyScalar(0.45 + Math.random() * 0.55);
+	c.copy(Math.random() < 0.08 ? green : white).multiplyScalar(0.35 + Math.random() * 0.4);
 	col[i * 3] = c.r;
 	col[i * 3 + 1] = c.g;
 	col[i * 3 + 2] = c.b;
@@ -40,11 +40,11 @@ const material = track(
 				64
 			)
 		),
-		size: 1.1,
+		size: 0.85,
 		sizeAttenuation: true,
 		vertexColors: true,
 		transparent: true,
-		opacity: 0.95,
+		opacity: 0.6,
 		depthWrite: false,
 		blending: THREE.AdditiveBlending
 	})
@@ -57,7 +57,7 @@ onBeforeRender(({ delta }) => {
 	const boost = warping.value ? 24 : 1;
 	points.rotation.y += delta * 0.006 * boost;
 	points.rotation.x += delta * 0.002 * boost;
-	const targetSize = warping.value ? 2.8 : 1.1;
+	const targetSize = warping.value ? 2.2 : 0.85;
 	material.size += (targetSize - material.size) * Math.min(1, delta * 6);
 });
 </script>

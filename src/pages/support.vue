@@ -27,7 +27,6 @@
 					:delay="i * 100"
 				>
 					<NuxtLink
-						v-tilt
 						:to="link.url"
 						target="_blank"
 						rel="noopener noreferrer"

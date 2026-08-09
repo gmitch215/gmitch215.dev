@@ -1,8 +1,5 @@
 <template>
 	<div>
-		<ClientOnly>
-			<CursorTrail />
-		</ClientOnly>
 		<JourneyHud :progress="journey" />
 
 		<div
@@ -22,22 +19,29 @@
 						alt="Gregory R. Mitchell"
 						width="144"
 						height="144"
-						class="ring-primary/50 motion-preset-fade motion-duration-1000 mb-8 size-36 rounded-full object-cover shadow-2xl shadow-black/60 ring-4"
+						class="ring-primary/50 motion-preset-fade motion-duration-500 mb-6 size-36 rounded-full object-cover shadow-2xl shadow-black/60 ring-4"
 					/>
+					<p
+						class="text-dimmed motion-preset-fade motion-duration-500 mb-3 font-mono text-xs tracking-widest uppercase sm:text-sm"
+					>
+						b. 2008 / Chicago / Dartmouth '30
+					</p>
 					<h1
 						class="font-display motion-preset-slide-up motion-duration-700 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
 					>
-						<span class="text-shimmer">Gregory Mitchell</span>
+						<span class="text-gradient-brand">Gregory Mitchell</span>
 					</h1>
 					<p
-						class="text-muted motion-preset-fade motion-delay-200 motion-duration-1000 mt-4 max-w-xl text-base drop-shadow-lg sm:text-xl"
+						class="text-toned motion-preset-fade motion-delay-200 motion-duration-500 mt-4 max-w-2xl text-base leading-relaxed drop-shadow-lg sm:text-lg"
 					>
-						{{ SITE_DESCRIPTION }}
+						The world's okayest developer, allegedly. I have been shipping code in public since I
+						was eleven: plugins, game engines, and the plumbing other people's apps and AI quietly
+						run on.
 					</p>
 					<p
-						class="motion-preset-fade motion-delay-500 motion-duration-1000 mt-4 max-w-lg text-sm text-white/90 drop-shadow-lg sm:text-base"
+						class="text-toned motion-preset-fade motion-delay-500 motion-duration-500 mt-3 max-w-xl text-sm drop-shadow-lg sm:text-base"
 					>
-						{{ MISSION }}
+						Now I am pointing all of it at one problem: making people feel a little less alone.
 					</p>
 
 					<div class="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -66,6 +70,22 @@
 							>Support</UButton
 						>
 					</div>
+
+					<figure
+						class="motion-preset-fade motion-delay-700 motion-duration-500 mt-10 flex flex-col items-center"
+					>
+						<NuxtImg
+							src="/pictures/gregory-cpu.png"
+							alt="Gregory examining a CPU die"
+							width="160"
+							height="160"
+							sizes="160px"
+							class="size-32 -rotate-2 rounded-lg border border-white/15 object-cover shadow-xl sm:size-40"
+						/>
+						<figcaption class="text-dimmed mt-3 max-w-xs font-mono text-xs italic">
+							yes, that is me squinting at a CPU. i do that for fun.
+						</figcaption>
+					</figure>
 
 					<NuxtLink
 						to="#story"
