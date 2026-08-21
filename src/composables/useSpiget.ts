@@ -71,5 +71,26 @@ export function useSpiget() {
 		return { ...(b ?? ({} as SpigetInfo)), ...(l ?? {}) };
 	}
 
-	return { load, spigetFor };
+	// aggregate across every resource, so the numbers never need hand-updating
+	function totals() {
+		const ids = new Set([...Object.keys(baked), ...Object.keys(live.value)]);
+		let downloads = 0;
+		let reviews = 0;
+		let weighted = 0;
+		for (const id of ids) {
+			const r = spigetFor(Number(id));
+			if (!r) continue;
+			downloads += r.downloads || 0;
+			reviews += r.count || 0;
+			weighted += (r.average || 0) * (r.count || 0);
+		}
+		return {
+			resources: ids.size,
+			downloads,
+			reviews,
+			average: reviews ? Math.round((weighted / reviews) * 100) / 100 : 0
+		};
+	}
+
+	return { load, spigetFor, totals };
 }

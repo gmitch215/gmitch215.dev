@@ -8,7 +8,8 @@ const SOURCES = [
 	'orgs/CalculusGames',
 	'orgs/brightplum',
 	'orgs/CodeMC',
-	'orgs/LevelZ-File'
+	'orgs/LevelZ-File',
+	'orgs/drupflare'
 ];
 const CACHE_KEY = 'gm-gh-v1';
 const TTL = 6 * 3600 * 1000;
