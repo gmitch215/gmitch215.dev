@@ -19,9 +19,7 @@ What makes it a real result instead of a stunt is the wall I hit on day two. `wo
 
 Then I made it fit. The free plan allows a 3,145,728-byte compressed worker; the interpreter travels as a zstd frame inflated at module scope, and the shipping bundle measures **2,904,125 bytes, 241,603 under the ceiling, with no extensions dropped to get there.** A cached page costs **1 ms** of Durable Object CPU, a full uncached render **34 ms** against 9.47 ms for native PHP, and cold boot is 1,398 ms. When it breaks at 3am there is a self-repair ladder, observe through rollback, behind _19 tripwires_.
 
-::callout{icon="i-lucide-gauge"}
-**The Rule That Came Out of It**
-
+::insight{icon="i-lucide-gauge" title="The Rule That Came Out of It"}
 An absolute CPU figure comes only from `cpuTime` in `wrangler tail` on a deployed worker. In-PHP `microtime()` returns 0 on the edge, and `Date.now()` inside the isolate once reported 114 ms for a 1,374 ms invocation. Zero is obviously broken; 114 survives review. I reversed four free-tier verdicts in eleven days, and three of the four were the instrument being wrong, not the system.
 ::
 

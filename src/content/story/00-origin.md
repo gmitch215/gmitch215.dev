@@ -15,9 +15,7 @@ The commit log agrees. Across all 86 repositories in my history my father appear
 
 The names came first, and they tracked who I thought I was. _MathyCrafter_ at seven (from accidentally setting my Minecraft username to an old email password), _GamerTeach_ at nine when I started teaching friends about the games I played, then _GamerCoder215_ at eleven. Gamer to teacher to coder, in three handles, before I had shipped anything real.
 
-::callout{icon="i-lucide-quote"}
-**The Honest Origin**
-
+::insight{icon="i-lucide-quote" title="The Honest Origin"}
 "I got into coding because I thought I was smart enough to market and grow a Discord Server that would somehow become profitable."
 ::
 

@@ -18,9 +18,7 @@ For four years my curve sat on a plateau near **2,000 commits a year**, roughly 
 
 And I spent the velocity building infrastructure for the AI era itself. **edgeport** is a from-scratch TCP library for Cloudflare Workers, with clients for SSH, SFTP, SMTP, IMAP, POP3, NATS, MQTT, STOMP, FTP, LDAP, and Syslog, tested against real Dockerized servers, because the platform advertised the capability and no maintained library wrapped it. It went up in a documented burst of _104 commits in one day_, and it is the actual email library that **smoke**, my self-hostable support desk, imports. **MyLoRA** fine-tunes LoRA adapters on my _own home RTX 4070_ over an SSH tunnel, driven from a Cloudflare Workers UI. **MyMCP** turns any OpenAPI spec into a Model Context Protocol server.
 
-::callout{icon="i-lucide-layers"}
-**The Single Most Important Pattern**
-
+::insight{icon="i-lucide-layers" title="The Single Most Important Pattern"}
 I do not consume AI tooling, I build the layer beneath it. Every one of these was born from a wall I hit in a real project, and my reflex was to build and publish the missing primitive.
 ::
 

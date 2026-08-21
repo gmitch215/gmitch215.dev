@@ -19,9 +19,7 @@ It ran the other direction too, and that part is less glamorous and more convinc
 
 I also lost, in public, repeatedly. Five Paper maintainers overruled me at once when I asked them to restore a method MobChip depended on; I conceded the technical point, wrote the reflection workaround, and shipped. The longer one is the one I would put on a resume if resumes had room. Over nine months in 2023, at _fifteen_, I took an idea my peers had already rejected, refined it anyway, submitted it as an API change to **Bukkit itself**, took review from three maintainers including the project lead, threw out my own design and rebuilt it on the API he pointed at, and then found out the objection was architectural rather than cosmetic.
 
-::callout{icon="i-lucide-git-pull-request"}
-**How It Ended, in My Own Words**
-
+::insight{icon="i-lucide-git-pull-request" title="How It Ended, in My Own Words"}
 "It seems this approach is unpopular. I've decided to decline this PR and maybe make a new one overall in the future, perhaps with better implementation."
 ::
 

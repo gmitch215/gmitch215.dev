@@ -19,9 +19,7 @@ Then I compiled the whole mission down into one small app. **recess** says _"Go 
 
 I also went back to teaching for a second summer, and almost none of my plan survived. Java was too slow, so I pivoted to web design, then CodeCombat, then an Intro to AI unit. Half the class finished the final project, and half of those were pasted out of ChatGPT. I am presenting that unsoftened, because the failure mode _is_ the research question.
 
-::callout{icon="i-lucide-quote"}
-**What Two Summers Taught Me**
-
+::insight{icon="i-lucide-quote" title="What Two Summers Taught Me"}
 "Developers have a problem-solving mindset; it becomes difficult for us to recognize when it shouldn't be us who solve the problem."
 ::
 

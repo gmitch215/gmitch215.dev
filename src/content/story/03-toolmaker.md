@@ -20,9 +20,7 @@ Alongside it, **KotlinMC** automated my own distribution: an hourly GitHub Actio
 
 Second, GamerCoder became Gregory Mitchell, then **gmitch215**. My git display name flipped to my real name across every active repo that summer; the handle followed soon after.
 
-::callout{icon="i-lucide-quote"}
-**Why I Rebranded**
-
+::insight{icon="i-lucide-quote" title="Why I Rebranded"}
 "I was getting older and needed to be more professional. I wanted a name that reflected my identity as a developer, not just a gamer."
 ::
 

@@ -5,9 +5,7 @@ b. 2008 <br>
 [🖥️ github.com/gmitch215](https://github.com/gmitch215) <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
-::callout{icon="i-lucide-badge-check"}
-**At a Glance**
-
+::insight{icon="i-lucide-badge-check" title="At a Glance"}
 13,326 commits since 2019 across 82 repositories, 4,810 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 5 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, and Homebrew. 29 patches upstream into 19 organizations I do not own.
 ::
 
