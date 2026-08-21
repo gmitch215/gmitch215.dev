@@ -9,7 +9,9 @@ const SURFACE_TYPE: Record<Surface, number> = {
 	grass: 4,
 	islands: 5,
 	rock: 6,
-	energy: 7
+	energy: 7,
+	wasm: 8,
+	hive: 9
 };
 
 interface Palette {
@@ -28,7 +30,9 @@ const PALETTE: Record<Surface, Palette> = {
 	grass: { a: '#3c7d38', b: '#4e9a45', c: '#8fb85a', atmo: '#9fe08a', emissive: '#000000' },
 	islands: { a: '#0f4a48', b: '#2fa89a', c: '#5fc059', atmo: '#7fe3d0', emissive: '#000000' },
 	rock: { a: '#3a3c30', b: '#6b6f5c', c: '#8c9074', atmo: '#8c9074', emissive: '#000000' },
-	energy: { a: '#15220a', b: '#2a3a12', c: '#bcff43', atmo: '#bcff43', emissive: '#bcff43' }
+	energy: { a: '#15220a', b: '#2a3a12', c: '#bcff43', atmo: '#bcff43', emissive: '#bcff43' },
+	wasm: { a: '#08243c', b: '#0678be', c: '#f38020', atmo: '#f38020', emissive: '#f38020' },
+	hive: { a: '#1a1033', b: '#3d2a6b', c: '#8b6fd4', atmo: '#c9a6ff', emissive: '#ffcf7a' }
 };
 
 const vertexShader = /* glsl */ `
@@ -154,6 +158,12 @@ vec3 surface(vec3 dir, out float emit){
 		emit = seam * 0.5;
 		return mix(uColorA, uColorC, m);
 	}
+	if (uType == 8){ // wasm: plated crust with hot molten seams between the plates
+		float plate = fbm(p * 2.4) * 0.5 + 0.5;
+		float seam = smoothstep(0.82, 0.99, ridge(p * 1.6));
+		emit = seam * (0.75 + 0.25 * sin(uTime * 1.5));
+		return mix(mix(uColorA, uColorB, plate), uColorC, seam * 0.7);
+	}
 
 	// earth / grass / islands / rock: shared elevation field
 	float h = fbm(p) * 0.5 + 0.5;
@@ -180,6 +190,11 @@ void main(){
 		float land = step(0.5, fbm(vDir * 2.0 + uSeed) * 0.5 + 0.5);
 		float city = step(0.72, fbm(vDir * 9.0 + 20.0) * 0.5 + 0.5);
 		night = uEmissive * land * city * (1.0 - day);
+	}
+	if (uType == 9){
+		// settled everywhere, not just on land: a fully inhabited world
+		float town = step(0.6, fbm(vDir * 13.0 + 40.0) * 0.5 + 0.5);
+		night = uEmissive * town * (1.0 - day) * 1.15;
 	}
 
 	vec3 lit = albedo * (0.07 + 0.93 * day);
