@@ -31,7 +31,13 @@ const REPOS = [
 	'gmitch215/QuantumPen',
 	'brightplum/nodejs-notebook',
 	'Team-Inceptus/PlasmaEnchants',
-	'CodeMC/API'
+	'CodeMC/API',
+	'drupflare/worker',
+	'drupflare/phasm',
+	'drupflare/durabledb',
+	'earth-app/recess',
+	'earth-app/smoke',
+	'earth-app/strata'
 ];
 
 const token = process.env.GITHUB_TOKEN;
