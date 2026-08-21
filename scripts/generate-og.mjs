@@ -32,7 +32,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8">
     <h1>Gregory Mitchell</h1>
     <div class="tag">Fullstack Software Engineer, Game Developer</div>
     <div class="mission">Building software so people feel a little less alone.</div>
-    <div class="stats"><span><b>11,491</b> commits</span><span><b>88</b>&#9733; top library</span><span><b>10+</b> languages</span></div>
+    <div class="stats"><span><b>13,326</b> commits</span><span><b>88</b>&#9733; top library</span><span><b>10+</b> languages</span></div>
   </div>
   <div class="url">gmitch215.dev</div>
 </body></html>`;

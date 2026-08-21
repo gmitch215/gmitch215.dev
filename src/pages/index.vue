@@ -100,9 +100,7 @@
 				</section>
 
 				<section class="mx-auto max-w-6xl px-6 py-10">
-					<div
-						class="plate plate-accent grid grid-cols-2 gap-y-10 p-8 sm:grid-cols-3 lg:grid-cols-5"
-					>
+					<div class="plate plate-accent grid grid-cols-2 gap-x-4 gap-y-10 p-8 sm:grid-cols-3">
 						<StatCounter
 							v-for="s in STATS"
 							:key="s.label"
@@ -138,8 +136,8 @@
 				<p class="text-primary font-mono text-sm tracking-widest uppercase">Telemetry</p>
 				<h2 class="font-display mt-2 text-3xl font-bold sm:text-4xl">The Curve Tells the Story</h2>
 				<p class="text-muted mx-auto mt-3 max-w-xl">
-					A trickle at eleven, a plateau near 1,800 a year through the pre-AI era, then the ceiling
-					breaks: more commits in seven months of 2026 than in any prior full year.
+					A trickle at eleven, a plateau near 2,000 a year through the pre-AI era, then the ceiling
+					breaks: more commits through August of 2026 than in 2024 and 2025 combined.
 				</p>
 			</ScrollReveal>
 			<ScrollReveal
@@ -156,7 +154,7 @@
 					<span class="text-gradient-brand">Keep Moving Forward.</span>
 				</h2>
 				<p class="text-muted mx-auto mt-4 max-w-xl">
-					Eleven thousand commits, and the one that matters most I have not written yet. If any of
+					Thirteen thousand commits, and the one that matters most I have not written yet. If any of
 					this resonates, the best way to follow along is right here.
 				</p>
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
