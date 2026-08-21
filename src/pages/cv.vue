@@ -1,7 +1,7 @@
 <template>
 	<div class="page-atmos min-h-screen">
 		<div class="cv-page mx-auto max-w-3xl px-6 py-16">
-			<header class="plate plate-accent flex flex-col items-center p-8 text-center">
+			<header class="cv-header plate plate-accent flex flex-col items-center p-8 text-center">
 				<img
 					:src="gravatarUrl(200)"
 					alt="Gregory R. Mitchell"
@@ -39,12 +39,16 @@
 			</header>
 
 			<section class="mt-10">
-				<h2 class="text-muted mb-3 text-xs font-semibold tracking-widest uppercase">
-					Editor Time (WakaTime)
+				<h2 class="text-muted mb-1 text-xs font-semibold tracking-widest uppercase">
+					Editor Time, Trailing 12 Months
 				</h2>
-				<div class="space-y-3">
+				<p class="text-dimmed mb-3 font-mono text-xs">
+					{{ WAKATIME.recentHours.toLocaleString('en-US') }} measured hours &middot;
+					{{ WAKATIME.recentDailyAverage }} daily average
+				</p>
+				<div class="waka-rows space-y-3">
 					<div
-						v-for="l in featured"
+						v-for="l in recent"
 						:key="l.name"
 					>
 						<div class="flex items-center justify-between text-sm">
@@ -55,12 +59,50 @@
 								/>
 								{{ l.name }}
 							</span>
-							<span class="text-muted font-mono text-xs">{{ l.pct }}%</span>
+							<span class="text-muted font-mono text-xs">{{ l.recent }}%</span>
 						</div>
-						<div class="bg-muted mt-1 h-2 overflow-hidden rounded-full">
+						<div class="waka-track bg-muted mt-1 h-2 overflow-hidden rounded-full">
 							<div
 								class="bg-brand-gradient h-full rounded-full transition-[width] duration-700"
-								:style="{ width: `${l.pct}%` }"
+								:style="{ width: `${scale(l.recent!)}%` }"
+							/>
+						</div>
+					</div>
+				</div>
+
+				<h2 class="text-muted mt-6 mb-1 text-xs font-semibold tracking-widest uppercase">
+					All-Time Mix
+				</h2>
+				<p class="text-dimmed mb-3 font-mono text-xs">
+					{{ WAKATIME.totalHours.toLocaleString('en-US') }} measured hours since
+					{{ WAKATIME.since }} &middot; {{ WAKATIME.dailyAverage }} daily average
+				</p>
+				<div class="waka-rows space-y-3">
+					<div
+						v-for="l in allTime"
+						:key="l.name"
+					>
+						<div class="flex items-center justify-between text-sm">
+							<span class="inline-flex items-center gap-1.5">
+								<Icon
+									:name="l.icon"
+									class="size-4"
+								/>
+								{{ l.name }}
+							</span>
+							<span class="text-muted font-mono text-xs"
+								>{{ l.pct }}%<span
+									v-if="l.hours"
+									class="text-dimmed"
+								>
+									&middot; {{ l.hours.toLocaleString('en-US') }} h</span
+								></span
+							>
+						</div>
+						<div class="waka-track bg-muted mt-1 h-2 overflow-hidden rounded-full">
+							<div
+								class="bg-brand-gradient h-full rounded-full transition-[width] duration-700"
+								:style="{ width: `${scale(l.pct!)}%` }"
 							/>
 						</div>
 					</div>
@@ -111,12 +153,21 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { LANGUAGES } from '~/data/timeline';
+import { LANGUAGES, WAKATIME } from '~/data/timeline';
 
 const { data: cv } = await useAsyncData('cv', () => queryCollection('content').path('/cv').first());
 
-const featured = computed(() => LANGUAGES.filter((l) => l.pct));
-const others = computed(() => LANGUAGES.filter((l) => !l.pct));
+const recent = computed(() =>
+	LANGUAGES.filter((l) => l.recent).sort((a, b) => b.recent! - a.recent!)
+);
+const allTime = computed(() => LANGUAGES.filter((l) => l.pct).sort((a, b) => b.pct! - a.pct!));
+const others = computed(() => LANGUAGES.filter((l) => !l.pct && !l.recent));
+
+// bars are relative to the largest share so single-digit languages stay visible
+const peak = computed(() =>
+	Math.max(...LANGUAGES.map((l) => Math.max(l.pct ?? 0, l.recent ?? 0)), 1)
+);
+const scale = (pct: number) => Math.max(2, Math.round((pct / peak.value) * 100));
 
 const tools = [
 	{ name: 'IntelliJ IDEA', icon: 'logos:intellij-idea' },
@@ -134,6 +185,6 @@ const tools = [
 useSeoMeta({
 	title: 'Curriculum Vitae',
 	description:
-		'Gregory R. Mitchell. Eight years shipping software, ten languages, published to five registries. Dartmouth Class of 2030, CS + Psychology.'
+		'Gregory R. Mitchell. Eight years shipping software, 13,326 commits, ten languages, published to five registries. Dartmouth Class of 2030, CS + Psychology.'
 });
 </script>

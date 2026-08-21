@@ -6,8 +6,9 @@
 					<span class="text-gradient-brand">Projects</span>
 				</h1>
 				<p class="text-muted mt-3 max-w-2xl">
-					Libraries, tools, and games I have shipped across the JVM, native C, and the edge. Star
-					counts and metadata are live from GitHub. Tap any project for the details.
+					Libraries, tools, and products I have shipped across the JVM, native C, and the edge, from
+					Minecraft internals to a PHP interpreter compiled to WebAssembly. Star counts and metadata
+					are live from GitHub. Tap any project for the details.
 				</p>
 			</ScrollReveal>
 
@@ -95,6 +96,8 @@
 					</div>
 				</button>
 			</div>
+
+			<Upstream class="mt-20" />
 		</div>
 
 		<UModal
@@ -353,6 +356,6 @@ async function openProject(p: Record<string, unknown>) {
 useSeoMeta({
 	title: 'Projects',
 	description:
-		'A galaxy of shipped work: libraries, tools, and games across the JVM, native C, and the edge. From MobChip (88 stars) to CollegeDB and edgeport.'
+		'A galaxy of shipped work: libraries, tools, and products across the JVM, native C, and the edge. From MobChip (88 stars) to CollegeDB, edgeport, and Drupal on Cloudflare Workers.'
 });
 </script>
