@@ -79,7 +79,16 @@ export default defineNuxtConfig({
 				'lucide:mail',
 				'lucide:star',
 				'lucide:download',
-				'lucide:quote'
+				'lucide:quote',
+				'lucide:layers',
+				'lucide:package',
+				'lucide:badge-check',
+				'lucide:book-open',
+				'lucide:git-fork',
+				'lucide:globe',
+				'lucide:house',
+				'lucide:rocket',
+				'lucide:git-pull-request'
 			]
 		}
 	},
