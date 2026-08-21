@@ -4,7 +4,7 @@ year: '2024'
 era: 'Breadth'
 headline: 'Ten Languages, Five Registries'
 tagline: 'Range, proved in a single artifact'
-commits: 1805
+commits: 2127
 scene: 'constellation'
 image: '/pictures/gregory-engineering.jpeg'
 flagship:
@@ -18,7 +18,9 @@ flagship:
 
 Then I proved multi-language fluency in one artifact. **benchmarks** is a harness that compiles and runs the same algorithms across _C, C++, Go, Java, JavaScript, Kotlin, Kotlin/Native, PHP, Ruby, Rust, and Zig_, times them, and plots the results. You cannot fake that; it requires writing correct, idiomatic, comparably-optimized code in **ten languages at once**.
 
-::callout{icon="i-lucide-package" title="Published to the Grown-Up Registries"}
+::callout{icon="i-lucide-package"}
+**Published to the Grown-Up Registries**
+
 kasciffy and TabroomAPI to Maven Central. TabroomAPI to npm. gitle to the Gradle Plugin Portal. I built gitle specifically so I would not have to keep paying for a hosted repository just to consume my own unpublished libraries.
 ::
 

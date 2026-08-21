@@ -5,8 +5,10 @@ b. 2008 <br>
 [🖥️ github.com/gmitch215](https://github.com/gmitch215) <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
-::callout{icon="i-lucide-badge-check" title="At a Glance"}
-11,491 commits since 2019. An 88-star top library. 10+ languages shipped in production. Published to 5 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, and Homebrew.
+::callout{icon="i-lucide-badge-check"}
+**At a Glance**
+
+13,326 commits since 2019 across 82 repositories, 4,810 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 5 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, and Homebrew. 29 patches upstream into 19 organizations I do not own.
 ::
 
 ---
@@ -14,11 +16,13 @@ b. 2008 <br>
 ## Software Development
 
 - High Quality Software Development with over **7** years of industry experience, since 2019
-- Over **3,900** hours in total programming experience, including:
-  - **1,200+** hours in Java
+- Over **4,100** measured hours of programming, tracked by WakaTime since February 2022:
+  - **1,240+** hours in Java
   - **800+** hours in Kotlin
-  - **450+** hours in TypeScript
-  - **100+** hours in C
+  - **525+** hours in TypeScript
+  - **295+** hours in Vue
+  - **145+** hours in PHP
+  - **115+** hours in C
 - Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
 - Fan of JetBrains IDEs (such as IntelliJ IDEA and WebStorm), along with Visual Studio Code, where I make JVM, JS, and other framework-related projects
 
@@ -27,7 +31,16 @@ b. 2008 <br>
 - [Dartmouth College](https://home.dartmouth.edu) \| Class of 2030
   - B.A. in Computer Science and Psychology
   - Aimed at the mental health and loneliness crisis
+  - Matriculating Fall 2026
 - High School Graduate \| 2026
+
+## Experience
+
+- **Computer Science Teacher** \| Chicago Pre-College Science and Engineering Program \| 2025-2026
+  - Wrote and delivered my own curriculum for roughly thirty rising 7th-9th graders, three blocks by grade level, Monday through Thursday
+  - Taught Java in 2025 and pivoted through web design, CodeCombat, and an Intro to AI unit in 2026 as each approach met a real constraint
+  - Negotiated ~40 donated CodeCombat licenses after the host university's credential policy blocked student logins
+  - Imaged and provisioned the classroom Raspberry Pi fleet by hand so lessons were boot-and-execute
 
 ## Awards
 
@@ -39,18 +52,22 @@ b. 2008 <br>
 - [brightplum](https://github.com/brightplum) \| 2019-Present
   - Web Development with HTML, CSS and SCSS
   - Uses Frameworks like Jekyll and Gulp
-- [Team Inceptus](https://github.com/Team-Inceptus) \| 2020-2024
+- [Team Inceptus](https://github.com/Team-Inceptus) \| 2020-2024 \| Archived
   - Minecraft: Java Edition development platform
   - Heavily utilizes Java, Kotlin, and Spigot API with Netty Channels and NMS
-- [Calculus Games](https://github.com/CalculusGames) \| 2024-2026
+- [Calculus Games](https://github.com/CalculusGames) \| 2024-2026 \| Archived
   - Game Development Studio
   - Utilizes multiple game engines with Java, Kotlin, C, and C++ for game development
   - Creation of the [LevelZ File Format](https://github.com/LevelZ-File), which is also used often in games
 - [earth-app](https://github.com/earth-app) \| 2025-Present
-  - Novelty & Intellectual Curiosity Platform
-  - Built with Nuxt + Vue.js in the Frontend, Capacitor for Mobile
-  - Uses Cloudflare Workers + Drupal/PHP for a hybrid backend, custom built CMS, and a custom API
-  - Utilizes Kotlin Multiplatform for web scraping and types
+  - Novelty & Intellectual Curiosity Platform, live in the app stores at v1.0.3
+  - Four surfaces, each doing one job: a Drupal 11 API on a VPS for durable state, a Cloudflare Worker for edge/AI/admin, a Nuxt web app, and a native iOS and Android app
+  - Utilizes Kotlin Multiplatform as the shared typed model for both the TypeScript frontends and the backend
+  - 732 test files across the services that carry a suite
+- [drupflare](https://github.com/drupflare) \| 2026-Present
+  - Nine repositories answering one question: can Drupal 11 run on Cloudflare Workers?
+  - PHP 8.5 statically linked to WebAssembly, executing inside a Durable Object with that object's own SQLite as the database
+  - Seven of the nine ship as standalone libraries, including a Drupal database driver and a documented SQLite layer for Durable Objects
 
 ---
 
@@ -70,7 +87,28 @@ b. 2008 <br>
   - 8+ years of experience utilizing Git and GitHub for version control and project management
   - Mastered in multiple project management tools, including Jira, Trello, and Asana
 
-## Contributions
+## Open Source Contributions
+
+Patches merged into repositories I do not own. **29** pull requests across **19** organizations that are not mine, plus **91** issues filed into roughly **45** upstream projects, the first merged when I was 12.
+
+- [**raysan5/raylib**](https://github.com/raysan5/raylib/pull/5397) \| 2025
+  - Fixed SHA-1 computation for messages longer than 31 bytes, in one of the most widely used C game libraries
+- [**actions/setup-java**](https://github.com/actions/setup-java/pull/637) \| 2024
+  - Added support for the JetBrains Runtime to GitHub's own official action
+- [**doxygen/doxygen**](https://github.com/doxygen/doxygen/pull/11468) \| 2025
+  - Added Linux ARM to CI
+- [**SchemaStore/schemastore**](https://github.com/SchemaStore/schemastore/pull/2982) \| 2023
+  - Added the `paper-plugin.yml` schema
+- [**speechanddebate/tabroom**](https://github.com/speechanddebate/tabroom/pull/54) \| 2025
+  - Linked tournament names to their information page
+- [**mfnalex/Spigot-UpdateChecker**](https://github.com/mfnalex/Spigot-UpdateChecker/pull/31) \| 2023
+  - Added HangarMC support
+- [**js-org/js.org**](https://github.com/js-org/js.org/pull/6360) \| 2021
+  - Two domain registrations
+
+Maintaining in the other direction: **69** issues opened on my projects by other people and answered, and **19 of 22** outside contributors' pull requests reviewed and merged. [MobChip](https://github.com/gmitch215/MobChip) took 13 of those at a 100% merge rate; when I stopped maintaining it, its most active outside contributor forked it as [MobChipLite](https://github.com/datatags/MobChipLite) and still ships it today.
+
+## Community Roles
 
 - [**National Speech & Debate Association**](https://www.speechanddebate.org) \| 2024-Present
   - Proposed new features implemented on the NSDA's tabroom.com platform
@@ -84,6 +122,51 @@ b. 2008 <br>
 ::no-print
 
 ## Projects
+
+### [Drupflare](https://github.com/drupflare)
+
+_2026 - Present_
+
+- Drupal 11 running on [Cloudflare Workers](https://workers.cloudflare.com), with PHP 8.5 compiled to WebAssembly inside a Durable Object and that object's own SQLite as the database
+- No VPS, no container, no origin server; the shipping bundle lands 241,603 bytes under the free-plan ceiling with no PHP extensions dropped
+- Nine repositories, seven of which stand alone: a Drupal database driver, a Workers compatibility layer, a wasm-interpreter runtime, a deployment CLI, a PHP HTTP stream wrapper, a dependency-free tar extractor, and a documented SQLite layer for Durable Objects
+
+### [phasm](https://github.com/drupflare/phasm)
+
+_2026 - Present_
+
+- A statically linked PHP 8.5 interpreter compiled to WebAssembly for the `workerd` runtime
+- Built because every published php-wasm build uses dynamic linking, whose linker synthesizes trampolines at request time, which `workerd` forbids; that makes PHP extensions unloadable and Drupal impossible
+- Ships `dom`, `xml`, `SimpleXML`, `mbstring`, and `gd` inside a compressed worker bundle
+
+### [recess](https://github.com/earth-app/recess)
+
+_2026 - Present_
+
+- A "Go Outside" app: a few small prompts a day, drawn from a catalog of 120 and filtered by clock, season, weather, and history
+- No server, no account, no competition, no social graph; an on-device CLIP model, sentence embedder, and Whisper verify completions and nothing is ever uploaded
+- Built with TypeScript and Vue
+
+### [smoke](https://github.com/earth-app/smoke)
+
+_2026 - Present_
+
+- A self-hostable customer-support desk with envelope encryption, per-row wrapped keys, and HMAC lookups
+- Imports [edgeport](https://github.com/gmitch215/edgeport) for mail, which is the reason edgeport exists
+
+### [CollegeDB](https://github.com/earth-app/CollegeDB)
+
+_2025 - Present_
+
+- A database-sharding router with Durable-Object-coordinated sharding across six database backends
+- Extracted from The Earth App and published to npm
+
+### [strata](https://github.com/earth-app/strata)
+
+_2026 - Present_
+
+- A Drupal 11 backup and instant-rollback suite over S3
+- The second Drupal module written for The Earth App's own backend
 
 ### [edgeport](https://github.com/gmitch215/edgeport)
 
@@ -148,17 +231,17 @@ _2024 - Present_
 - Contributed to their [Discord Bot](https://github.com/CodeMC/Bot)
 - Collaborated as Moderator on their platform to ensure success
 
+## Deprecated Projects
+
 ### [LevelZ File Format](https://github.com/LevelZ-File)
 
-_2024_
+_2024 - 2026_
 
 - Game Level Format used for designing Video Game Levels
 - Supports 2D and 3D Format
 - Includes IDE Plugins, Multi-Language Bindings & Parsers
   - Java, Kotlin, JavaScript, C, C++, and Python
   - Includes a CLI tool built with Kotlin Multiplatform, and a Desktop App written in Svelte
-
-## Deprecated Projects
 
 ### [kasciffy](https://github.com/gmitch215/kasciffy)
 

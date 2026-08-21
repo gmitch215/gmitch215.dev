@@ -9,8 +9,8 @@ languages: ['Kotlin']
 category: 'Tooling'
 categories: ['Tooling']
 featured: false
-archived: false
-order: 11
+archived: true
+order: 20
 ---
 
 A documentation-generation engine written from scratch in Kotlin: it reads JSON schema files and produces a JDK-Javadoc-style browsable website, with its own schema validator and template generator. A tool to document other tools.

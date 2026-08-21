@@ -10,7 +10,7 @@ category: 'AI'
 categories: ['AI', 'Infrastructure']
 featured: false
 archived: false
-order: 20
+order: 13
 ---
 
-A full MLOps control plane that fine-tunes LoRA adapters on his own home RTX 4070, reached over an SSH tunnel and driven from a Cloudflare Workers UI.
+A full MLOps control plane that fine-tunes LoRA adapters on my own home RTX 4070, reached over an SSH tunnel and driven from a Cloudflare Workers UI.

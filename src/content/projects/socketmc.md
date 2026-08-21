@@ -10,7 +10,7 @@ category: 'Minecraft'
 categories: ['Minecraft', 'Library', 'Infrastructure']
 featured: true
 archived: true
-order: 5
+order: 9
 ---
 
-A server-to-client communication mod and library for Minecraft that pairs a server plugin with a client mod over a socket protocol, bridging the plugin and mod worlds that normally cannot talk. The technical capstone of his Minecraft years, and a direct ancestor of edgeport.
+A server-to-client communication mod and library for Minecraft that pairs a server plugin with a client mod over a socket protocol, bridging the plugin and mod worlds that normally cannot talk. The technical capstone of my Minecraft years, and a direct ancestor of edgeport.

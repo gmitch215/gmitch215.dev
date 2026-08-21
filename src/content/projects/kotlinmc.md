@@ -10,7 +10,7 @@ category: 'Tooling'
 categories: ['Tooling']
 featured: false
 archived: true
-order: 9
+order: 18
 ---
 
-An automation pipeline that polls JetBrains hourly for new Kotlin releases, auto-bumps a Gradle plugin, and auto-publishes to Modrinth. He automated his own distribution.
+An automation pipeline that polls JetBrains hourly for new Kotlin releases, auto-bumps a Gradle plugin, and auto-publishes to Modrinth. I automated my own distribution.

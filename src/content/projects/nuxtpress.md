@@ -10,7 +10,7 @@ category: 'Web'
 categories: ['Web', 'Tooling']
 featured: false
 archived: false
-order: 12
+order: 16
 ---
 
-Nuxt and Cloudflare Workers blogging software with a custom API over KV and D1 storage. Built because he did not feel like making a git commit for every blog post with Jekyll.
+Nuxt and Cloudflare Workers blogging software with a custom API over KV and D1 storage. Built because I did not feel like making a git commit for every blog post with Jekyll.

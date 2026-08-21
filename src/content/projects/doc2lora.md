@@ -10,7 +10,7 @@ category: 'AI'
 categories: ['AI', 'Tooling']
 featured: false
 archived: false
-order: 13
+order: 14
 ---
 
 Converts documents into LoRA adapters, with device-precision-aware GPU training. Built in 2025; wired into The Earth App's support tooling (smoke) in 2026, alongside MyLoRA.

@@ -11,7 +11,7 @@ category: 'Minecraft'
 categories: ['Minecraft', 'Library']
 featured: false
 archived: true
-order: 14
+order: 21
 ---
 
-A Clash-Royale-inspired card battler for Minecraft, his most idiomatic Kotlin, with clean domain modeling and WASD-rideable entities built by intercepting player-input packets. One of the first projects sold on the SpigotMC market.
+A Clash-Royale-inspired card battler for Minecraft, my most idiomatic Kotlin, with clean domain modeling and WASD-rideable entities built by intercepting player-input packets. One of the first projects sold on the SpigotMC market.

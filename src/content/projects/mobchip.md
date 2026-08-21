@@ -13,4 +13,4 @@ archived: true
 order: 1
 ---
 
-An Entity AI Library for SpigotMC that wraps Minecraft's native mob-AI internals behind a clean, fully documented public API across 17 versioned adapters. His most successful project by a wide margin, later adopted by another maintainer after he stepped back.
+An Entity AI Library for SpigotMC that wraps Minecraft's native mob-AI internals behind a clean, fully documented public API across 17 versioned adapters. My most successful project by a wide margin, later adopted by another maintainer after I stepped back.

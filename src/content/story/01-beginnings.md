@@ -4,7 +4,7 @@ year: '2021'
 era: 'Beginnings'
 headline: 'The Minecraft Awakening'
 tagline: 'First package, first plugin, first five stars'
-commits: 352
+commits: 363
 scene: 'none'
 ---
 
@@ -12,7 +12,9 @@ This is where the record truly begins, and where a pattern gets set that never b
 
 Then Minecraft. Within two weeks that April I shipped **MoreSurvival**, a Bukkit survival plugin, and **minecraft.js**, a low-dependency API wrapper I wrote like a real library rather than a script, at _thirteen_. **QuantumPen**, a packet-level world editor, became my first published plugin on SpigotMC.
 
-::callout{icon="i-lucide-quote" title="The Moment It Clicked"}
+::callout{icon="i-lucide-quote"}
+**The Moment It Clicked**
+
 "I got my first 5-star review, and moved forward."
 ::
 

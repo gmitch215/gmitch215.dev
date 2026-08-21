@@ -9,8 +9,8 @@ languages: ['Java', 'Kotlin', 'JavaScript', 'C', 'C++', 'Python']
 category: 'FileFormat'
 categories: ['FileFormat', 'Library', 'Tooling']
 featured: false
-archived: false
-order: 19
+archived: true
+order: 26
 ---
 
 A human-readable file format for describing game levels, backed with parsers and bindings in six languages plus an IntelliJ plugin, a VSCode extension, and a CLI. More completeness than most formats get from an entire company.

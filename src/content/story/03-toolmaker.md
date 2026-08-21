@@ -4,7 +4,7 @@ year: '2023'
 era: 'Toolmaker'
 headline: 'Building Tools That Build Tools'
 tagline: 'And GamerCoder becomes gmitch215'
-commits: 1912
+commits: 1869
 scene: 'none'
 image: '/pictures/gregory-engineering-2.png'
 flagship:
@@ -20,7 +20,9 @@ Alongside it, **KotlinMC** automated my own distribution: an hourly GitHub Actio
 
 Second, GamerCoder became Gregory Mitchell, then **gmitch215**. My git display name flipped to my real name across every active repo that summer; the handle followed soon after.
 
-::callout{icon="i-lucide-quote" title="Why I Rebranded"}
+::callout{icon="i-lucide-quote"}
+**Why I Rebranded**
+
 "I was getting older and needed to be more professional. I wanted a name that reflected my identity as a developer, not just a gamer."
 ::
 

@@ -9,8 +9,8 @@ languages: ['Kotlin']
 category: 'GameDev'
 categories: ['GameDev', 'Library']
 featured: false
-archived: false
-order: 15
+archived: true
+order: 22
 ---
 
-Kotlin bindings for the raylib game library, reached after trying and discarding allegro5 and SDL3. His highest-starred Calculus Games studio repo.
+Kotlin bindings for the raylib game library, reached after trying and discarding allegro5 and SDL3. My highest-starred Calculus Games studio repo.

@@ -4,7 +4,7 @@ year: '2022'
 era: 'Craftsman'
 headline: 'The Craftsman Emerges'
 tagline: 'Gradle, a 25-version abstraction, and real users'
-commits: 1839
+commits: 1849
 scene: 'none'
 image: '/pictures/gregory-coding-2022.jpg'
 flagship:
@@ -14,7 +14,7 @@ flagship:
   description: 'Entity AI Library for SpigotMC'
 ---
 
-The gap between 2021 me and 2022 me is the largest single-year leap in the record. In one year I went from a kid pasting getters to a developer running open-source projects like an adult, and my commit count _tripled_. Three things happened at once.
+The gap between 2021 me and 2022 me is the largest single-year leap in the record. In one year I went from a kid pasting getters to a developer running open-source projects like an adult, and my commit count went up _fivefold_. Three things happened at once.
 
 I learned real build engineering. My Maven plugins migrated to multi-module **Gradle Kotlin DSL**, and Novaconomy grew a **25-version NMS abstraction layer**: reflection-based adapters for every Minecraft server release from _1.8 to 1.20_. Minecraft's internals are obfuscated and change every version; abstracting across 25 of them is the kind of thing that defeats professional plugin developers.
 

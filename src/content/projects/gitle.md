@@ -10,7 +10,7 @@ category: 'Tooling'
 categories: ['Tooling']
 featured: false
 archived: false
-order: 16
+order: 23
 ---
 
-A Gradle plugin that pulls dependencies straight from git repositories, no artifact repository required. Built specifically so he would not have to pay for a hosted Nexus just to consume his own unpublished libraries.
+A Gradle plugin that pulls dependencies straight from git repositories, no artifact repository required. Built specifically so I would not have to pay for a hosted Nexus just to consume my own unpublished libraries.
