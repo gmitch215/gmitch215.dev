@@ -1,4 +1,5 @@
-export type Surface = 'rock' | 'grass' | 'gas' | 'metal' | 'lava' | 'energy' | 'islands' | 'earth';
+export type Surface =
+	'rock' | 'grass' | 'gas' | 'metal' | 'lava' | 'energy' | 'islands' | 'earth' | 'wasm' | 'hive';
 
 export interface PlanetConfig {
 	order: number;
@@ -24,8 +25,6 @@ export interface PlanetConfig {
 
 const SEG = 24;
 const z = (order: number) => -order * SEG;
-
-export const TRAVEL = 8 * SEG - 8;
 
 export const PLANETS: PlanetConfig[] = [
 	{
@@ -114,6 +113,25 @@ export const PLANETS: PlanetConfig[] = [
 	},
 	{
 		order: 6,
+		name: 'Commons',
+		era: 'Ecosystem',
+		year: '2021-2024',
+		surface: 'hive',
+		color: '#8b6fd4',
+		emissive: '#ffcf7a',
+		emissiveIntensity: 0.5,
+		radius: 2.6,
+		roughness: 0.8,
+		metalness: 0,
+		flatShading: false,
+		spin: 0.09,
+		moons: 5,
+		atmosphere: '#c9a6ff',
+		glow: 1.2,
+		position: [8, -2, z(6)]
+	},
+	{
+		order: 7,
 		name: 'Ignition',
 		era: 'Architect',
 		year: '2025',
@@ -127,10 +145,10 @@ export const PLANETS: PlanetConfig[] = [
 		flatShading: false,
 		spin: 0.05,
 		glow: 3.2,
-		position: [7, 1, z(6)]
+		position: [-7, 1, z(7)]
 	},
 	{
-		order: 7,
+		order: 8,
 		name: 'Velocity',
 		era: 'Force-Multiplier',
 		year: '2026',
@@ -145,10 +163,28 @@ export const PLANETS: PlanetConfig[] = [
 		spin: 0.5,
 		rings: { color: '#a2f213', inner: 2.6, outer: 3.1 },
 		glow: 2.2,
-		position: [-7, -3, z(7)]
+		position: [7, -3, z(8)]
 	},
 	{
-		order: 8,
+		order: 9,
+		name: 'Bedrock',
+		era: 'Runtime',
+		year: 'Aug 2026',
+		surface: 'wasm',
+		color: '#f38020',
+		emissive: '#3d1400',
+		emissiveIntensity: 0.35,
+		radius: 2.4,
+		roughness: 0.3,
+		metalness: 0.9,
+		flatShading: false,
+		spin: 0.11,
+		rings: { color: '#0678be', inner: 3, outer: 4.2 },
+		satellites: 9,
+		position: [-8, 2, z(9)]
+	},
+	{
+		order: 10,
 		name: 'Earth',
 		era: 'Mission',
 		year: 'Now',
@@ -164,6 +200,8 @@ export const PLANETS: PlanetConfig[] = [
 		atmosphere: '#7fe3b0',
 		moons: 1,
 		glow: 1.4,
-		position: [3, 1, z(8)]
+		position: [3, 1, z(10)]
 	}
 ];
+
+export const TRAVEL = PLANETS.length * SEG - 8;
