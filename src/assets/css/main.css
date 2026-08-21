@@ -175,6 +175,22 @@ body {
 	:root {
 		color-scheme: light;
 	}
+	/* the cv header carries the name, so keep it even though chrome headers are dropped */
+	header.cv-header {
+		display: block !important;
+		padding: 0 0 0.5rem;
+		text-align: left;
+	}
+	header.cv-header img {
+		display: none;
+	}
+	/* bar fills are backgrounds and never print, so the rows read as plain text */
+	.waka-track {
+		display: none !important;
+	}
+	.waka-rows > * + * {
+		margin-top: 0.1rem !important;
+	}
 }
 
 /* respect reduced-motion globally (adaptive engine also honors this) */
