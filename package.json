@@ -36,7 +36,7 @@
     "postprocessing": "^6.39.3",
     "tailwindcss": "^4.3.3",
     "tailwindcss-motion": "^1.1.1",
-    "three": "^0.185.1",
+    "three": "^0.186.0",
     "vue": "^3.5.40",
     "vue-router": "^5.2.0"
   },
@@ -47,7 +47,7 @@
     "@iconify-json/lucide": "^1.2.119",
     "@iconify-json/uil": "^1.2.3",
     "@nuxt/hints": "^1.1.4",
-    "@types/three": "^0.185.1",
+    "@types/three": "^0.186.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "playwright": "^1.61.1",
@@ -60,7 +60,7 @@
     "*.{js,ts,vue,css,md}": "prettier --write"
   },
   "overrides": {
-    "@unhead/vue": "3.3.2",
-    "unhead": "3.3.2"
+    "@unhead/vue": "3.4.0",
+    "unhead": "3.4.0"
   }
 }
