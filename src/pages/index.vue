@@ -34,8 +34,8 @@
 					<p
 						class="text-toned motion-preset-fade motion-delay-200 motion-duration-500 mt-4 max-w-2xl text-base leading-relaxed drop-shadow-lg sm:text-lg"
 					>
-						The world's okayest developer, allegedly. I have been shipping code in public since I
-						was eleven: plugins, game engines, and the plumbing other people's apps and AI quietly
+						The world's okayest developer, allegedly. I have been shipping things in public since I
+						was eight: plugins, game engines, and the plumbing other people's apps and AI quietly
 						run on.
 					</p>
 					<p
@@ -154,7 +154,7 @@
 					<span class="text-gradient-brand">Keep Moving Forward.</span>
 				</h2>
 				<p class="text-muted mx-auto mt-4 max-w-xl">
-					Thirteen thousand commits, and the one that matters most I have not written yet. If any of
+					Fifteen thousand commits, and the one that matters most I have not written yet. If any of
 					this resonates, the best way to follow along is right here.
 				</p>
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
