@@ -2,7 +2,7 @@
 name: 'edgeport'
 repo: 'gmitch215/edgeport'
 url: 'https://github.com/gmitch215/edgeport'
-stars: 3
+stars: 7
 period: '2026-Present'
 era: '2026'
 languages: ['TypeScript']
@@ -13,4 +13,4 @@ archived: false
 order: 5
 ---
 
-A from-scratch TCP library for Cloudflare Workers with clients for SSH, SFTP, SMTP, IMAP, NATS, MQTT, STOMP, and more, tested against real Dockerized servers. Built because the platform advertised the capability and no maintained library wrapped it.
+A from-scratch TCP library for Cloudflare Workers with clients for SSH, SFTP, SMTP, IMAP, NATS, MQTT, STOMP, Redis, and more, tested against real Dockerized servers. Built because the platform advertised the capability and no maintained library wrapped it. It has also shipped the kind of defect a from-scratch protocol library is most likely to ship, and I fixed it: an SMTP MIME header injection bug.

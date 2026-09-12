@@ -13,4 +13,4 @@ archived: false
 order: 15
 ---
 
-A Drupal 11 backup and instant-rollback suite over S3, and the second Drupal module written for The Earth App's own backend. 77 commits in three days.
+A Drupal 11 backup and instant-rollback suite, and the second Drupal module written for The Earth App's own backend. Opened with 77 commits in three days, generalized from S3 to any object store, and published on Packagist, which makes PHP the sixth package registry I ship to.

@@ -2,7 +2,7 @@
 name: 'cmdfx'
 repo: 'gmitch215/cmdfx'
 url: 'https://github.com/gmitch215/cmdfx'
-stars: 16
+stars: 17
 period: '2025-Present'
 era: '2025'
 languages: ['C']
