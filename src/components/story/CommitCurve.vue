@@ -7,7 +7,7 @@
 			:viewBox="`0 0 ${W} ${H}`"
 			class="w-full"
 			role="img"
-			:aria-label="`Commits per year from 2019 to 2026, totalling ${TOTAL_COMMITS.toLocaleString('en-US')}. A trickle at age 11, a plateau near 2,000 per year, then 4,810 through August 20 of 2026, more than 2024 and 2025 combined.`"
+			:aria-label="`Commits per year from 2019 to 2026, totalling ${TOTAL_COMMITS.toLocaleString('en-US')}. A trickle at age 11, a plateau near 2,000 per year, then 6,141 through September 12 of 2026, more than 2024 and 2025 combined.`"
 			@mouseleave="hovered = null"
 		>
 			<defs>
