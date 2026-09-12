@@ -6,7 +6,7 @@ b. 2008 <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
 ::insight{icon="i-lucide-badge-check" title="At a Glance"}
-13,326 commits since 2019 across 82 repositories, 4,810 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 5 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, and Homebrew. 29 patches upstream into 19 organizations I do not own.
+15,369 commits since 2019 across 108 repositories, and published work going back to 2016, 6,141 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 6 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, Homebrew, and Packagist. 29 patches upstream into 19 organizations I do not own.
 ::
 
 ---
@@ -126,7 +126,7 @@ Maintaining in the other direction: **69** issues opened on my projects by other
 _2026 - Present_
 
 - Drupal 11 running on [Cloudflare Workers](https://workers.cloudflare.com), with PHP 8.5 compiled to WebAssembly inside a Durable Object and that object's own SQLite as the database
-- No VPS, no container, no origin server; the shipping bundle lands 241,603 bytes under the free-plan ceiling with no PHP extensions dropped
+- No VPS, no container, no origin server, and no PHP extensions dropped to make it fit
 - Nine repositories, seven of which stand alone: a Drupal database driver, a Workers compatibility layer, a wasm-interpreter runtime, a deployment CLI, a PHP HTTP stream wrapper, a dependency-free tar extractor, and a documented SQLite layer for Durable Objects
 
 ### [phasm](https://github.com/drupflare/phasm)
@@ -136,6 +136,22 @@ _2026 - Present_
 - A statically linked PHP 8.5 interpreter compiled to WebAssembly for the `workerd` runtime
 - Built because every published php-wasm build uses dynamic linking, whose linker synthesizes trampolines at request time, which `workerd` forbids; that makes PHP extensions unloadable and Drupal impossible
 - Ships `dom`, `xml`, `SimpleXML`, `mbstring`, and `gd` inside a compressed worker bundle
+
+### [bytebox](https://github.com/gmitch215/bytebox)
+
+_2026 - Present_
+
+- Java on [Cloudflare Workers](https://workers.cloudflare.com): a Gradle plugin that compiles a Java workspace into a Worker through TeaVM
+- Consumes `cartridge`, the wasm-interpreter host extracted from Drupflare, so one runtime host now serves two languages
+- Ships a code-coverage lane that runs Java inside workerd and reconstructs a real `jacoco.xml`
+
+### [tinyimg](https://github.com/gmitch215/tinyimg)
+
+_2026 - Present_
+
+- Image decode, transform and re-encode inside a Cloudflare Worker, with no binding and no subrequest
+- Freestanding C compiled to a single wasm32 module behind a TypeScript wrapper, because workerd has no Canvas API
+- $0.05 per million transformations against Cloudflare Images' $500 per million
 
 ### [recess](https://github.com/earth-app/recess)
 
