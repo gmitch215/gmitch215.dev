@@ -31,7 +31,7 @@ export const PLANETS: PlanetConfig[] = [
 		order: 1,
 		name: 'Genesis',
 		era: 'Origin',
-		year: '2019',
+		year: '2016',
 		surface: 'rock',
 		color: '#6b6f5c',
 		emissive: '#0a0f06',

@@ -37,24 +37,28 @@ export const ERAS: Era[] = [
 		commits: 2184,
 		era: 'Architect',
 		headline: 'cmdfx, teaching, and the mission',
-		flagship: { name: 'cmdfx', stars: 16 }
+		flagship: { name: 'cmdfx', stars: 17 }
 	},
 	{
 		year: 2026,
-		commits: 4810,
+		commits: 6141,
 		era: 'Force-Multiplier',
-		headline: 'The layer beneath AI, and Drupal on the edge',
-		annualized: 7570,
+		headline: 'Three runtimes on the edge',
+		annualized: 8790,
 		flagship: { name: 'phasm', stars: 1 }
 	}
 ];
 
-export const TOTAL_COMMITS = ERAS.reduce((sum, e) => sum + e.commits, 0);
+// commits in repos that were never cloned locally, so they cannot be split by year
+export const ORG_COMMITS = 712;
+
+export const LOCAL_COMMITS = ERAS.reduce((sum, e) => sum + e.commits, 0);
+export const TOTAL_COMMITS = LOCAL_COMMITS + ORG_COMMITS;
 
 // 2026 is a partial year; every figure above was recounted by script on this date
-export const CENSUS_DATE = 'August 20, 2026';
-export const CENSUS_MONTHS = 8;
-export const REPOS_COUNTED = 82;
+export const CENSUS_DATE = 'September 12, 2026';
+export const CENSUS_MONTHS = 9;
+export const REPOS_COUNTED = 108;
 export const CONTRIBUTIONS_12MO = 6755;
 
 // participation in other people's projects; GitHub API reads on the census date
@@ -123,11 +127,13 @@ export const UPSTREAM: Upstream[] = [
 	}
 ];
 
-// the pre-AI control sample: everything below predates agentic tooling (adopted 2026)
+// the pre-AI sample; boundary is the first stored editor chat session, not the first AI commit trailer
 export const PRE_AI = {
 	minecraftCommits: 4345,
 	minecraftRepos: 18,
 	throughEnd2024: 6332,
+	beforeFirstChatSession: 6861,
+	firstChatSession: 'April 2025',
 	spigotJoined: 'March 2021',
 	lastMinecraftCommit: 'June 2024'
 };
@@ -185,9 +191,9 @@ export const STATS: Stat[] = [
 	},
 	{ value: 10, suffix: '+', label: 'Languages Shipped in Production' },
 	{
-		value: 5,
+		value: 6,
 		label: 'Package Registries Published To',
-		footnote: 'Maven Central, Gradle Portal, npm, PyPI, Homebrew'
+		footnote: 'Maven Central, Gradle Portal, npm, PyPI, Homebrew, Packagist'
 	},
 	{
 		value: WAKATIME.totalHours,
@@ -202,4 +208,11 @@ export const STATS: Stat[] = [
 	}
 ];
 
-export const REGISTRIES = ['Maven Central', 'Gradle Plugin Portal', 'npm', 'PyPI', 'Homebrew'];
+export const REGISTRIES = [
+	'Maven Central',
+	'Gradle Plugin Portal',
+	'npm',
+	'PyPI',
+	'Homebrew',
+	'Packagist'
+];
