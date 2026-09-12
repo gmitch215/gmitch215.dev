@@ -14,7 +14,7 @@ flagship:
   description: 'A from-scratch TCP library for Cloudflare Workers'
 ---
 
-For four years my curve sat on a plateau near **2,000 commits a year**, roughly the ceiling of what a fast human can hand-type while also going to school. In 2026 the ceiling broke: **4,810 commits in not quite eight months**, more than 2024 and 2025 put together, because the constraint stopped being my hands. `crust` took 235 commits in a month. `smoke` took **113 in a single day**. That cadence is not typing. It is _directing agents_.
+For four years my curve sat on a plateau near **2,000 commits a year**, roughly the ceiling of what a fast human can hand-type while also going to school. In 2026 the ceiling broke: **6,141 commits in not quite nine months**, more than 2024 and 2025 put together, because the constraint stopped being my hands. `crust` took 235 commits in a month. `smoke` took **113 in a single day**. That cadence is not typing. It is _directing agents_.
 
 And I spent the velocity building infrastructure for the AI era itself. **edgeport** is a from-scratch TCP library for Cloudflare Workers, with clients for SSH, SFTP, SMTP, IMAP, POP3, NATS, MQTT, STOMP, FTP, LDAP, and Syslog, tested against real Dockerized servers, because the platform advertised the capability and no maintained library wrapped it. It went up in a documented burst of _104 commits in one day_, and it is the actual email library that **smoke**, my self-hostable support desk, imports. **MyLoRA** fine-tunes LoRA adapters on my _own home RTX 4070_ over an SSH tunnel, driven from a Cloudflare Workers UI. **MyMCP** turns any OpenAPI spec into a Model Context Protocol server.
 
