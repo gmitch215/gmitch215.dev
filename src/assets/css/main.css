@@ -145,16 +145,18 @@ body {
 		border-radius: 0.3rem;
 		padding: 0.1rem 0.35rem;
 	}
-	.prose :where(:not(pre) > code):not(:where(.not-prose *))::before,
-	.prose :where(:not(pre) > code):not(:where(.not-prose *))::after {
-		content: '';
-	}
 	.prose :where(ul > li):not(:where(.not-prose *))::marker {
 		color: var(--color-brand-400);
 	}
 	.prose :where(strong):not(:where(.not-prose *)) {
 		color: var(--color-brand-300);
 	}
+}
+
+/* unlayered on purpose; @tailwindcss/typography adds code backticks from @layer utilities */
+.prose :not(pre) > code:not(:where(.not-prose *))::before,
+.prose :not(pre) > code:not(:where(.not-prose *))::after {
+	content: '';
 }
 
 /* print: strip chrome + decoration, keep the CV body */

@@ -5,6 +5,7 @@
 			:alt="alt || caption || ''"
 			:width="width"
 			:height="height"
+			sizes="(max-width: 640px) 88vw, 560px"
 			loading="lazy"
 			class="brand-glow w-full rounded-xl"
 		/>

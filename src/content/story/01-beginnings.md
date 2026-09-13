@@ -6,6 +6,7 @@ headline: 'The Minecraft Awakening'
 tagline: 'First package, first plugin, first five stars'
 commits: 363
 scene: 'none'
+image: '/pictures/gregory-coding-2020.png'
 ---
 
 This is where the record truly begins, and where a pattern gets set that never breaks: _I learn by building real, published software, in public, at a pace that embarrasses adults._ In **March 2021** I pushed **nodejs-notebook** to npm, my first published package. It reached version _1.2.2_, so it saw real iteration, not a one-and-done upload.

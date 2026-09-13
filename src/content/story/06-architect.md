@@ -22,7 +22,7 @@ The second is a job. That summer, at _sixteen_, I taught **Java to seventh throu
 
 The third is **The Earth App**. In _May 2025_ I founded the org and began the most ambitious thing I had attempted: a social platform to fight loneliness and the mental-health crisis, built as a **five-language microservices architecture**. The backend started as a hand-written TypeScript service on Hono and was simply _too slow_ paired with CollegeDB, the sharding router I had pulled out of it. Facing a re-platform, I took my father's recommendation and went to **Drupal**. That is the only piece of technical advice from him anywhere in this story, accepted on its merits after a measured failure, and it is the seed that eventually grew into Drupflare. I submitted the app to the **2025 Congressional App Challenge** in Illinois' 2nd District, and _won_.
 
-::figure{src="/pictures/gregory-cac.png" caption="First place, 2025 Congressional App Challenge, Illinois 2nd District"}
+::photo{src="/pictures/gregory-cac.png" caption="First place, 2025 Congressional App Challenge, Illinois 2nd District"}
 ::
 
 This is where it crystallizes. I am easily drained, and more than anything I want to feel _included_; in 2025 I decided to point my one real superpower at the thing that hurts. From here on the code has a purpose that is not about code.
