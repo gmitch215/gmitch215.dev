@@ -60,7 +60,7 @@
     "*.{js,ts,vue,css,md}": "prettier --write"
   },
   "overrides": {
-    "@unhead/vue": "3.4.0",
-    "unhead": "3.4.0"
+    "@unhead/vue": "3.4.1",
+    "unhead": "3.4.1"
   }
 }
