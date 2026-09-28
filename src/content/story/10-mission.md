@@ -1,9 +1,9 @@
 ---
-order: 10
+order: 11
 year: 'Now'
 era: 'Mission'
 headline: 'Build Software So People Feel Less Alone'
-tagline: 'CS and Psychology at Dartmouth, aimed at the problem'
+tagline: 'CS and Quantitative Social Science, aimed at the problem'
 scene: 'globe'
 image: '/pictures/gregory-thinking.png'
 flagship:
@@ -26,4 +26,4 @@ I also went back to teaching for a second summer, and almost none of my plan sur
 "Developers have a problem-solving mindset; it becomes difficult for us to recognize when it shouldn't be us who solve the problem."
 ::
 
-My interest in mental health is _not academic_. I am that same self-aware, easily-drained, wants-to-be-included kid, deciding to point my one real superpower at the thing that hurts. That is why I am pairing **Computer Science with Psychology at Dartmouth**, aimed at the problem rather than at a job title. I moved into Hanover on **September 3**, the last of my friends to arrive, and shipped 1,378 commits and two new runtimes across the three weeks that covered the move and my first week of classes. I call myself the world's okayest developer. It is a good joke, and it is _wrong_. You only really need one or two languages to be successful; I learned ten because I _had a reason to_. It shows in every commit.
+My interest in mental health is _not academic_. I am that same self-aware, easily-drained, wants-to-be-included kid, deciding to point my one real superpower at the thing that hurts. That is why I am majoring in **Computer Science at Dartmouth with a Quantitative Social Science minor**, keeping psychology for its research methods, aimed at the problem rather than at a job title. I moved into Hanover on **September 3**, the last of my friends to arrive, and did not stop shipping: the three weeks around the move and my first week of classes carry 1,378 commits and two new runtimes. I call myself the world's okayest developer. It is a good joke, and it is _wrong_. You only really need one or two languages to be successful; I learned ten because I _had a reason to_. It shows in every commit.

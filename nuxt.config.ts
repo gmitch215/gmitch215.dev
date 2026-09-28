@@ -88,7 +88,10 @@ export default defineNuxtConfig({
 				'lucide:globe',
 				'lucide:house',
 				'lucide:rocket',
-				'lucide:git-pull-request'
+				'lucide:git-pull-request',
+				'lucide:ruler',
+				'lucide:scale',
+				'lucide:scissors'
 			]
 		}
 	},
