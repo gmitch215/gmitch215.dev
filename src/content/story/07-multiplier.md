@@ -1,25 +1,27 @@
 ---
 order: 8
 year: '2026'
-era: 'Force-Multiplier'
-headline: 'The Ceiling Breaks'
-tagline: 'Building the layer beneath AI'
-commits: 4810
+era: 'Impact'
+headline: 'It Was the Harness, Not the Model'
+tagline: 'What actually moved, measured against my own logs'
+commits: 6754
 scene: 'curve'
 image: '/pictures/gregory-dartmouth.jpg'
 flagship:
   name: 'edgeport'
   url: 'https://github.com/gmitch215/edgeport'
-  stars: 3
+  stars: 8
   description: 'A from-scratch TCP library for Cloudflare Workers'
 ---
 
-For four years my curve sat on a plateau near **2,000 commits a year**, roughly the ceiling of what a fast human can hand-type while also going to school. In 2026 the ceiling broke: **6,141 commits in not quite nine months**, more than 2024 and 2025 put together, because the constraint stopped being my hands. `crust` took 235 commits in a month. `smoke` took **113 in a single day**. That cadence is not typing. It is _directing agents_.
+For four years my curve sat near **2,000 commits a year**, roughly what a fast human types while also going to school. In 2026 it broke: **6,754 commits in not quite nine months**, more than 2024 and 2025 put together. The interesting part is _when_, because my own stored prompts date it precisely and the obvious answer is wrong.
 
-And I spent the velocity building infrastructure for the AI era itself. **edgeport** is a from-scratch TCP library for Cloudflare Workers, with clients for SSH, SFTP, SMTP, IMAP, POP3, NATS, MQTT, STOMP, FTP, LDAP, and Syslog, tested against real Dockerized servers, because the platform advertised the capability and no maintained library wrapped it. It went up in a documented burst of _104 commits in one day_, and it is the actual email library that **smoke**, my self-hostable support desk, imports. **MyLoRA** fine-tunes LoRA adapters on my _own home RTX 4070_ over an SSH tunnel, driven from a Cloudflare Workers UI. **MyMCP** turns any OpenAPI spec into a Model Context Protocol server.
+I had a conversational assistant for thirteen months before anything changed. Across the Copilot Chat era my median month went from **182 commits to 199** - flat. The step came in **May 2026**, the month the first `CLAUDE.md` appeared in one of my repositories: 585 commits that month, then 1,033, then 1,361, then 1,773. It was not a better model, and 92% of my prompts were already going to Anthropic. It was the _harness_: an agent that can run the build, the tests, and the deploy.
 
-::insight{icon="i-lucide-layers" title="The Single Most Important Pattern"}
-I do not consume AI tooling, I build the layer beneath it. Every one of these was born from a wall I hit in a real project, and my reflex was to build and publish the missing primitive.
+::insight{icon="i-lucide-ruler" title="The Objection, and Why It Fails"}
+The obvious reading is that agents just split work into smaller commits. My median commit went the other way - from **27 changed lines to 90**. The work per commit got bigger, not smaller.
 ::
 
-The way I use it is the tell: _you can outsource the typing, but you cannot outsource the understanding._ The architecture stays mine; only the keystrokes are shared. This was also the year I closed the old chapters for real. I graduated in **June**, got into **Dartmouth**, and archived every repository in Calculus Games, Team Inceptus, and LevelZ-File, along with **MobChip** itself, the 88-star library that was my best-known work.
+I spent the velocity building the layer underneath. **edgeport** is a from-scratch TCP library for Cloudflare Workers - SSH, SFTP, SMTP, IMAP, POP3, NATS, MQTT, STOMP, FTP, LDAP, Syslog, and since August Redis - tested against real Dockerized servers, because the platform advertised the capability and nothing maintained wrapped it. One burst put up _104 commits in a day_. It is the email library that **smoke**, my self-hostable support desk, imports, and where I fixed an SMTP MIME header injection bug, which is the defect a from-scratch protocol library is most likely to ship.
+
+That is also how I split the work with an agent, in my own words from that project: I wrapped the `connect` function around `cloudflare:sockets` myself, had Claude design the wrappers and protocols, then oriented the tests around real-world recipes. _You can outsource the typing. You cannot outsource the understanding._ This was the year I closed the old chapters too: I graduated in **June**, got into **Dartmouth**, and archived every repository in Calculus Games, Team Inceptus, and LevelZ-File, along with **MobChip** itself.
