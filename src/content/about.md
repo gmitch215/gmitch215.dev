@@ -10,7 +10,7 @@ I have built a lot of different things, starting from Discord bots and moving in
 
 My high school years saw me shift toward an interest in Psychology and human connection. I still really enjoyed programming and was not ready to give it up. So I built [The Earth App](https://earth-app.com), my long-term work against the mental health and loneliness epidemic in our society. It is not a prototype anymore; it is live in the app stores, and I compiled the whole idea down into a second, smaller app called [recess](https://github.com/earth-app/recess), which has no server, no account, and no social graph, and asks you to go outside.
 
-I spent two summers teaching Computer Science to rising 7th through 9th graders in Chicago. It was exhausting and surreal and worthwhile, and it taught me more about the psychology of learning to code than any of my own projects did. The nine-year-old who called himself "GamerTeach" because he taught his friends about games grew up and actually taught. I am now at Dartmouth studying Computer Science and Psychology, pointed at the same problem.
+I spent two summers teaching Computer Science to rising 7th through 9th graders in Chicago. It was exhausting and surreal and worthwhile, and it taught me more about the psychology of learning to code than any of my own projects did. The nine-year-old who called himself "GamerTeach" because he taught his friends about games grew up and actually taught. I am now at Dartmouth majoring in Computer Science with a Quantitative Social Science minor; I kept psychology for its research methods, and all of it is pointed at the same problem.
 
 ---
 

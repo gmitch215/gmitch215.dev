@@ -6,7 +6,7 @@ b. 2008 <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
 ::insight{icon="i-lucide-badge-check" title="At a Glance"}
-15,369 commits since 2019 across 108 repositories, and published work going back to 2016, 6,141 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 6 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, Homebrew, and Packagist. 29 patches upstream into 19 organizations I do not own.
+15,983 commits since 2019 across 112 repositories, and published work going back to 2016, 6,754 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 6 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, Homebrew, and Packagist. 29 patches upstream into 19 organizations I do not own. One published paper.
 ::
 
 ---
@@ -27,7 +27,8 @@ b. 2008 <br>
 ## Education
 
 - [Dartmouth College](https://home.dartmouth.edu) \| Class of 2030
-  - B.A. in Computer Science and Psychology
+  - Computer Science major, Quantitative Social Science minor
+  - Psychology kept for its research methods
   - Aimed at the mental health and loneliness crisis
   - Matriculating Fall 2026
 - High School Graduate \| 2026
@@ -117,6 +118,17 @@ Maintaining in the other direction: **69** issues opened on my projects by other
 
 ---
 
+## Publications
+
+### Retargeting Managed Runtimes to Serverless WebAssembly: A Case Study in Java on Cloudflare Workers
+
+_September 2026_ \| Sole author \| [10.6084/m9.figshare.33941974](https://doi.org/10.6084/m9.figshare.33941974)
+
+- Published on figshare and Zenodo under CC BY 4.0, artifact pinned to [bytebox](https://github.com/gmitch215/bytebox) v1.0.2 at a specific commit
+- Findings from differential testing against a real JVM: startup tracks executable WebAssembly rather than uploaded bytes (a bundle grown 640-fold with inert padding kept startup flat); the documented CPU limit is not the enforced one; 5 of 14 third-party Java libraries run unmodified
+- Semantic agreement is not operational equivalence: a correctly translated regular expression cost 14 ms on the reference JVM and 11,010 ms on the host engine for identical output
+- Published and citable, not yet refereed; seeking an arXiv endorsement, with a JOSS resubmission due February 2027
+
 ::no-print
 
 ## Projects
@@ -136,6 +148,30 @@ _2026 - Present_
 - A statically linked PHP 8.5 interpreter compiled to WebAssembly for the `workerd` runtime
 - Built because every published php-wasm build uses dynamic linking, whose linker synthesizes trampolines at request time, which `workerd` forbids; that makes PHP extensions unloadable and Drupal impossible
 - Ships `dom`, `xml`, `SimpleXML`, `mbstring`, and `gd` inside a compressed worker bundle
+
+### [gmux](https://github.com/gmitch215/gmux)
+
+_2026 - Present_
+
+- A real Linux kernel running inside one Cloudflare Worker deployment, each machine a Durable Object, on the free plan
+- Boots to a BusyBox shell in a 476 ms median; `fork`, `dlopen`, job control, signals, sockets and System V IPC pass deployed
+- A 1 GiB pipeline finishes exactly across five free-plan events; a booted machine checkpoints mid-job, survives eviction and restores exactly
+- Unchanged x86-64 binaries run through Katybug, an ELF translator, matching native Linux on 117 of 117 transcript lines
+
+### [burrow](https://github.com/drupflare/burrow)
+
+_2026 - Present_
+
+- Arbitrary WebAssembly supplied at request time, on a runtime that forbids request-time code generation
+- Ships an interpreter compiled to wasm, so a guest module arriving with a request is data rather than code
+
+### [bastion](https://github.com/drupflare/bastion)
+
+_2026 - Present_
+
+- A hardened environment for self-hosted workerd, as a single binary, so the stack can run off Cloudflare's network
+- One workerd process per tenant under a cgroup, real stores behind every binding, encrypted backups with a scheduled restore drill, hash-chained audit and deny-by-default egress
+- Published to npm, Docker Hub and GitHub's container registry
 
 ### [bytebox](https://github.com/gmitch215/bytebox)
 

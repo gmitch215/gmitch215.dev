@@ -185,6 +185,6 @@ const tools = [
 useSeoMeta({
 	title: 'Curriculum Vitae',
 	description:
-		'Gregory R. Mitchell. Eight years shipping software, 15,369 commits, ten languages, published to six registries. Dartmouth Class of 2030, CS + Psychology.'
+		'Gregory R. Mitchell. Ten years shipping software, 15,983 commits, ten languages, published to six registries. Dartmouth Class of 2030, CS + Quantitative Social Science.'
 });
 </script>
