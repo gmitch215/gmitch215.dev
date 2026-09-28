@@ -10,4 +10,5 @@ LICENSE
 tsconfig.json
 tailwind.config.js
 src/data/stars.json
+src/data/downloads.json
 src/data/spiget.json

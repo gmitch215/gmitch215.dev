@@ -59,11 +59,13 @@
 				</div>
 				<div>
 					<p class="text-gradient-brand font-mono text-3xl font-bold tabular-nums">
-						{{ downloads.toLocaleString('en-US') }}
+						{{ downloads.total.toLocaleString('en-US') }}
 					</p>
 					<p class="text-muted mt-1 text-sm">
-						downloads on SpigotMC<template v-if="reviews"
-							>, {{ average }}/5 across {{ reviews }} written reviews</template
+						downloads, {{ downloads.spigot.toLocaleString('en-US') }} on SpigotMC and
+						{{ downloads.github.toLocaleString('en-US') }} from GitHub releases<template
+							v-if="reviews"
+							>, rated {{ average }}/5 across {{ reviews }} written reviews</template
 						>
 					</p>
 				</div>
@@ -89,8 +91,9 @@ import { computed } from 'vue';
 import { ECOSYSTEM, UPSTREAM } from '~/data/timeline';
 
 const spiget = useSpiget();
+const { totals: downloadTotals } = useDownloads();
 const totals = computed(() => spiget.totals());
-const downloads = computed(() => totals.value.downloads);
+const downloads = downloadTotals;
 const reviews = computed(() => totals.value.reviews);
 const average = computed(() => totals.value.average);
 </script>

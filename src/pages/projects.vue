@@ -42,15 +42,15 @@
 						<h2 class="font-display text-highlighted font-semibold">{{ p.name }}</h2>
 						<div class="text-muted flex shrink-0 items-center gap-3 font-mono text-sm">
 							<span
-								v-if="fmtDownloads(spigetOf(p)?.downloads)"
+								v-if="fmtDownloads(downloadsOf(p)?.total)"
 								class="inline-flex items-center gap-1"
-								title="SpigotMC downloads"
+								:title="downloadTitle(p)"
 							>
 								<UIcon
 									name="i-lucide-download"
 									class="text-primary size-3.5"
 								/>
-								{{ fmtDownloads(spigetOf(p)?.downloads) }}
+								{{ fmtDownloads(downloadsOf(p)?.total) }}
 							</span>
 							<span
 								v-if="starsOf(p)"
@@ -225,6 +225,29 @@
 						>
 					</div>
 
+					<div
+						v-if="ghDownloads"
+						class="border-default rounded-lg border p-3"
+					>
+						<p
+							class="text-muted mb-2 flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase"
+						>
+							<UIcon
+								name="i-lucide-download"
+								class="size-3.5"
+							/>
+							GitHub Releases
+						</p>
+						<span class="text-muted inline-flex items-center gap-1 font-mono text-sm">
+							<UIcon
+								name="i-lucide-download"
+								class="text-primary size-4"
+							/>
+							{{ ghDownloads.toLocaleString('en-US') }}
+							<span class="text-dimmed">asset downloads</span>
+						</span>
+					</div>
+
 					<div class="border-default border-t pt-3">
 						<p
 							class="text-muted mb-2 flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase"
@@ -295,8 +318,19 @@ onMounted(() => {
 const starsOf = (p: Record<string, unknown>) =>
 	gh.starsFor(p.repo as string | undefined, p.stars as number | undefined);
 const spigetOf = (p: Record<string, unknown>) => spiget.spigetFor(p.spiget as number | undefined);
+const { downloadsFor } = useDownloads();
+const downloadsOf = (p: Record<string, unknown>) =>
+	downloadsFor({ repo: p.repo as string | undefined, spiget: p.spiget as number | undefined });
 const fmtDownloads = (n?: number) =>
-	n == null ? '' : n >= 1000 ? `${(n / 1000).toFixed(1)}k` : `${n}`;
+	n == null || n === 0 ? '' : n >= 1000 ? `${(n / 1000).toFixed(1)}k` : `${n}`;
+const downloadTitle = (p: Record<string, unknown>) => {
+	const d = downloadsOf(p);
+	if (!d) return '';
+	const parts = [];
+	if (d.spigot) parts.push(`${d.spigot.toLocaleString('en-US')} on SpigotMC`);
+	if (d.github) parts.push(`${d.github.toLocaleString('en-US')} from GitHub releases`);
+	return parts.join(', ');
+};
 
 const badgeStyle = (l: string) => ({
 	color: languageColor(l),
@@ -327,6 +361,8 @@ const readme = ref('');
 const readmeLoading = ref(false);
 const meta = computed(() => gh.metaFor(selected.value?.repo as string | undefined));
 const spig = computed(() => spiget.spigetFor(selected.value?.spiget as number | undefined));
+const { githubFor } = useDownloads();
+const ghDownloads = computed(() => githubFor(selected.value?.repo as string | undefined));
 
 function cleanReadme(md: string): string {
 	return md
