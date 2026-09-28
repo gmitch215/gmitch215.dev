@@ -36,30 +36,30 @@ export const ERAS: Era[] = [
 		year: 2025,
 		commits: 2184,
 		era: 'Architect',
-		headline: 'cmdfx, teaching, and the mission',
+		headline: 'Copilot Chat arrives; the rate does not move',
 		flagship: { name: 'cmdfx', stars: 17 }
 	},
 	{
 		year: 2026,
-		commits: 6141,
-		era: 'Force-Multiplier',
-		headline: 'Three runtimes on the edge',
-		annualized: 8790,
+		commits: 6754,
+		era: 'Impact',
+		headline: 'Runtimes for Workers, and what hosting costs',
+		annualized: 9200,
 		flagship: { name: 'phasm', stars: 1 }
 	}
 ];
 
 // commits in repos that were never cloned locally, so they cannot be split by year
-export const ORG_COMMITS = 712;
+export const ORG_COMMITS = 713;
 
 export const LOCAL_COMMITS = ERAS.reduce((sum, e) => sum + e.commits, 0);
 export const TOTAL_COMMITS = LOCAL_COMMITS + ORG_COMMITS;
 
 // 2026 is a partial year; every figure above was recounted by script on this date
-export const CENSUS_DATE = 'September 12, 2026';
+export const CENSUS_DATE = 'September 26, 2026';
 export const CENSUS_MONTHS = 9;
-export const REPOS_COUNTED = 108;
-export const CONTRIBUTIONS_12MO = 6755;
+export const REPOS_COUNTED = 112;
+export const CONTRIBUTIONS_12MO = 9599;
 
 // participation in other people's projects; GitHub API reads on the census date
 export const ECOSYSTEM = {
@@ -132,10 +132,12 @@ export const PRE_AI = {
 	minecraftCommits: 4345,
 	minecraftRepos: 18,
 	throughEnd2024: 6332,
-	beforeFirstChatSession: 6861,
-	firstChatSession: 'April 2025',
+	beforeFirstChatSession: 6850,
+	beforeAgentic: 9683,
+	firstChatPrompt: 'April 3, 2025',
+	firstClaudeMd: 'May 22, 2026',
 	spigotJoined: 'March 2021',
-	lastMinecraftCommit: 'June 2024'
+	lastMinecraftCommit: 'August 2024'
 };
 
 export interface Language {
