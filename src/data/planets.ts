@@ -167,9 +167,9 @@ export const PLANETS: PlanetConfig[] = [
 	},
 	{
 		order: 9,
-		name: 'Bedrock',
+		name: 'Substrate',
 		era: 'Runtime',
-		year: 'Aug 2026',
+		year: 'Aug-Oct 2026',
 		surface: 'wasm',
 		color: '#f38020',
 		emissive: '#3d1400',
@@ -185,25 +185,6 @@ export const PLANETS: PlanetConfig[] = [
 	},
 	{
 		order: 10,
-		name: 'Kernel',
-		era: 'Magnum Opus',
-		year: 'Sep 2026',
-		surface: 'metal',
-		color: '#8fb6d9',
-		emissive: '#0a1c2e',
-		emissiveIntensity: 0.3,
-		radius: 2.6,
-		roughness: 0.25,
-		metalness: 1,
-		flatShading: false,
-		spin: 0.07,
-		rings: { color: '#bcff43', inner: 3.2, outer: 4.6 },
-		moons: 2,
-		satellites: 6,
-		position: [8, -2, z(10)]
-	},
-	{
-		order: 11,
 		name: 'Earth',
 		era: 'Mission',
 		year: 'Now',
@@ -219,7 +200,7 @@ export const PLANETS: PlanetConfig[] = [
 		atmosphere: '#7fe3b0',
 		moons: 1,
 		glow: 1.4,
-		position: [3, 1, z(11)]
+		position: [3, 1, z(10)]
 	}
 ];
 
