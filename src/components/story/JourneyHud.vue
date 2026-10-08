@@ -19,7 +19,7 @@
 					:style="dot(p)"
 				/>
 				<span
-					class="border-default bg-default/90 text-highlighted pointer-events-none absolute right-7 rounded-md border px-2 py-0.5 text-xs whitespace-nowrap opacity-0 transition group-hover:opacity-100"
+					class="border-default bg-default/90 text-highlighted pointer-events-none absolute right-7 flex gap-2 rounded-md border px-2 py-0.5 text-xs whitespace-nowrap opacity-0 transition group-hover:opacity-100"
 				>
 					<span class="text-highlighted">{{ p.name }}</span>
 					<span class="text-dimmed">{{ p.era }} {{ p.year }}</span>
@@ -31,11 +31,16 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { PLANETS, type PlanetConfig } from '~/data/planets';
+import { PLANETS, arrival, type PlanetConfig } from '~/data/planets';
 
 const props = defineProps<{ progress: number }>();
-const activeOrder = computed(() =>
-	Math.min(PLANETS.length, Math.max(1, Math.round(props.progress * (PLANETS.length - 1)) + 1))
+const activeOrder = computed(
+	() =>
+		PLANETS.reduce((best, p) =>
+			Math.abs(arrival(p.order) - props.progress) < Math.abs(arrival(best.order) - props.progress)
+				? p
+				: best
+		).order
 );
 
 function dot(p: PlanetConfig) {
@@ -51,6 +56,6 @@ function dot(p: PlanetConfig) {
 function go(order: number) {
 	document
 		.getElementById(`chapter-${order}`)
-		?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>

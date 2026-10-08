@@ -137,7 +137,7 @@
 				<h2 class="font-display mt-2 text-3xl font-bold sm:text-4xl">The Curve Tells the Story</h2>
 				<p class="text-muted mx-auto mt-3 max-w-xl">
 					A trickle at eleven, a plateau near 2,000 a year through the pre-AI era, then the ceiling
-					breaks: more commits through August of 2026 than in 2024 and 2025 combined.
+					breaks: more commits through October of 2026 than in 2024 and 2025 combined.
 				</p>
 			</ScrollReveal>
 			<ScrollReveal
@@ -154,7 +154,7 @@
 					<span class="text-gradient-brand">Keep Moving Forward.</span>
 				</h2>
 				<p class="text-muted mx-auto mt-4 max-w-xl">
-					Fifteen thousand commits, and the one that matters most I have not written yet. If any of
+					Sixteen thousand commits, and the one that matters most I have not written yet. If any of
 					this resonates, the best way to follow along is right here.
 				</p>
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -180,6 +180,7 @@
 </template>
 
 <script setup lang="ts">
+import { PLANETS, arrival } from '~/data/planets';
 import { STATS } from '~/data/timeline';
 
 const { data: story } = await useAsyncData('story-chapters', () =>
@@ -198,10 +199,42 @@ const statValue = (s: (typeof STATS)[number]) =>
 const region = ref<HTMLElement | null>(null);
 const { top, height } = useElementBounding(region);
 const { height: vh } = useWindowSize();
-const journey = computed(() => {
+const journey = ref(0);
+
+function stops() {
 	const dist = height.value - vh.value;
-	return dist > 0 ? Math.min(1, Math.max(0, -top.value / dist)) : 0;
-});
+	const pts: [number, number][] = [[0, 0]];
+	for (const p of PLANETS) {
+		const el = document.getElementById(`chapter-${p.order}`);
+		if (!el) continue;
+		const r = el.getBoundingClientRect();
+		const mid = r.top - top.value + r.height / 2 - vh.value / 2;
+		const hold = Math.max(0, (r.height - vh.value * 1.5) / 2);
+		for (const s of hold ? [mid - hold, mid + hold] : [mid]) {
+			if (s > pts[pts.length - 1]![0]) pts.push([s, arrival(p.order)]);
+		}
+	}
+	pts.push([Math.max(dist, pts[pts.length - 1]![0] + 1), 1]);
+	return pts;
+}
+
+function update() {
+	if (height.value - vh.value <= 0) return;
+	const s = -top.value;
+	const pts = stops();
+	if (s <= 0) return void (journey.value = 0);
+	for (let i = 1; i < pts.length; i++) {
+		const [s1, p1] = pts[i]!;
+		if (s <= s1) {
+			const [s0, p0] = pts[i - 1]!;
+			return void (journey.value = p0 + ((s - s0) / (s1 - s0)) * (p1 - p0));
+		}
+	}
+	journey.value = 1;
+}
+
+watch([top, height, vh], update, { immediate: true });
+onMounted(update);
 
 useSeoMeta({
 	title: '',

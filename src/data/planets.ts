@@ -42,7 +42,7 @@ export const PLANETS: PlanetConfig[] = [
 		flatShading: false,
 		spin: 0.1,
 		moons: 1,
-		position: [-7, 2, z(1)]
+		position: [7, 2, z(1)]
 	},
 	{
 		order: 2,
@@ -58,7 +58,7 @@ export const PLANETS: PlanetConfig[] = [
 		metalness: 0,
 		flatShading: true,
 		spin: 0.13,
-		position: [8, -3, z(2)]
+		position: [-8, -3, z(2)]
 	},
 	{
 		order: 3,
@@ -76,7 +76,7 @@ export const PLANETS: PlanetConfig[] = [
 		spin: 0.08,
 		rings: { color: '#f0d7a0', inner: 3.4, outer: 5.4 },
 		moons: 4,
-		position: [-9, 3, z(3)]
+		position: [9, 3, z(3)]
 	},
 	{
 		order: 4,
@@ -92,7 +92,7 @@ export const PLANETS: PlanetConfig[] = [
 		metalness: 0.85,
 		flatShading: true,
 		spin: 0.14,
-		position: [9, -2, z(4)]
+		position: [-9, -2, z(4)]
 	},
 	{
 		order: 5,
@@ -109,7 +109,7 @@ export const PLANETS: PlanetConfig[] = [
 		flatShading: false,
 		spin: 0.1,
 		satellites: 10,
-		position: [-8, 2, z(5)]
+		position: [8, 2, z(5)]
 	},
 	{
 		order: 6,
@@ -128,7 +128,7 @@ export const PLANETS: PlanetConfig[] = [
 		moons: 5,
 		atmosphere: '#c9a6ff',
 		glow: 1.2,
-		position: [8, -2, z(6)]
+		position: [-8, -2, z(6)]
 	},
 	{
 		order: 7,
@@ -145,7 +145,7 @@ export const PLANETS: PlanetConfig[] = [
 		flatShading: false,
 		spin: 0.05,
 		glow: 3.2,
-		position: [-7, 1, z(7)]
+		position: [7, 1, z(7)]
 	},
 	{
 		order: 8,
@@ -163,7 +163,7 @@ export const PLANETS: PlanetConfig[] = [
 		spin: 0.5,
 		rings: { color: '#a2f213', inner: 2.6, outer: 3.1 },
 		glow: 2.2,
-		position: [7, -3, z(8)]
+		position: [-7, -3, z(8)]
 	},
 	{
 		order: 9,
@@ -181,7 +181,7 @@ export const PLANETS: PlanetConfig[] = [
 		spin: 0.11,
 		rings: { color: '#0678be', inner: 3, outer: 4.2 },
 		satellites: 9,
-		position: [-8, 2, z(9)]
+		position: [8, 2, z(9)]
 	},
 	{
 		order: 10,
@@ -204,4 +204,8 @@ export const PLANETS: PlanetConfig[] = [
 	}
 ];
 
-export const TRAVEL = PLANETS.length * SEG - 8;
+const ARRIVE = 12;
+
+export const TRAVEL = PLANETS.length * SEG - ARRIVE;
+
+export const arrival = (order: number) => (order * SEG - ARRIVE) / TRAVEL;
