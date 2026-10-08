@@ -4,17 +4,17 @@ year: '2026'
 era: 'Impact'
 headline: 'It Was the Harness, Not the Model'
 tagline: 'What actually moved, measured against my own logs'
-commits: 6754
+commits: 7122
 scene: 'curve'
 image: '/pictures/gregory-dartmouth.jpg'
 flagship:
   name: 'edgeport'
   url: 'https://github.com/gmitch215/edgeport'
-  stars: 8
+  stars: 9
   description: 'A from-scratch TCP library for Cloudflare Workers'
 ---
 
-For four years my curve sat near **2,000 commits a year**, roughly what a fast human types while also going to school. In 2026 it broke: **6,754 commits in not quite nine months**, more than 2024 and 2025 put together. The interesting part is _when_, because my own stored prompts date it precisely and the obvious answer is wrong.
+For four years my curve sat near **2,000 commits a year**, roughly what a fast human types while also going to school. In 2026 it broke: **7,122 commits in a little over nine months**, more than 2024 and 2025 put together. The interesting part is _when_, because my own stored prompts date it precisely and the obvious answer is wrong.
 
 I had a conversational assistant for thirteen months before anything changed. Across the Copilot Chat era my median month went from **182 commits to 199** - flat. The step came in **May 2026**, the month the first `CLAUDE.md` appeared in one of my repositories: 585 commits that month, then 1,033, then 1,361, then 1,773. It was not a better model, and 92% of my prompts were already going to Anthropic. It was the _harness_: an agent that can run the build, the tests, and the deploy.
 

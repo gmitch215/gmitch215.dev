@@ -153,7 +153,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { LANGUAGES, WAKATIME } from '~/data/timeline';
+import { LANGUAGES, TOTAL_COMMITS, WAKATIME } from '~/data/timeline';
 
 const { data: cv } = await useAsyncData('cv', () => queryCollection('content').path('/cv').first());
 
@@ -184,7 +184,6 @@ const tools = [
 
 useSeoMeta({
 	title: 'Curriculum Vitae',
-	description:
-		'Gregory R. Mitchell. Ten years shipping software, 15,983 commits, ten languages, published to six registries. Dartmouth Class of 2030, CS + Quantitative Social Science.'
+	description: `Gregory R. Mitchell. Ten years shipping software, ${TOTAL_COMMITS.toLocaleString('en-US')} commits, ten languages, published to six registries. Dartmouth Class of 2030, CS + Quantitative Social Science.`
 });
 </script>

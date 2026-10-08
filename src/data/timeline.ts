@@ -41,10 +41,10 @@ export const ERAS: Era[] = [
 	},
 	{
 		year: 2026,
-		commits: 6754,
+		commits: 7122,
 		era: 'Impact',
 		headline: 'Runtimes for Workers, and what hosting costs',
-		annualized: 9200,
+		annualized: 9300,
 		flagship: { name: 'phasm', stars: 1 }
 	}
 ];
@@ -56,9 +56,10 @@ export const LOCAL_COMMITS = ERAS.reduce((sum, e) => sum + e.commits, 0);
 export const TOTAL_COMMITS = LOCAL_COMMITS + ORG_COMMITS;
 
 // 2026 is a partial year; every figure above was recounted by script on this date
-export const CENSUS_DATE = 'September 26, 2026';
+export const CENSUS_DATE = 'October 8, 2026';
+export const CENSUS_THRU = 'Oct 8';
 export const CENSUS_MONTHS = 9;
-export const REPOS_COUNTED = 112;
+export const REPOS_COUNTED = 114;
 export const CONTRIBUTIONS_12MO = 9599;
 
 // participation in other people's projects; GitHub API reads on the census date
@@ -151,12 +152,13 @@ export interface Language {
 
 // all-time percentages and hours are live WakaTime reads; recent = trailing twelve months
 export const LANGUAGES: Language[] = [
-	{ name: 'Java', icon: 'logos:java', pct: 27, hours: 1246 },
-	{ name: 'Kotlin', icon: 'logos:kotlin-icon', pct: 17.5, hours: 806, recent: 7.1 },
-	{ name: 'TypeScript', icon: 'logos:typescript-icon', pct: 11.4, hours: 527, recent: 30.5 },
-	{ name: 'Vue', icon: 'logos:vue', pct: 6.5, hours: 297, recent: 20.2 },
-	{ name: 'PHP', icon: 'logos:php', pct: 3.2, hours: 149, recent: 11.3 },
-	{ name: 'C', icon: 'logos:c', pct: 2.6, hours: 118, recent: 0.7 },
+	{ name: 'Java', icon: 'logos:java', pct: 24.5, hours: 1252 },
+	{ name: 'Kotlin', icon: 'logos:kotlin-icon', pct: 15.9, hours: 811, recent: 6.0 },
+	{ name: 'TypeScript', icon: 'logos:typescript-icon', pct: 13.3, hours: 680, recent: 33.1 },
+	{ name: 'Markdown', icon: 'logos:markdown', pct: 7, hours: 356, recent: 13.7 },
+	{ name: 'Vue', icon: 'logos:vue', pct: 5.9, hours: 299, recent: 16.7 },
+	{ name: 'PHP', icon: 'logos:php', pct: 3.3, hours: 170, recent: 7.9 },
+	{ name: 'C', icon: 'logos:c', pct: 2.8, hours: 144 },
 	{ name: 'C++', icon: 'logos:c-plusplus', note: 'PendulumFX, Terminal Miner' },
 	{ name: 'JavaScript', icon: 'logos:javascript', note: 'the first language' },
 	{ name: 'Python', icon: 'logos:python', note: 'doc2lora, LevelZ bindings' },
@@ -165,10 +167,10 @@ export const LANGUAGES: Language[] = [
 
 export const WAKATIME = {
 	since: 'February 2022',
-	totalHours: 4134,
-	dailyAverage: '2 hrs 46 mins',
-	recentHours: 1294,
-	recentDailyAverage: '3 hrs 49 mins'
+	totalHours: 4587,
+	dailyAverage: '2 hrs 59 mins',
+	recentHours: 1525,
+	recentDailyAverage: '4 hrs 31 mins'
 };
 
 export interface Stat {

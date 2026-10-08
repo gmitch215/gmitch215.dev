@@ -7,7 +7,7 @@
 			:viewBox="`0 0 ${W} ${H}`"
 			class="w-full"
 			role="img"
-			:aria-label="`Commits per year from 2019 to 2026, totalling ${TOTAL_COMMITS.toLocaleString('en-US')}. A trickle at age 11, a plateau near 2,000 per year, then 6,754 through September 26 of 2026, more than 2024 and 2025 combined.`"
+			:aria-label="`Commits per year from 2019 to 2026, totalling ${TOTAL_COMMITS.toLocaleString('en-US')}. A trickle at age 11, a plateau near 2,000 per year, then ${ERAS[ERAS.length - 1]!.commits.toLocaleString('en-US')} through ${CENSUS_DATE}, more than 2024 and 2025 combined.`"
 			@mouseleave="hovered = null"
 		>
 			<defs>
@@ -123,7 +123,7 @@
 						class="fill-current text-[10px]"
 						fill-opacity="0.55"
 					>
-						thru Aug 20
+						thru {{ CENSUS_THRU }}
 					</text>
 					<rect
 						:x="padL + slot * b.i"
@@ -138,7 +138,11 @@
 
 		<table class="sr-only">
 			<caption>
-				Commits per year, 2019 to 2026 (2026 runs through August 20 only)
+				Commits per year, 2019 to 2026 (2026 runs through
+				{{
+					CENSUS_DATE
+				}}
+				only)
 			</caption>
 			<thead>
 				<tr>
@@ -152,7 +156,7 @@
 					v-for="e in ERAS"
 					:key="e.year"
 				>
-					<td>{{ e.year }}{{ e.year === 2026 ? ' (thru Aug 20)' : '' }}</td>
+					<td>{{ e.year }}{{ e.year === 2026 ? ` (thru ${CENSUS_THRU})` : '' }}</td>
 					<td>{{ e.era }}</td>
 					<td>{{ e.commits.toLocaleString('en-US') }}</td>
 				</tr>
@@ -187,7 +191,7 @@
 <script setup lang="ts">
 import { useIntersectionObserver } from '@vueuse/core';
 import { computed, ref } from 'vue';
-import { ERAS, TOTAL_COMMITS } from '~/data/timeline';
+import { CENSUS_DATE, CENSUS_THRU, ERAS, TOTAL_COMMITS } from '~/data/timeline';
 
 const W = 880;
 const H = 340;
@@ -197,7 +201,7 @@ const padT = 28;
 const padB = 46;
 const plotW = W - padL - padR;
 const plotH = H - padT - padB;
-const MAX = 5200;
+const MAX = 8000;
 const baseline = padT + plotH;
 
 const slot = plotW / ERAS.length;
@@ -220,7 +224,7 @@ const bars = computed(() =>
 	})
 );
 
-const gridLines = [1000, 2000, 3000, 4000];
+const gridLines = [2000, 4000, 6000];
 const yFor = (v: number) => baseline - (v / MAX) * plotH;
 
 const root = ref<HTMLElement | null>(null);
