@@ -34,8 +34,8 @@ const stars = Array.from({ length: 96 }, (_, i) => {
 	const a = i * 2.399963;
 	const r = Math.sqrt((i + 0.5) / 96);
 	return {
-		x: 50 + Math.cos(a) * r * 54,
-		y: 50 + Math.sin(a) * r * 52,
+		x: +(50 + Math.cos(a) * r * 54).toFixed(3),
+		y: +(50 + Math.sin(a) * r * 52).toFixed(3),
 		s: i % 6 === 0 ? 1.8 : 1,
 		o: 0.25 + (i % 8) / 12,
 		tw: i % 4 === 0,
