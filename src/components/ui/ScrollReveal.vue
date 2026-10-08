@@ -22,7 +22,7 @@ useIntersectionObserver(
 	(e) => {
 		if (e[0]?.isIntersecting) shown.value = true;
 	},
-	{ threshold: 0.15 }
+	{ threshold: 0, rootMargin: '0px 0px -12% 0px' }
 );
 </script>
 
