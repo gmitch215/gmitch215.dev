@@ -16,6 +16,11 @@ flagship:
 
 Three storylines converge in 2025, and this is the year the mission gets discovered and decided. The first is **cmdfx**, a game engine for the terminal written from scratch in **C**, begun in _January 2025_. CMake build, sanitizer harnesses, a hand-rolled assertion library, Doxygen docs, a Homebrew formula, and installers for Windows, macOS, and Linux.
 
+It came sideways from **kasciffy**, my ASCII-art engine in Kotlin Multiplatform: I needed an excuse to get back into C. This is a demo of it from that January, a clip of an arcade hoop followed by the same scene redrawn as a brightness ramp of plain characters.
+
+::clip{src="/videos/kasciffy-demo.mp4" poster="/videos/kasciffy-demo-poster.jpg" caption="kasciffy, around January 2025. Source footage, then the ASCII render. No sound."}
+::
+
 I used to call cmdfx my clean control sample. It is not, and I would rather correct that than keep the better story. My editor's own stored chat history puts conversational AI in this project from **April 2025** - the first session is me asking why my mutex was interleaving `printf` output - so 298 of its 465 commits predate any assistance and the rest had it available. The real control sample is bigger anyway and does not need cmdfx to prop it up: **6,850 commits predate my first chat prompt entirely**, including every line of the Minecraft years, and **9,683 predate any agentic tool**. Three instruments gave three different answers for when I started using AI, I checked the most convenient one last, and the number moved by thousands of commits.
 
 The second is a job. That summer, at _sixteen_, I taught **Java to seventh through ninth graders** in downtown Chicago, an hour from home, writing my own curriculum and delivering the lessons myself. The nine-year-old who called himself GamerTeach grew up and actually taught, and it is not a coincidence that this is the same person who wants to study psychology.
