@@ -4,3 +4,8 @@
 *.jpg binary
 *.jpeg binary
 *.ico binary
+*.mp4 binary
+*.webm binary
+*.webp binary
+*.avif binary
+*.woff2 binary
