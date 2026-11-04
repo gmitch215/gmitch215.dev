@@ -6,7 +6,7 @@ b. 2008 <br>
 [🕓 wakatime.com/@gmitch215](https://wakatime.com/@gmitch215) <br>
 
 ::insight{icon="i-lucide-badge-check" title="At a Glance"}
-16,351 commits since 2019 across 114 repositories, and published work going back to 2016, 7,122 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 6 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, Homebrew, and Packagist. 29 patches upstream into 19 organizations I do not own. One published paper.
+17,275 commits since 2019 across 119 repositories, and published work going back to 2016, 8,045 of them in 2026 alone. An 88-star top library. 10+ languages shipped in production. Published to 6 package registries: Maven Central, Gradle Plugin Portal, npm, PyPI, Homebrew, and Packagist. 29 patches upstream into 19 organizations I do not own. One published paper.
 ::
 
 ---
@@ -14,11 +14,11 @@ b. 2008 <br>
 ## Software Development
 
 - High Quality Software Development with over **7** years of industry experience, since 2019
-- Over **4,500** measured hours of programming, tracked by WakaTime since February 2022:
+- Over **4,700** measured hours of programming, tracked by WakaTime since February 2022:
   - **1,250+** hours in Java
-  - **810+** hours in Kotlin
-  - **680+** hours in TypeScript
-  - **295+** hours in Vue
+  - **820+** hours in Kotlin
+  - **710+** hours in TypeScript
+  - **300+** hours in Vue
   - **170+** hours in PHP
   - **140+** hours in C
 - Experience in dozens of languages, featuring Java, Kotlin, Vue, C/C++, and TypeScript
@@ -64,10 +64,10 @@ b. 2008 <br>
   - Utilizes Kotlin Multiplatform as the shared typed model for both the TypeScript frontends and the backend
   - 732 test files across the services that carry a suite
 - [drupflare](https://github.com/drupflare) \| 2026-Present
-  - Thirteen repositories answering one question: can Drupal 11 run on Cloudflare Workers?
+  - Fourteen repositories answering one question: can Drupal 11 run on Cloudflare Workers?
   - PHP 8.5 statically linked to WebAssembly, executing inside a Durable Object with that object's own SQLite as the database
   - Most ship as standalone libraries, including a Drupal database driver and a documented SQLite layer for Durable Objects
-  - v1.0.3 ran 27 pinned production Drupal codebases through a 13-row capability lane and found 104 defects
+  - v1.0.3 ran 27 pinned production Drupal codebases through a 13-row capability lane and found 104 defects; v1.0.4 (November 2026) verified 94 of 95 module rows and fixed three request-state leaks found by a state audit
 
 ---
 
@@ -154,7 +154,7 @@ _2026 - Present_
 
 _2026 - Present_
 
-- A real Linux kernel running inside one Cloudflare Worker deployment, each machine a Durable Object, on the free plan
+- A real Linux kernel running inside one Cloudflare Worker deployment, each machine a Durable Object, on the free plan; 240 commits and untagged, with the kernel base moved to mainline 7.3 in October
 - Boots to a BusyBox shell in a 476 ms median; `fork`, `dlopen`, job control, signals, sockets and System V IPC pass deployed
 - A 1 GiB pipeline finishes exactly across five free-plan events; a booted machine checkpoints mid-job, survives eviction and restores exactly
 - Unchanged x86-64 binaries run through Katybug, an ELF translator, matching native Linux on 117 of 117 transcript lines
@@ -165,8 +165,22 @@ _2026 - Present_
 _2026 - Present_
 
 - Why does it pass here and fail there? Captures an environment as a hashed capsule, ranks what differs between a passing run and a failing one, and re-derives every verdict from the archived case
-- Kotlin Multiplatform, with 88.4% of its lines in common code and a portability atlas of 38 programs recorded on 13 Kotlin targets
-- Publishes its weak result beside the strong ones: the right cause ranks first in 19 of 41 scenarios where random order expects 15.2
+- Kotlin Multiplatform, v1.0.0 on November 1, 2026, with 93.9% of its lines in common code and a portability atlas of 38 programs, 32 of which print different output on at least one Kotlin target
+- Publishes its weak result beside the strong ones: the right cause ranks first in 46 of 105 development scenarios where random order expects 36.2
+
+### [spool](https://github.com/drupflare/spool)
+
+_2026 - Present_
+
+- A dependency-free TypeScript library that keeps an authorised, versioned replica of what a page needs on the visitor's device, so a repeat view makes no request
+- Ships with a stylesheet trimmer and an impact page where every energy figure carries a provenance label
+
+### [folio](https://github.com/gmitch215/folio)
+
+_2026 - Present_
+
+- Shared WebAssembly memory and execution parallelism across isolates, as a library for Drupflare and gmux
+- Reports its limits beside its results: 7.5x on a compiled C kernel at eight workers on Node, and no speedup for a Drupal render on any backend
 
 ### [burrow](https://github.com/drupflare/burrow)
 

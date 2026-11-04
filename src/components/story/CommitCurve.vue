@@ -201,7 +201,7 @@ const padT = 28;
 const padB = 46;
 const plotW = W - padL - padR;
 const plotH = H - padT - padB;
-const MAX = 8000;
+const MAX = 9000;
 const baseline = padT + plotH;
 
 const slot = plotW / ERAS.length;
@@ -224,7 +224,7 @@ const bars = computed(() =>
 	})
 );
 
-const gridLines = [2000, 4000, 6000];
+const gridLines = [2000, 4000, 6000, 8000];
 const yFor = (v: number) => baseline - (v / MAX) * plotH;
 
 const root = ref<HTMLElement | null>(null);

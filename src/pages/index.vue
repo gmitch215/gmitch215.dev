@@ -137,7 +137,7 @@
 				<h2 class="font-display mt-2 text-3xl font-bold sm:text-4xl">The Curve Tells the Story</h2>
 				<p class="text-muted mx-auto mt-3 max-w-xl">
 					A trickle at eleven, a plateau near 2,000 a year through the pre-AI era, then the ceiling
-					breaks: more commits through October of 2026 than in 2024 and 2025 combined.
+					breaks: more commits through early November of 2026 than in 2024 and 2025 combined.
 				</p>
 			</ScrollReveal>
 			<ScrollReveal
@@ -154,8 +154,8 @@
 					<span class="text-gradient-brand">Keep Moving Forward.</span>
 				</h2>
 				<p class="text-muted mx-auto mt-4 max-w-xl">
-					Sixteen thousand commits, and the one that matters most I have not written yet. If any of
-					this resonates, the best way to follow along is right here.
+					Seventeen thousand commits, and the one that matters most I have not written yet. If any
+					of this resonates, the best way to follow along is right here.
 				</p>
 				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
 					<UButton
