@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_FILE = join(__dirname, '..', 'src', 'data', 'stars.json');
 const DOWNLOADS_FILE = join(__dirname, '..', 'src', 'data', 'downloads.json');
+const DOCS_FILE = join(__dirname, '..', 'src', 'data', 'docs.json');
 
 // curated repos as owner/name
 const REPOS = [
@@ -51,6 +52,8 @@ const REPOS = [
 	'drupflare/bastion',
 	'drupflare/workforce',
 	'drupflare/drangler',
+	'drupflare/spool',
+	'gmitch215/folio',
 	'gmitch215/SuperAdvancements'
 ];
 
@@ -85,6 +88,31 @@ async function fetchDownloads(repo) {
 		(sum, rel) => sum + (rel.assets ?? []).reduce((n, a) => n + (a.download_count ?? 0), 0),
 		0
 	);
+}
+
+const DOC_FILES = [
+	'README.md',
+	'MANUAL.md',
+	'USAGE.md',
+	'INSTALL_GUIDE.md',
+	'ADVANCED_USAGE.md',
+	'TECHNICAL_REPORT.md',
+	'paper.md',
+	'SECURITY.md',
+	'R2_TROUBLESHOOTING.md',
+	'CHANGELOG.md',
+	'CONTRIBUTING.md'
+];
+
+async function fetchDocs(repo) {
+	const res = await fetch(`https://api.github.com/repos/${repo}/contents`, { headers: headers() });
+	if (!res.ok) throw new Error(`HTTP ${res.status} for ${repo} contents`);
+
+	const data = await res.json();
+	if (!Array.isArray(data)) throw new Error(`bad contents payload for ${repo}`);
+
+	const names = new Set(data.filter((f) => f.type === 'file').map((f) => f.name));
+	return DOC_FILES.filter((f) => names.has(f));
 }
 
 async function fetchStars(repo) {
@@ -141,7 +169,22 @@ async function main() {
 		}
 	});
 
+	const docs = loadExisting(DOCS_FILE);
+	const docResults = await Promise.allSettled(repos.map((repo) => fetchDocs(repo)));
+
+	docResults.forEach((result, i) => {
+		const repo = repos[i];
+		if (result.status === 'fulfilled') {
+			docs[repo.toLowerCase()] = result.value;
+		} else {
+			console.warn(
+				`warning: could not fetch docs for ${repo}: ${result.reason?.message ?? result.reason}`
+			);
+		}
+	});
+
 	writeSorted(OUT_FILE, stars, 'repos');
+	writeSorted(DOCS_FILE, docs, 'repos with doc listings');
 	writeSorted(DOWNLOADS_FILE, downloads, 'repos with release downloads');
 }
 

@@ -100,8 +100,8 @@ export function useGitHub() {
 	function metaFor(repo?: string): RepoMeta | undefined {
 		return repo ? repos.value[repo.toLowerCase()] : undefined;
 	}
-	async function fetchReadme(repo: string): Promise<string> {
-		const key = `gm-gh-readme:${repo.toLowerCase()}`;
+	async function fetchDoc(repo: string, file: string): Promise<string> {
+		const key = `gm-gh-doc:${repo.toLowerCase()}/${file}`;
 		try {
 			const c = localStorage.getItem(key);
 			if (c) {
@@ -112,9 +112,7 @@ export function useGitHub() {
 			/* ignore */
 		}
 		try {
-			const r = await fetch(`https://api.github.com/repos/${repo}/readme`, {
-				headers: { Accept: 'application/vnd.github.raw' }
-			});
+			const r = await fetch(`https://raw.githubusercontent.com/${repo}/HEAD/${file}`);
 			if (!r.ok) return '';
 			const md = await r.text();
 			try {
@@ -135,5 +133,5 @@ export function useGitHub() {
 		() => Object.values(repos.value).reduce((s, r) => s + r.stars, 0) || undefined
 	);
 
-	return { load, starsFor, metaFor, fetchReadme, repos, topStars, totalStars };
+	return { load, starsFor, metaFor, fetchDoc, repos, topStars, totalStars };
 }

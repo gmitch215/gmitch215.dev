@@ -1,0 +1,169 @@
+{
+  "brightplum/nodejs-notebook": [
+    "README.md"
+  ],
+  "calculusgames/kray": [
+    "README.md"
+  ],
+  "codemc/api": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "drupflare/bastion": [
+    "README.md",
+    "MANUAL.md",
+    "ADVANCED_USAGE.md"
+  ],
+  "drupflare/burrow": [
+    "README.md",
+    "ADVANCED_USAGE.md",
+    "TECHNICAL_REPORT.md"
+  ],
+  "drupflare/cartridge": [
+    "README.md",
+    "ADVANCED_USAGE.md"
+  ],
+  "drupflare/drangler": [
+    "README.md"
+  ],
+  "drupflare/drupflare": [
+    "README.md"
+  ],
+  "drupflare/durabledb": [
+    "README.md"
+  ],
+  "drupflare/phasm": [
+    "README.md"
+  ],
+  "drupflare/rom": [
+    "README.md"
+  ],
+  "drupflare/spool": [
+    "README.md",
+    "SECURITY.md"
+  ],
+  "drupflare/worker": [
+    "README.md",
+    "TECHNICAL_REPORT.md",
+    "SECURITY.md"
+  ],
+  "drupflare/workforce": [
+    "README.md",
+    "ADVANCED_USAGE.md"
+  ],
+  "earth-app/collegedb": [
+    "README.md"
+  ],
+  "earth-app/doc2lora": [
+    "README.md",
+    "USAGE.md",
+    "INSTALL_GUIDE.md",
+    "R2_TROUBLESHOOTING.md"
+  ],
+  "earth-app/moho": [
+    "README.md"
+  ],
+  "earth-app/recess": [
+    "README.md"
+  ],
+  "earth-app/smoke": [
+    "README.md"
+  ],
+  "earth-app/strata": [
+    "README.md",
+    "ADVANCED_USAGE.md"
+  ],
+  "gmitch215/battlecards": [
+    "README.md"
+  ],
+  "gmitch215/benchmarks": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "gmitch215/bytebox": [
+    "README.md",
+    "ADVANCED_USAGE.md",
+    "TECHNICAL_REPORT.md",
+    "paper.md"
+  ],
+  "gmitch215/cmdfx": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "gmitch215/drift": [
+    "README.md",
+    "MANUAL.md",
+    "ADVANCED_USAGE.md",
+    "TECHNICAL_REPORT.md"
+  ],
+  "gmitch215/edgeport": [
+    "README.md",
+    "ADVANCED_USAGE.md"
+  ],
+  "gmitch215/folio": [
+    "README.md",
+    "TECHNICAL_REPORT.md",
+    "CHANGELOG.md"
+  ],
+  "gmitch215/gitle": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "gmitch215/gmux": [
+    "README.md",
+    "TECHNICAL_REPORT.md",
+    "SECURITY.md"
+  ],
+  "gmitch215/kasciffy": [
+    "README.md"
+  ],
+  "gmitch215/kotlinmc": [
+    "README.md"
+  ],
+  "gmitch215/mobchip": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "gmitch215/mylora": [
+    "README.md"
+  ],
+  "gmitch215/mymcp": [
+    "README.md"
+  ],
+  "gmitch215/nuxtpress": [
+    "README.md"
+  ],
+  "gmitch215/quantumpen": [
+    "README.md"
+  ],
+  "gmitch215/socketmc": [
+    "README.md"
+  ],
+  "gmitch215/starcosmetics": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "gmitch215/superadvancements": [
+    "README.md"
+  ],
+  "gmitch215/tabroomapi": [
+    "README.md"
+  ],
+  "gmitch215/terminal-miner": [
+    "README.md"
+  ],
+  "gmitch215/tinyimg": [
+    "README.md",
+    "TECHNICAL_REPORT.md"
+  ],
+  "team-inceptus/inceptusnms": [
+    "README.md",
+    "CONTRIBUTING.md"
+  ],
+  "team-inceptus/novaconomy": [
+    "README.md"
+  ],
+  "team-inceptus/plasmaenchants": [
+    "README.md"
+  ]
+}

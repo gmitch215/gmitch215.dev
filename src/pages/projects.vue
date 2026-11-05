@@ -103,7 +103,7 @@
 		<UModal
 			v-model:open="open"
 			:title="(selected?.name as string) ?? 'Project'"
-			:ui="{ content: 'sm:max-w-2xl' }"
+			:ui="{ content: 'sm:max-w-3xl' }"
 		>
 			<template #body>
 				<div
@@ -248,34 +248,25 @@
 						</span>
 					</div>
 
-					<div class="border-default border-t pt-3">
-						<p
-							class="text-muted mb-2 flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase"
-						>
-							<UIcon
-								name="i-lucide-book-open"
-								class="size-3.5"
+					<div
+						v-if="docs.length"
+						class="border-default border-t pt-3"
+					>
+						<UTabs
+							v-if="docs.length > 1"
+							v-model="docTab"
+							:items="docs"
+							:content="false"
+							size="sm"
+							class="mb-3"
+						/>
+						<div class="bg-muted/40 max-h-96 overflow-y-auto rounded-lg p-4">
+							<Doc
+								:key="`${selected.repo}/${docTab}`"
+								:repo="selected.repo as string"
+								:file="docTab"
 							/>
-							README
-						</p>
-						<div
-							v-if="readmeLoading"
-							class="text-dimmed text-sm"
-						>
-							Loading from GitHub...
 						</div>
-						<p
-							v-else-if="readme"
-							class="text-muted bg-muted/40 max-h-64 overflow-y-auto rounded-lg p-3 text-sm leading-relaxed whitespace-pre-line"
-						>
-							{{ readme }}
-						</p>
-						<p
-							v-else
-							class="text-dimmed text-sm"
-						>
-							No README preview available.
-						</p>
 					</div>
 
 					<div class="flex flex-wrap gap-2 pt-1">
@@ -305,6 +296,8 @@
 </template>
 
 <script setup lang="ts">
+import docsIndex from '~/data/docs.json';
+
 const { data: projects } = await useAsyncData('projects', () =>
 	queryCollection('projects').order('order', 'ASC').all()
 );
@@ -357,36 +350,36 @@ const filtered = computed(() =>
 
 const open = ref(false);
 const selected = ref<Record<string, unknown> | null>(null);
-const readme = ref('');
-const readmeLoading = ref(false);
 const meta = computed(() => gh.metaFor(selected.value?.repo as string | undefined));
 const spig = computed(() => spiget.spigetFor(selected.value?.spiget as number | undefined));
 const { githubFor } = useDownloads();
 const ghDownloads = computed(() => githubFor(selected.value?.repo as string | undefined));
 
-function cleanReadme(md: string): string {
-	return md
-		.replace(/<!--[\s\S]*?-->/g, '')
-		.replace(/<[^>]+>/g, '')
-		.replace(/!\[[^\]]*\]\([^)]*\)/g, '')
-		.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-		.replace(/^[>#*_`\-|]+/gm, '')
-		.replace(/`/g, '')
-		.replace(/\n{3,}/g, '\n\n')
-		.trim()
-		.slice(0, 1200);
-}
+const DOC_LABELS: Record<string, string> = {
+	'README.md': 'Readme',
+	'MANUAL.md': 'Manual',
+	'USAGE.md': 'Usage',
+	'INSTALL_GUIDE.md': 'Install Guide',
+	'ADVANCED_USAGE.md': 'Advanced Usage',
+	'TECHNICAL_REPORT.md': 'Technical Report',
+	'paper.md': 'Paper',
+	'SECURITY.md': 'Security',
+	'R2_TROUBLESHOOTING.md': 'R2 Troubleshooting',
+	'CHANGELOG.md': 'Changelog',
+	'CONTRIBUTING.md': 'Contributing'
+};
 
-async function openProject(p: Record<string, unknown>) {
+const docs = computed(() => {
+	const repo = (selected.value?.repo as string | undefined)?.toLowerCase();
+	const files = (repo && (docsIndex as Record<string, string[]>)[repo]) || [];
+	return files.map((f) => ({ label: DOC_LABELS[f] ?? f, value: f }));
+});
+const docTab = ref('README.md');
+
+function openProject(p: Record<string, unknown>) {
 	selected.value = p;
+	docTab.value = 'README.md';
 	open.value = true;
-	readme.value = '';
-	const repo = p.repo as string | undefined;
-	if (!repo) return;
-	readmeLoading.value = true;
-	const md = await gh.fetchReadme(repo);
-	readme.value = md ? cleanReadme(md) : '';
-	readmeLoading.value = false;
 }
 
 useSeoMeta({
