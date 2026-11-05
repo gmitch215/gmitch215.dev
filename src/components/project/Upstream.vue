@@ -62,9 +62,9 @@
 						{{ downloads.total.toLocaleString('en-US') }}
 					</p>
 					<p class="text-muted mt-1 text-sm">
-						downloads, {{ downloads.spigot.toLocaleString('en-US') }} on SpigotMC and
-						{{ downloads.github.toLocaleString('en-US') }} from GitHub releases<template
-							v-if="reviews"
+						downloads, {{ downloads.spigot.toLocaleString('en-US') }} on SpigotMC,
+						{{ downloads.github.toLocaleString('en-US') }} from GitHub releases and
+						{{ downloads.npm.toLocaleString('en-US') }} from npm<template v-if="reviews"
 							>, rated {{ average }}/5 across {{ reviews }} written reviews</template
 						>
 					</p>

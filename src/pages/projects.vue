@@ -249,6 +249,29 @@
 					</div>
 
 					<div
+						v-if="npmDownloads"
+						class="border-default rounded-lg border p-3"
+					>
+						<p
+							class="text-muted mb-2 flex items-center gap-1.5 text-xs font-semibold tracking-widest uppercase"
+						>
+							<UIcon
+								name="i-lucide-package"
+								class="size-3.5"
+							/>
+							npm
+						</p>
+						<span class="text-muted inline-flex items-center gap-1 font-mono text-sm">
+							<UIcon
+								name="i-lucide-download"
+								class="text-primary size-4"
+							/>
+							{{ npmDownloads.toLocaleString('en-US') }}
+							<span class="text-dimmed">all-time downloads</span>
+						</span>
+					</div>
+
+					<div
 						v-if="docs.length"
 						class="border-default border-t pt-3"
 					>
@@ -322,6 +345,7 @@ const downloadTitle = (p: Record<string, unknown>) => {
 	const parts = [];
 	if (d.spigot) parts.push(`${d.spigot.toLocaleString('en-US')} on SpigotMC`);
 	if (d.github) parts.push(`${d.github.toLocaleString('en-US')} from GitHub releases`);
+	if (d.npm) parts.push(`${d.npm.toLocaleString('en-US')} from npm`);
 	return parts.join(', ');
 };
 
@@ -352,8 +376,9 @@ const open = ref(false);
 const selected = ref<Record<string, unknown> | null>(null);
 const meta = computed(() => gh.metaFor(selected.value?.repo as string | undefined));
 const spig = computed(() => spiget.spigetFor(selected.value?.spiget as number | undefined));
-const { githubFor } = useDownloads();
+const { githubFor, npmFor } = useDownloads();
 const ghDownloads = computed(() => githubFor(selected.value?.repo as string | undefined));
+const npmDownloads = computed(() => npmFor(selected.value?.repo as string | undefined));
 
 const DOC_LABELS: Record<string, string> = {
 	'README.md': 'Readme',

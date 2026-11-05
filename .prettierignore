@@ -14,3 +14,4 @@ src/data/downloads.json
 src/data/spiget.json
 src/data/docs.json
 .remember/
+src/data/npm.json
