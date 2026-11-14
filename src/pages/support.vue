@@ -62,8 +62,7 @@
 				<a
 					:href="`mailto:${EMAIL}`"
 					class="text-primary hover:underline"
-					>{{ EMAIL }}</a
-				>.
+					>{{ EMAIL }}</a>.
 			</p>
 		</div>
 	</div>
