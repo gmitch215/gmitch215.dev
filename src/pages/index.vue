@@ -24,7 +24,7 @@
 					<p
 						class="text-dimmed motion-preset-fade motion-duration-500 mb-3 font-mono text-xs tracking-widest uppercase sm:text-sm"
 					>
-						b. 2008 / Chicago / Dartmouth '30
+						b. 2008 / Chicagoland / Dartmouth '30
 					</p>
 					<h1
 						class="font-display motion-preset-slide-up motion-duration-700 text-4xl font-black tracking-tight sm:text-6xl lg:text-7xl"
@@ -34,14 +34,12 @@
 					<p
 						class="text-toned motion-preset-fade motion-delay-200 motion-duration-500 mt-4 max-w-2xl text-base leading-relaxed drop-shadow-lg sm:text-lg"
 					>
-						The world's okayest developer, allegedly. I have been shipping things in public since I
-						was eight: plugins, game engines, and the plumbing other people's apps and AI quietly
-						run on.
+						world's okayest developer
 					</p>
 					<p
 						class="text-toned motion-preset-fade motion-delay-500 motion-duration-500 mt-3 max-w-xl text-sm drop-shadow-lg sm:text-base"
 					>
-						Now I am pointing all of it at one problem: making people feel a little less alone.
+						big software nerd, obnoxious f1 fan, sunglasses enthusiast, and quite extroverted
 					</p>
 
 					<div class="mt-9 flex flex-wrap items-center justify-center gap-3">
