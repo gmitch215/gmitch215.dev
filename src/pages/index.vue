@@ -54,6 +54,15 @@
 							>Begin the Journey</UButton
 						>
 						<UButton
+							to="https://gmitch215.blog"
+							target="_blank"
+							rel="noopener"
+							size="lg"
+							color="secondary"
+							icon="i-lucide-book-open"
+							>Read the Blog</UButton
+						>
+						<UButton
 							to="/cv"
 							size="lg"
 							color="neutral"
